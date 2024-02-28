@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Far de Reaparitie",
+  "handbooktitle-respawnbeacon-usage": "Utilizare",
+  "handbooktext-respawnbeacon-usage": "Dacă un jucător moare în timp ce se află în raza farului de reapariție, acesta va reînvia la far în locul punctului său de reapariție. Jucătorii vor reînvia la far doar atunci când este activat. Raza farului poate fi modificată și activată sau dezactivată în interfața grafică a farului.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Setări Far de Reapariție",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Activat:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Jucătorii vor reînvia doar la far atunci când este activat.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Rază:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Jucătorii în această rază vor reînvia la acest far, în locul punctului lor de reapariție propriu."
+}

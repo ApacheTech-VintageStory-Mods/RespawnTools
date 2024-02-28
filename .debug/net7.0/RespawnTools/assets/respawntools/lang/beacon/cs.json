@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Oživovací stožár",
+  "handbooktitle-respawnbeacon-usage": "Použití",
+  "handbooktext-respawnbeacon-usage": "Pokud hráč zemře, když je v dosahu stožáru, oživne na stožáru místo vlastního bodu oživení. Hráči ožijí na stožáru pouze tehdy, když je povolen. Dosah stožáru lze změnit a zapnout a vypnout v rozhraní pro stožár.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Nastavení oživovacího stožáru",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Povoleno:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Hráči ožijí na stožáru pouze tehdy, když je povoleno.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Dosah:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Hráči v tomto dosahu ožijí u tohoto stožáru místo vlastního bodu oživení."
+}

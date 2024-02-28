@@ -1,0 +1,11 @@
+{
+  "block-respawnbeacon": "Marcador de Ressurreição",
+  "handbooktitle-respawnbeacon-usage": "Utilização",
+  "handbooktext-respawnbeacon-usage": "Se um jogador morrer enquanto estiver dentro do alcance do marcador, ele ressuscitará no marcador, em vez do seu próprio ponto de ressurreição. Os jogadores só ressuscitarão no marcador quando estiver ativado. O alcance do marcador pode ser alterado e ativado ou desativado na interface de usuário do marcador.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Configurações do Marcador de Ressurreição",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Ativado:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Os jogadores só ressuscitarão no marcador quando estiver ativado.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Alcance:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Jogadores dentro deste alcance ressuscitarão neste marcador, em vez do seu próprio ponto de ressurreição."
+}

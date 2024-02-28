@@ -1,0 +1,11 @@
+{
+  "block-respawnbeacon": "Herbakeningsbaken",
+  "handbooktitle-respawnbeacon-usage": "Gebruik",
+  "handbooktext-respawnbeacon-usage": "Als een speler sterft terwijl hij binnen het bereik van het baken is, zal hij respawnen bij het baken in plaats van zijn eigen respawn-punt. Spelers respawnen alleen bij het baken als het is ingeschakeld. Het bereik van het baken kan worden aangepast en in- en uitgeschakeld in de GUI van het baken.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Instellingen voor het Herbakeningsbaken",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Ingeschakeld:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Spelers respawnen alleen bij het baken als het is ingeschakeld.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Bereik:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spelers binnen dit bereik respawnen bij dit baken in plaats van hun eigen respawn-punt."
+}

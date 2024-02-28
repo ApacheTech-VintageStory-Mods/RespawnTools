@@ -1,0 +1,9 @@
+﻿{
+  "item-respawntablet": "复活药片",
+
+  "handbooktitle-respawntablet-usage": "使用",
+  "handbooktext-respawntablet-usage": "如果玩家手持复活药片，或者将其放在副手或背包槽中，并受到致命伤害，图腾会将玩家从死亡中拯救出来。复活药片必须在玩家的手中（主手或副手）或在背包槽中才能起作用。如果复活药片在快捷栏中，除非被选中，否则不起作用。复活药片只能使用一次，使用后消失。",
+
+  "handbooktitle-respawntablet-effect": "效果",
+  "handbooktext-respawntablet-effect": "激活后，复活药片会使玩家恢复到满血状态，移除所有现有的负面效果，并让玩家在短时间内发光。药片在死亡时消耗。"
+}

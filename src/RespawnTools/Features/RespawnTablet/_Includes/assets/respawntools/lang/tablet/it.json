@@ -1,0 +1,9 @@
+{
+  "item-respawntablet": "Tavoletta di Resurrezione",
+
+  "handbooktitle-respawntablet-usage": "Utilizzo",
+  "handbooktext-respawntablet-usage": "Se il giocatore tiene una tavoletta di resurrezione nella mano principale, mano secondaria o nello scomparto dello zaino e subisce altrimenti danni fatali, il totem salva il giocatore dalla morte. La tavoletta di resurrezione deve essere nella mano del giocatore (mano principale o secondaria) o nello scomparto dello zaino per funzionare. Non funziona se � nella barra rapida, a meno che non sia selezionata. La tavoletta pu� essere utilizzata solo una volta; scompare dopo l'uso.",
+
+  "handbooktitle-respawntablet-effect": "Effetto",
+  "handbooktext-respawntablet-effect": "Quando attivata, la tavoletta di resurrezione riporta il giocatore a piena salute, rimuove tutti gli effetti negativi esistenti e fa brillare il giocatore per un breve periodo di tempo. La tavoletta viene consumata alla morte."
+}

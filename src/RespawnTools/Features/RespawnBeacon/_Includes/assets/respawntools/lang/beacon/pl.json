@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Kaplica Odrodzenia",
+  "handbooktitle-respawnbeacon-usage": "Użycie",
+  "handbooktext-respawnbeacon-usage": "Jeśli gracz umiera w zasięgu kaplicy, odrodzi się w niej, a nie na swoim własnym punkcie odrodzenia. Gracze odradzają się tylko w kaplicy, gdy jest włączona. Zasięg kaplicy można zmieniać i włączać oraz wyłączać w interfejsie graficznym kaplicy.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Ustawienia Kaplicy Odrodzenia",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Włączone:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Gracze odradzają się tylko w kaplicy, gdy jest włączona.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Zasięg:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Gracze w tym zasięgu odradzają się w tej kaplicy, a nie na swoim własnym punkcie odrodzenia."
+}

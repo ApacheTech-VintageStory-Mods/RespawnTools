@@ -1,0 +1,9 @@
+{
+  "item-respawntablet": "Tableta de Resurrecci�n",
+
+  "handbooktitle-respawntablet-usage": "Uso",
+  "handbooktext-respawntablet-usage": "Si el jugador lleva una tableta de resurrecci�n en su mano principal, mano secundaria o ranura de mochila, y recibe da�o fatal de otro modo, el t�tem salvar� al jugador de la muerte. La tableta de resurrecci�n debe estar en la mano del jugador (mano principal o secundaria) o dentro de la ranura de la mochila para que funcione. No funciona si est� en la barra de acceso r�pido, a menos que est� seleccionada. La tableta solo se puede usar una vez; desaparece despu�s de su uso.",
+
+  "handbooktitle-respawntablet-effect": "Efecto",
+  "handbooktext-respawntablet-effect": "Cuando se activa, la tableta de resurrecci�n revive al jugador a plena salud, elimina todos los efectos negativos existentes y hace que el jugador brille durante un corto per�odo de tiempo. La tableta se consume al morir."
+}

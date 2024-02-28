@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Miesto znovuzrodenia",
+  "handbooktitle-respawnbeacon-usage": "Použitie",
+  "handbooktext-respawnbeacon-usage": "Ak hráč zomrie v dosahu miesta znovuzrodenia, zrodiť sa bude na mieste znovuzrodenia, a nie na svojom vlastnom mieste znovuzrodenia. Hráči sa budú zrodiť iba na mieste znovuzrodenia, ak je zapnuté. Dosah miesta znovuzrodenia možno zmeniť a zapnúť alebo vypnúť v rozhraní miesta znovuzrodenia.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Nastavenia miesta znovuzrodenia",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Zapnuté:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Hráči sa budú zrodiť iba na mieste znovuzrodenia, ak je zapnuté.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Dosah:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Hráči v tomto dosahu sa zrodiť na tomto mieste, a nie na svojom vlastnom mieste znovuzrodenia."
+}

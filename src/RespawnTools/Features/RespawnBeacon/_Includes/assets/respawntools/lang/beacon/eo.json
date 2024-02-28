@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Responddorno",
+  "handbooktitle-respawnbeacon-usage": "Uzo",
+  "handbooktext-respawnbeacon-usage": "Se ludanto mortas dum li estas en la raggio de la responddorno, li respondos ĉe la dorno anstataŭe ĉe sia propra respondpunkto. Ludantoj respondos nur ĉe la dorno, se ĝi estas ebligita. La raggio de la dorno povas esti ŝanĝita, kaj ĝi povas esti ebligita kaj malŝaltita en la GUI por la dorno.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Agordoj de la Responddorno",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Ebligita:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Ludantoj respondos nur ĉe la dorno, se ĝi estas ebligita.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Raggio:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Ludantoj en tiu ĉi raggio respondos ĉe tiu ĉi dorno anstataŭe ĉe sia propra respondpunkto."
+}

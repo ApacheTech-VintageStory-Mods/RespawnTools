@@ -1,0 +1,11 @@
+{
+  "block-respawnbeacon": "Ripetitore di Respawn",
+  "handbooktitle-respawnbeacon-usage": "Utilizzo",
+  "handbooktext-respawnbeacon-usage": "Se un giocatore muore mentre si trova nel raggio del ripetitore, risorger� presso il ripetitore anzich� nel proprio punto di respawn. I giocatori risorgeranno solo presso il ripetitore quando � attivato. Il raggio del ripetitore pu� essere modificato ed � possibile attivarlo e disattivarlo nell'interfaccia utente del ripetitore.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Impostazioni del Ripetitore di Respawn",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Attivato:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "I giocatori risorgeranno solo presso il ripetitore quando � attivato.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Raggio:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "I giocatori all'interno di questo raggio risorgeranno presso questo ripetitore anzich� nel proprio punto di respawn."
+}

@@ -1,0 +1,11 @@
+{
+  "block-respawnbeacon": "Återupplivningsfackla",
+  "handbooktitle-respawnbeacon-usage": "Användning",
+  "handbooktext-respawnbeacon-usage": "Om en spelare dör medan de är inom räckvidd för facklan, kommer de att återupplivas vid facklan, istället för deras egen återupplivningsplats. Spelare kommer endast återupplivas vid facklan när den är aktiverad. Räckvidden för facklan kan ändras och den kan aktiveras eller inaktiveras inom gränssnittet för facklan.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Inställningar för Återupplivningsfacklan",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Aktiverad:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Spelare kommer endast återupplivas vid facklan när den är aktiverad.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Räckvidd:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spelare inom detta område kommer att återupplivas vid denna fackla, istället för deras egen återupplivningsplats."
+}

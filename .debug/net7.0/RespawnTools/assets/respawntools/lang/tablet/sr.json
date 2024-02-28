@@ -1,0 +1,9 @@
+﻿{
+  "item-respawntablet": "Tableta za Ponovno Oživljavanje",
+
+  "handbooktitle-respawntablet-usage": "Korišćenje",
+  "handbooktext-respawntablet-usage": "Ako igrač drži tabletu za ponovno oživljavanje u svojoj glavnoj ruci, sporednoj ruci ili slotu ranca i dobije inače smrtonosne povrede, totem će spasiti igrača od smrti. Tableta za ponovno oživljavanje mora biti u igračevom ruci (glavna ruka ili sporedna ruka) ili u slotu ranca da bi funkcionisala. Ne radi ako je u traci za brzi pristup, osim ako nije odabrana. Tabletu možete koristiti samo jednom; nestaje nakon upotrebe.",
+
+  "handbooktitle-respawntablet-effect": "Efekat",
+  "handbooktext-respawntablet-effect": "Kada se aktivira, tableta za ponovno oživljavanje vraća igrača u potpuno zdravlje, uklanja sve postojeće negativne efekte i čini igrača da svetli tokom kratkog vremenskog perioda. Tableta se troši pri smrti."
+}

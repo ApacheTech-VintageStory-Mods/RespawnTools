@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Маяк відродження",
+  "handbooktitle-respawnbeacon-usage": "Використання",
+  "handbooktext-respawnbeacon-usage": "Якщо гравець помирає, будучи в зоні дії маяка, він відроджується біля маяка, а не власній точці відродження. Гравці відроджуються лише біля маяка, коли він активований. Діапазон дії маяка можна змінити, і його можна активувати або деактивувати в інтерфейсі для маяка.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Налаштування маяка відродження",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Активовано:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Гравці відроджуються лише біля маяка, коли він активований.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Діапазон дії:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Гравці в цій діапазоні відроджуються біля цього маяка, а не власній точці відродження."
+}

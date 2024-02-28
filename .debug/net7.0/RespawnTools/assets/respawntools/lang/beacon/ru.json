@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "Маяк воскрешения",
+  "handbooktitle-respawnbeacon-usage": "Использование",
+  "handbooktext-respawnbeacon-usage": "Если игрок умирает, находясь в радиусе действия маяка, он будет возрождаться у маяка, а не у своей собственной точки возрождения. Игроки могут возрождаться только у маяка, когда он включен. Радиус действия маяка можно изменить, и его можно включить и выключить в интерфейсе маяка.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "Настройки маяка воскрешения",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "Включено:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Игроки могут возрождаться у маяка только при его включении.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Радиус:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Игроки в пределах этого радиуса будут возрождаться у этого маяка, а не у своей собственной точки возрождения."
+}

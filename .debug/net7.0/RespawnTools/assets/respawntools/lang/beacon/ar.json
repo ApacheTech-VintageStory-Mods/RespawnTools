@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "منارة الإعادة",
+  "handbooktitle-respawnbeacon-usage": "الاستخدام",
+  "handbooktext-respawnbeacon-usage": "إذا مات اللاعب أثناء تواجده في مدى منارة الإعادة، سيعيد الظهور عند المنارة بدلاً من نقطة الإعادة الخاصة به. سيتمكن اللاعبون من العودة إلى المنارة فقط عندما يتم تفعيلها. يمكن تغيير مدى المنارة، ويمكن تفعيلها وإلغاء تفعيلها في واجهة المستخدم الرسومية للمنارة.",
+
+  "Features.RespawnBeacon.Dialogue.Title": "إعدادات منارة الإعادة",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "تم التفعيل:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "سيتمكن اللاعبون من العودة إلى المنارة فقط عندما تكون مفعلة.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "نصف القطر:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "سيعيد اللاعبون الذين يكونون ضمن هذا النصف القطري إلى هذه المنارة بدلاً من نقطة إعادتهم الخاصة."
+}

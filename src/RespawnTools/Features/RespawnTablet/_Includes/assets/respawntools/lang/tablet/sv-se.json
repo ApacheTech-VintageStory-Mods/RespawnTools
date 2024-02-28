@@ -1,0 +1,9 @@
+{
+  "item-respawntablet": "�terupplivningstablett",
+
+  "handbooktitle-respawntablet-usage": "Anv�ndning",
+  "handbooktext-respawntablet-usage": "Om spelaren h�ller en �terupplivningstablett i sin huvudhand, offhand eller ryggs�cksfack och annars f�r d�dlig skada, r�ddar totem spelaren fr�n d�den. �terupplivningstabletten m�ste vara i spelarens hand (huvudhand eller offhand) eller i ett ryggs�cksfack f�r att fungera. Den fungerar inte om den �r i verktygsf�ltet, om den inte �r vald. Tabletten kan bara anv�ndas en g�ng; den f�rsvinner efter anv�ndning.",
+
+  "handbooktitle-respawntablet-effect": "Effekt",
+  "handbooktext-respawntablet-effect": "N�r den aktiveras �terupplivar �terupplivningstabletten spelaren till full h�lsa, tar bort alla befintliga negativa effekter och l�ter spelaren lysa under en kort tid. Tabletten f�rbrukas vid d�d."
+}

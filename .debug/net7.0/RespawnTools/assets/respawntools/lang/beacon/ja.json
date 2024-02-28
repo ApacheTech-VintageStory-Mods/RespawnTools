@@ -1,0 +1,11 @@
+﻿{
+  "block-respawnbeacon": "リスポーンビーコン",
+  "handbooktitle-respawnbeacon-usage": "使用法",
+  "handbooktext-respawnbeacon-usage": "プレイヤーがビーコンの範囲内で死亡した場合、彼らはビーコンでリスポーンします。それ以外のリスポーン地点ではなくです。ビーコンが有効であるときにのみ、プレイヤーはビーコンでリスポーンします。ビーコンの範囲は変更でき、ビーコンのGUI内で有効または無効にできます。",
+
+  "Features.RespawnBeacon.Dialogue.Title": "リスポーンビーコンの設定",
+  "Features.RespawnBeacon.Dialogue.lblEnabled": "有効:",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "プレイヤーはビーコンが有効であるときにのみリスポーンします。",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "範囲:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "この範囲内のプレイヤーは、自分自身のリスポーン地点ではなく、このビーコンでリスポーンします。"
+}
