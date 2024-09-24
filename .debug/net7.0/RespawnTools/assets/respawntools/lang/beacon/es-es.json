@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Habilitado:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Los jugadores solo revivir�n en el punto de respawn cuando est� habilitado.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Rango:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Los jugadores dentro de este rango revivir�n en este punto en lugar de su propio punto de respawn."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Los jugadores dentro de este rango revivir�n en este punto en lugar de su propio punto de respawn.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Volumen ambiental:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "El volumen al que se reproducen los sonidos ambientales.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Volumen de reaparición:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "El volumen al que se reproducen los sonidos de reaparición."
 }

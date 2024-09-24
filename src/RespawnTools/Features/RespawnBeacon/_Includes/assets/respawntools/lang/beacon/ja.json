@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "有効:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "プレイヤーはビーコンが有効であるときにのみリスポーンします。",
   "Features.RespawnBeacon.Dialogue.lblRadius": "範囲:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "この範囲内のプレイヤーは、自分自身のリスポーン地点ではなく、このビーコンでリスポーンします。"
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "この範囲内のプレイヤーは、自分自身のリスポーン地点ではなく、このビーコンでリスポーンします。",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "環境音量:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "環境音が再生される音量です。",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "リスポーン音量:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "リスポーン時の音が再生される音量です。"
 }

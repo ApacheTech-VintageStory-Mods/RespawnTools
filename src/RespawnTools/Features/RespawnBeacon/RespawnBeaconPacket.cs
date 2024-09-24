@@ -29,4 +29,18 @@ public sealed class RespawnBeaconPacket
     /// <value>An instance of <see cref="BlockPos"/>, giving an absolute position within the gameworld.</value>
     [ProtoMember(3)]
     public BlockPos Position { get; init; }
+
+    /// <summary>
+    ///     Gets or sets the volume at which the ambient sounds are played.
+    /// </summary>
+    /// <value>An <see cref="int"/> value, determining the volume of the ambient sounds.</value>
+    [ProtoMember(4)]
+    public int AmbientVolume { get; init; }
+
+    /// <summary>
+    ///     Gets or sets the volume at which the respawn sounds are played.
+    /// </summary>
+    /// <value>An <see cref="int"/> value, determining the volume of the respawn sounds.</value>
+    [ProtoMember(5)]
+    public int RespawnVolume { get; init; }
 }

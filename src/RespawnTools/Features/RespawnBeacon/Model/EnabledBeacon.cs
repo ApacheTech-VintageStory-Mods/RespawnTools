@@ -24,20 +24,19 @@ public class EnabledBeacon : IEquatable<EnabledBeacon>
     /// </summary>
     /// <param name="pos">The position.</param>
     /// <param name="radius">The radius.</param>
-    private EnabledBeacon(BlockPos pos, int radius)
+    private EnabledBeacon(BlockEntityRespawnBeacon beacon)
     {
-        Position = pos;
-        Radius = radius;
+        Position = beacon.Pos;
+        Radius = beacon.Radius;
+        AmbientVolume = beacon.AmbientVolume;
+        RespawnVolume = beacon.RespawnVolume;
     }
 
     /// <summary>
     /// 	Initialises a new instance of the <see cref="EnabledBeacon"/> class.
     /// </summary>
     /// <param name="beacon">The block entity in the game world to populate values from.</param>
-    public static EnabledBeacon FromBlockEntity(BlockEntityRespawnBeacon beacon)
-    {
-        return new EnabledBeacon(beacon.Pos, beacon.Radius);
-    }
+    public static EnabledBeacon FromBlockEntity(BlockEntityRespawnBeacon beacon) => new(beacon);
 
     /// <summary>
     ///     Gets a value indicating whether the Respawn Beacon at the given BlockPos is enabled.
@@ -50,6 +49,18 @@ public class EnabledBeacon : IEquatable<EnabledBeacon>
     /// </summary>
     /// <value>An <see cref="int"/> value, determining the active radius of the beacon.</value>
     public int Radius { get; }
+
+    /// <summary>
+    ///     Gets or sets the volume at which the ambient sounds are played.
+    /// </summary>
+    /// <value>An <see cref="int"/> value, determining the volume of the ambient sounds.</value>
+    public int AmbientVolume { get; }
+
+    /// <summary>
+    ///     Gets or sets the volume at which the respawn sounds are played.
+    /// </summary>
+    /// <value>An <see cref="int"/> value, determining the volume of the respawn sounds.</value>
+    public int RespawnVolume { get; }
 
     /// <summary>
     ///     Indicates whether the current object is equal to another object, based on the block position alone.

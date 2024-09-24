@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Zapnuté:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Hráči sa budú zrodiť iba na mieste znovuzrodenia, ak je zapnuté.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Dosah:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Hráči v tomto dosahu sa zrodiť na tomto mieste, a nie na svojom vlastnom mieste znovuzrodenia."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Hráči v tomto dosahu sa zrodiť na tomto mieste, a nie na svojom vlastnom mieste znovuzrodenia.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Hlasitosť prostredia:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Hlasitosť, pri ktorej sú prehrávané zvuky prostredia.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Hlasitosť oživenia:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Hlasitosť, pri ktorej sú prehrávané zvuky oživenia."
 }

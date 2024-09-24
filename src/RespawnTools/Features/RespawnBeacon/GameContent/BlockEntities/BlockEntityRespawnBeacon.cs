@@ -31,7 +31,7 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
     ///     Gets the light colour and brightness.
     /// </summary>
     /// <value>The light levels emitted from this block.</value>
-    public byte[] LightHsv => new byte[] { 4, 1, (byte)(Enabled ? 18 : 4) };
+    public byte[] LightHsv => [4, 1, (byte)(Enabled ? 18 : 4)];
 
     /// <summary>
     ///     Gets or sets a value indicating whether the Respawn Beacon at the given BlockPos is enabled.
@@ -44,6 +44,18 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
     /// </summary>
     /// <value>An <see cref="int"/> value, determining the active radius of the beacon.</value>
     public int Radius { get; set; } = 128;
+
+    /// <summary>
+    ///     Gets or sets the volume at which the ambient sounds are played.
+    /// </summary>
+    /// <value>An <see cref="int"/> value, determining the volume of the ambient sounds.</value>
+    public int AmbientVolume { get; set; } = 100;
+
+    /// <summary>
+    ///     Gets or sets the volume at which the arespawn sounds are played.
+    /// </summary>
+    /// <value>An <see cref="int"/> value, determining the volume of the respawn sounds.</value>
+    public int RespawnVolume { get; set; } = 100;
 
     /// <summary>
     ///     This method is called right after the block entity was spawned or right after it was loaded from a newly loaded chunk.
@@ -74,6 +86,7 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
     public override void OnBlockBroken(IPlayer byPlayer = null)
     {
         Enabled = false;
+        RespawnBeacon.UpdateBeaconCache(this, false);
         if (Api is ICoreServerAPI sapi)
         {
             sapi.World.BlockAccessor.RemoveBlockLight(LightHsv, Pos);
@@ -90,6 +103,8 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
         base.ToTreeAttributes(tree);
         tree.SetBool("Enabled", Enabled);
         tree.SetInt("Radius", Radius);
+        tree.SetInt("AmbientVolume", AmbientVolume);
+        tree.SetInt("RespawnVolume", RespawnVolume);
         if (Api.Side.IsClient()) return;
         RespawnBeacon.UpdateBeaconCache(this, true);
     }
@@ -108,6 +123,8 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
         base.FromTreeAttributes(tree, worldForResolving);
         Enabled = tree.GetBool("Enabled");
         Radius = tree.GetInt("Radius");
+        AmbientVolume = tree.GetInt("AmbientVolume");
+        RespawnVolume = tree.GetInt("RespawnVolume");
         if (worldForResolving.Api.Side.IsClient()) return;
         ApiEx.ServerMain.WorldMap.UpdateLighting(Block.Id, Block.Id, Pos);
     }
@@ -144,7 +161,7 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
         
         // SFX.
         var soundFile = AssetLocation.Create("respawntools:sounds/respawnbeacon-spawn");
-        Api.World.PlaySoundAt(soundFile, Pos.X, Pos.Y, Pos.Z);
+        Api.World.PlaySoundAt(soundFile, Pos.X, Pos.Y, Pos.Z, volume: RespawnVolume / 100f);
     }
 
     private void SpawnActiveParticles(float dt)

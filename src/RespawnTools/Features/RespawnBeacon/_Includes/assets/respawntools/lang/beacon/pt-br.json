@@ -1,11 +1,17 @@
 {
   "block-respawnbeacon": "Marcador de Reviver",
   "handbooktitle-respawnbeacon-usage": "Uso",
-  "handbooktext-respawnbeacon-usage": "Se um jogador morrer enquanto estiver dentro do alcance do marcador, ele reviver· no marcador, em vez do seu prÛprio ponto de reviver. Os jogadores sÛ reviver„o no marcador quando estiver habilitado. O alcance do marcador pode ser alterado e habilitado ou desabilitado na interface do usu·rio do marcador.",
+  "handbooktext-respawnbeacon-usage": "Se um jogador morrer enquanto estiver dentro do alcance do marcador, ele reviver√° no marcador, em vez do seu pr√≥prio ponto de reviver. Os jogadores s√≥ reviver√£o no marcador quando estiver habilitado. O alcance do marcador pode ser alterado e habilitado ou desabilitado na interface do usu√°rio do marcador.",
 
-  "Features.RespawnBeacon.Dialogue.Title": "ConfiguraÁıes do Marcador de Reviver",
+  "Features.RespawnBeacon.Dialogue.Title": "Configura√ß√µes do Marcador de Reviver",
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Habilitado:",
-  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Os jogadores sÛ reviver„o no marcador quando estiver habilitado.",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Os jogadores s√≥ reviver√£o no marcador quando estiver habilitado.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Alcance:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Jogadores dentro deste alcance reviver„o neste marcador, em vez do seu prÛprio ponto de reviver."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Jogadores dentro deste alcance reviver√£o neste marcador, em vez do seu pr√≥prio ponto de reviver.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Volume ambiente:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "O volume em que os sons ambientes s√£o reproduzidos.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Volume de ressurgimento:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "O volume em que os sons de ressurgimento s√£o reproduzidos."
 }

@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Активовано:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Гравці відроджуються лише біля маяка, коли він активований.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Діапазон дії:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Гравці в цій діапазоні відроджуються біля цього маяка, а не власній точці відродження."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Гравці в цій діапазоні відроджуються біля цього маяка, а не власній точці відродження.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Гучність оточення:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Гучність, з якою відтворюються звуки оточення.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Гучність відродження:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Гучність, з якою відтворюються звуки відродження."
 }

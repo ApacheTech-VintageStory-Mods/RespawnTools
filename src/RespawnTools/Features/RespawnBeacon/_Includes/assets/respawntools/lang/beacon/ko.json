@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "활성화:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "비컨이 활성화되어 있는 경우에만 플레이어가 리스폰합니다.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "범위:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "이 범위 내에 있는 플레이어는 자신의 리스폰 지점이 아닌 이 비컨에서 리스폰합니다."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "이 범위 내에 있는 플레이어는 자신의 리스폰 지점이 아닌 이 비컨에서 리스폰합니다.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "환경 음량:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "환경 사운드가 재생되는 음량입니다.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "부활 음량:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "부활 사운드가 재생되는 음량입니다."
 }

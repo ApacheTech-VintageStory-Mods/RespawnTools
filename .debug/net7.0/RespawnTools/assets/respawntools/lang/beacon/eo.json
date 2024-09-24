@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Ebligita:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Ludantoj respondos nur ĉe la dorno, se ĝi estas ebligita.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Raggio:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Ludantoj en tiu ĉi raggio respondos ĉe tiu ĉi dorno anstataŭe ĉe sia propra respondpunkto."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Ludantoj en tiu ĉi raggio respondos ĉe tiu ĉi dorno anstataŭe ĉe sia propra respondpunkto.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Mediala Volumo:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "La volumo, je kiu la mediaj sonoj estas ludataj.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Reviviga Volumo:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "La volumo, je kiu la revivigaj sonoj estas ludataj."
 }

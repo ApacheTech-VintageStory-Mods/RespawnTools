@@ -2,7 +2,7 @@
 using System;
 using System.Timers;
 using ApacheTech.Common.Extensions.System;
-using ApacheTech.VintageMods.RespawnTools.Core;
+using Gantry.Core.Annotation;
 using Gantry.Core.Extensions.Helpers;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
@@ -31,17 +31,17 @@ public class ItemRespawnTablet : Item
         base.OnLoaded(coreApi);
 
         _particles = new SimpleParticleProperties(
-            10f,
-            100f,
-            0,
-            new Vec3d(),
-            new Vec3d(),
-            new Vec3f(-0.5f, -0.5f, -0.5f),
-            new Vec3f(0.5f, 1.5f, 0.5f),
-            6.0f,
-            0f,
-            0.3f,
-            1.25f)
+            minQuantity: 10f,
+            maxQuantity: 100f,
+            color: 0,
+            minPos: new Vec3d(),
+            maxPos: new Vec3d(),
+            minVelocity: new Vec3f(-0.5f, -0.5f, -0.5f),
+            maxVelocity: new Vec3f(0.5f, 1.5f, 0.5f),
+            lifeLength: 6.0f,
+            gravityEffect: 0f,
+            minSize: 0.3f,
+            maxSize: 1.25f)
         {
             SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
         };

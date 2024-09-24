@@ -1,11 +1,17 @@
 {
-  "block-respawnbeacon": "Marcador de RessurreiÁ„o",
-  "handbooktitle-respawnbeacon-usage": "UtilizaÁ„o",
-  "handbooktext-respawnbeacon-usage": "Se um jogador morrer enquanto estiver dentro do alcance do marcador, ele ressuscitar· no marcador, em vez do seu prÛprio ponto de ressurreiÁ„o. Os jogadores sÛ ressuscitar„o no marcador quando estiver ativado. O alcance do marcador pode ser alterado e ativado ou desativado na interface de usu·rio do marcador.",
+  "block-respawnbeacon": "Marcador de Ressurrei√ß√£o",
+  "handbooktitle-respawnbeacon-usage": "Utiliza√ß√£o",
+  "handbooktext-respawnbeacon-usage": "Se um jogador morrer enquanto estiver dentro do alcance do marcador, ele ressuscitar√° no marcador, em vez do seu pr√≥prio ponto de ressurrei√ß√£o. Os jogadores s√≥ ressuscitar√£o no marcador quando estiver ativado. O alcance do marcador pode ser alterado e ativado ou desativado na interface de usu√°rio do marcador.",
 
-  "Features.RespawnBeacon.Dialogue.Title": "ConfiguraÁıes do Marcador de RessurreiÁ„o",
+  "Features.RespawnBeacon.Dialogue.Title": "Configura√ß√µes do Marcador de Ressurrei√ß√£o",
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Ativado:",
-  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Os jogadores sÛ ressuscitar„o no marcador quando estiver ativado.",
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Os jogadores s√≥ ressuscitar√£o no marcador quando estiver ativado.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Alcance:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Jogadores dentro deste alcance ressuscitar„o neste marcador, em vez do seu prÛprio ponto de ressurreiÁ„o."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Jogadores dentro deste alcance ressuscitar√£o neste marcador, em vez do seu pr√≥prio ponto de ressurrei√ß√£o.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Volume ambiente:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "O volume a que os sons ambientes s√£o reproduzidos.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Volume de renascimento:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "O volume a que os sons de renascimento s√£o reproduzidos."
 }

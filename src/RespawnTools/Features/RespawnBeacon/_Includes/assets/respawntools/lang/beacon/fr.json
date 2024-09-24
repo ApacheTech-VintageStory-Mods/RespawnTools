@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Activ�e :",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Les joueurs ne r�appara�tront qu'� la balise lorsqu'elle est activ�e.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Port�e :",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Les joueurs se trouvant dans cette port�e r�appara�tront � cette balise plut�t qu'� leur propre point de r�apparition."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Les joueurs se trouvant dans cette port�e r�appara�tront � cette balise plut�t qu'� leur propre point de r�apparition.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Volume ambiant:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Le volume auquel les sons ambiants sont joués.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Volume de réapparition:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Le volume auquel les sons de réapparition sont joués."
 }

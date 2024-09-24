@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Attivato:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "I giocatori risorgeranno solo presso il ripetitore quando � attivato.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Raggio:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "I giocatori all'interno di questo raggio risorgeranno presso questo ripetitore anzich� nel proprio punto di respawn."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "I giocatori all'interno di questo raggio risorgeranno presso questo ripetitore anzich� nel proprio punto di respawn.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Volume ambientale:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Il volume al quale vengono riprodotti i suoni ambientali.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Volume di respawn:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Il volume al quale vengono riprodotti i suoni di respawn."
 }

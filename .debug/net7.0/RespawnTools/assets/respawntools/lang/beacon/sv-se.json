@@ -1,11 +1,17 @@
 {
-  "block-respawnbeacon": "�terupplivningsfackla",
-  "handbooktitle-respawnbeacon-usage": "Anv�ndning",
-  "handbooktext-respawnbeacon-usage": "Om en spelare d�r medan de �r inom r�ckvidd f�r facklan, kommer de att �terupplivas vid facklan, ist�llet f�r deras egen �terupplivningsplats. Spelare kommer endast �terupplivas vid facklan n�r den �r aktiverad. R�ckvidden f�r facklan kan �ndras och den kan aktiveras eller inaktiveras inom gr�nssnittet f�r facklan.",
+  "block-respawnbeacon": "Återupplivningsfackla",
+  "handbooktitle-respawnbeacon-usage": "Användning",
+  "handbooktext-respawnbeacon-usage": "Om en spelare dör medan de är inom räckvidd för facklan, kommer de att återupplivas vid facklan, istället för deras egen återupplivningsplats. Spelare kommer endast återupplivas vid facklan när den är aktiverad. Räckvidden för facklan kan ändras och den kan aktiveras eller inaktiveras inom gränssnittet för facklan.",
 
-  "Features.RespawnBeacon.Dialogue.Title": "Inst�llningar f�r �terupplivningsfacklan",
+  "Features.RespawnBeacon.Dialogue.Title": "Inställningar för återupplivningsfacklan",
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Aktiverad:",
-  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Spelare kommer endast �terupplivas vid facklan n�r den �r aktiverad.",
-  "Features.RespawnBeacon.Dialogue.lblRadius": "R�ckvidd:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spelare inom detta omr�de kommer att �terupplivas vid denna fackla, ist�llet f�r deras egen �terupplivningsplats."
+  "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Spelare kommer endast återupplivas vid facklan när den är aktiverad.",
+  "Features.RespawnBeacon.Dialogue.lblRadius": "Räckvidd:",
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spelare inom detta område kommer att återupplivas vid denna fackla, istället för deras egen återupplivningsplats.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Miljövolym:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Volymen på vilken miljöljuden spelas upp.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Återfödelsevolym:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Volymen på vilken återfödelseljuden spelas upp."
 }

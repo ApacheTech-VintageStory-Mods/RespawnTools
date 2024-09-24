@@ -3,8 +3,9 @@ using ApacheTech.Common.Extensions.System;
 using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.Dialogue;
 using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 using Gantry.Core;
-using Gantry.Core.DependencyInjection;
+using Gantry.Core.Annotation;
 using Gantry.Core.Extensions.GameContent.Gui;
+using Gantry.Core.Hosting;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
@@ -56,7 +57,7 @@ public class BlockRespawnBeacon : Block
     public override bool ShouldPlayAmbientSound(IWorldAccessor world, BlockPos pos)
     {
         if (pos is null || world.BlockAccessor.GetBlockEntity(pos) is not BlockEntityRespawnBeacon beacon) return false;
-        Sounds.AmbientBlockCount = 20f - beacon.Radius / 128f * 10f;
+        Sounds.AmbientBlockCount = 100f - beacon.AmbientVolume;
         return beacon.Enabled;
     }
 
@@ -80,7 +81,7 @@ public class BlockRespawnBeacon : Block
         var dialogue = IOC.Services.CreateInstance<RespawnBeaconDialogue>(beacon);
         dialogue.OnOkAction = packet =>
         {
-            ApiEx.Client.Network.GetChannel("RespawnBeacon").SendPacket(packet);
+            ApiEx.Client.Network.GetChannel("RespawnBeacon").SendPacket(packet);            
         };
         dialogue.ToggleGui();
         return true;
@@ -101,17 +102,17 @@ public class BlockRespawnBeacon : Block
         }
 
         IdleParticles = new SimpleParticleProperties(
-            1f,
-            1f,
-            0,
-            new Vec3d(),
-            new Vec3d(),
-            new Vec3f(-0.1f, -0.1f, -0.1f),
-            new Vec3f(0.1f, 0.3f, 0.1f),
-            1.0f,
-            0f,
-            0.1f,
-            0.75f)
+            minQuantity: 1f,
+            maxQuantity: 5f,
+            color: 0,
+            minPos: new Vec3d(),
+            maxPos: new Vec3d(),
+            minVelocity: new Vec3f(-0.1f, -0.1f, -0.1f),
+            maxVelocity: new Vec3f(0.1f, 0.3f, 0.1f),
+            lifeLength: 1.0f,
+            gravityEffect: 0f,
+            minSize: 0.1f,
+            maxSize: 0.75f)
         {
             SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
         };
@@ -120,17 +121,17 @@ public class BlockRespawnBeacon : Block
 
 
         ActiveParticles = new SimpleParticleProperties(
-            10f,
-            100f,
-            0,
-            new Vec3d(),
-            new Vec3d(),
-            new Vec3f(-0.5f, -0.5f, -0.5f),
-            new Vec3f(0.5f, 1.5f, 0.5f),
-            6.0f,
-            0f,
-            0.3f,
-            1.25f)
+            minQuantity: 10f,
+            maxQuantity: 100f,
+            color: 0,
+            minPos: new Vec3d(),
+            maxPos: new Vec3d(),
+            minVelocity: new Vec3f(-0.5f, -0.5f, -0.5f),
+            maxVelocity: new Vec3f(0.5f, 1.5f, 0.5f),
+            lifeLength: 6.0f,
+            gravityEffect: 0f,
+            minSize: 0.3f,
+            maxSize: 1.25f)
         {
             SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
         };
@@ -162,6 +163,7 @@ public class BlockRespawnBeacon : Block
     /// </summary>
     /// <param name="fromPlayer">The player that sent the packet.</param>
     /// <param name="packet">The packet.</param>
+    [RunsOn(EnumAppSide.Server)]
     private static void OnClientPacketReceived(IServerPlayer fromPlayer, RespawnBeaconPacket packet)
     {
         var blockAccessor = ApiEx.ServerMain.GetBlockAccessorBulkUpdate(true, true);
@@ -169,9 +171,11 @@ public class BlockRespawnBeacon : Block
         if (!beacon.Pos.Equals(packet.Position)) return;
 
         beacon.Radius = packet.Radius;
+        beacon.AmbientVolume = packet.AmbientVolume;
+        beacon.RespawnVolume = packet.RespawnVolume;
         beacon.Enabled = packet.Enabled;
 
-        RespawnBeacon.UpdateBeaconCache(beacon, true);
+        RespawnBeacon.UpdateBeaconCache(beacon, packet.Enabled);
 
         blockAccessor.RemoveBlockLight(beacon.LightHsv.With(p => p[2] = 31), beacon.Pos);
         blockAccessor.MarkBlockDirty(beacon.Pos);

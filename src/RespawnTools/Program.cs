@@ -1,7 +1,7 @@
 ﻿using ApacheTech.Common.DependencyInjection.Abstractions;
-using Gantry.Core.DependencyInjection;
-using Gantry.Services.FileSystem.DependencyInjection;
-using Gantry.Services.HarmonyPatches.DependencyInjection;
+using Gantry.Core.Hosting;
+using Gantry.Services.FileSystem.Hosting;
+using Gantry.Services.HarmonyPatches.Hosting;
 using Vintagestory.API.Common;
 
 // ReSharper disable UnusedType.Global
@@ -20,11 +20,17 @@ namespace ApacheTech.VintageMods.RespawnTools;
 ///     instantiating, and adding Application specific services to the IOC Container.
 /// </remarks>
 /// <seealso cref="ModHost" />
-public sealed class Program : ModHost
+public sealed class Program() : ModHost(
+#if DEBUG
+    debugMode: true
+#else
+    debugMode: false
+#endif
+    )
 {
     protected override void ConfigureUniversalModServices(IServiceCollection services, ICoreAPI api)
     {
-        services.AddFileSystemService(o => o.RegisterSettingsFiles = false);
-        services.AddHarmonyPatchingService(o => o.AutoPatchModAssembly = true);
+        services.AddFileSystemService(api, o => o.RegisterSettingsFiles = false);
+        services.AddHarmonyPatchingService(api, o => o.AutoPatchModAssembly = true);
     }
 }

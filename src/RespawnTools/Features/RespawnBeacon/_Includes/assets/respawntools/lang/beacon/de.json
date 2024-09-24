@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Aktiviert:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Spieler k�nnen nur am Feuer wiederbelebt werden, wenn es aktiviert ist.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Radius:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spieler innerhalb dieses Radius werden am Feuer wiederbelebt, anstatt an ihrem eigenen Wiederbelebungspunkt."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spieler innerhalb dieses Radius werden am Feuer wiederbelebt, anstatt an ihrem eigenen Wiederbelebungspunkt.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Umgebungslautstärke:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Die Lautstärke, mit der die Umgebungsgeräusche abgespielt werden.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Wiederbelebungslautstärke:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Die Lautstärke, mit der die Wiederbelebungstöne abgespielt werden."
 }

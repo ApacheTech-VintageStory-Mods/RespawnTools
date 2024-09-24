@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Ingeschakeld:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Spelers respawnen alleen bij het baken als het is ingeschakeld.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Bereik:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spelers binnen dit bereik respawnen bij dit baken in plaats van hun eigen respawn-punt."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Spelers binnen dit bereik respawnen bij dit baken in plaats van hun eigen respawn-punt.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Omgevingsvolume:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Het volume waarop de omgevingsgeluiden worden afgespeeld.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Herlevingsvolume:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Het volume waarop de herlevingsgeluiden worden afgespeeld."
 }

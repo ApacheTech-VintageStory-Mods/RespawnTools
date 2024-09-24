@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Povoleno:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Hráči ožijí na stožáru pouze tehdy, když je povoleno.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Dosah:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Hráči v tomto dosahu ožijí u tohoto stožáru místo vlastního bodu oživení."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Hráči v tomto dosahu ožijí u tohoto stožáru místo vlastního bodu oživení.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Hlasitost prostředí:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Hlasitost, při které jsou přehrávány zvuky prostředí.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Hlasitost oživení:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Hlasitost, při které jsou přehrávány zvuky oživení."
 }

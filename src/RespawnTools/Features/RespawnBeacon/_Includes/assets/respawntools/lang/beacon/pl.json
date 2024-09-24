@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Włączone:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Gracze odradzają się tylko w kaplicy, gdy jest włączona.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Zasięg:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Gracze w tym zasięgu odradzają się w tej kaplicy, a nie na swoim własnym punkcie odrodzenia."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Gracze w tym zasięgu odradzają się w tej kaplicy, a nie na swoim własnym punkcie odrodzenia.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Głośność otoczenia:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Głośność, z jaką odtwarzane są dźwięki otoczenia.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Głośność odrodzenia:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Głośność, z jaką odtwarzane są dźwięki odradzania się."
 }

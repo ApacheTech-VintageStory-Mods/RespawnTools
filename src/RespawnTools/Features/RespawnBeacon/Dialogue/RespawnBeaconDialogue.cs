@@ -1,8 +1,8 @@
 ﻿using System;
 using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 using Gantry.Core;
-using Gantry.Core.DependencyInjection.Annotation;
-using Gantry.Core.GameContent.GUI;
+using Gantry.Core.GameContent.GUI.Abstractions;
+using Gantry.Core.Hosting.Annotation;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 
@@ -19,7 +19,9 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     private readonly BlockEntityRespawnBeacon _beacon;
     private bool _enabled;
     private int _radius;
-
+    private int _ambientVolume;
+    private int _respawnVolume;
+    
     /// <summary>
     /// 	Initialises a new instance of the <see cref="RespawnBeaconDialogue"/> class.
     /// </summary>
@@ -32,6 +34,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         _beacon = beacon;
         _enabled = _beacon.Enabled;
         _radius = _beacon.Radius;
+        _ambientVolume = _beacon.AmbientVolume;
+        _respawnVolume = _beacon.RespawnVolume;
         ModalTransparency = 0.4f;
         Alignment = EnumDialogArea.CenterMiddle;
         Title = LangEntry("Title");
@@ -42,10 +46,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     /// </summary>
     /// <param name="code">The entry to return.</param>
     /// <returns>A localised <see cref="string"/>, for the specified language file code.</returns>
-    private static string LangEntry(string code)
-    {
-        return LangEx.FeatureString("RespawnBeacon.Dialogue", code);
-    }
+    private static string LangEntry(string code) 
+        => LangEx.FeatureString("RespawnBeacon.Dialogue", code);
 
     /// <summary>
     ///     Gets or sets the action to perform when the used presses the OK button.
@@ -60,6 +62,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     {
         if (!IsOpened()) return;
         SingleComposer.GetSlider("sldRadius").SetValues(_radius, 0, 128, 1);
+        SingleComposer.GetSlider("sldAmbientVolume").SetValues(_ambientVolume, 0, 100, 1);
+        SingleComposer.GetSlider("sldRespawnVolume").SetValues(_respawnVolume, 0, 100, 1);
         SingleComposer.GetSwitch("btnEnabled").SetValue(_enabled);
     }
 
@@ -70,10 +74,11 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     protected override void ComposeBody(GuiComposer composer)
     {
         var labelFont = CairoFont.WhiteSmallText();
-        var topBounds = ElementBounds.FixedSize(400, 30);
-        var left = ElementBounds.FixedSize(100, 30).FixedUnder(topBounds, 10);
+        var topBounds = ElementBounds.FixedSize(600, 30);
+
+        var left = ElementBounds.FixedSize(200, 30).FixedUnder(topBounds, 10);
         var right = ElementBounds.FixedSize(270, 30).FixedUnder(topBounds, 10).FixedRightOf(left, 10);
-        var controlRowBoundsRightFixed = ElementBounds.FixedSize(100, 30).WithAlignment(EnumDialogArea.RightFixed);
+        var controlRowBoundsRightFixed = ElementBounds.FixedSize(200, 30).WithAlignment(EnumDialogArea.RightFixed);
 
         composer
             .AddStaticText(LangEntry("lblRadius"), labelFont, EnumTextOrientation.Right, left)
@@ -81,7 +86,25 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
             .AddSlider(OnRadiusChanged, right, "sldRadius");
 
 
-        left = ElementBounds.FixedSize(100, 30).FixedUnder(left, 10);
+        left = ElementBounds.FixedSize(200, 30).FixedUnder(left, 10);
+        right = ElementBounds.FixedSize(270, 30).FixedUnder(right, 10).FixedRightOf(left, 10);
+
+        composer
+            .AddStaticText(LangEntry("lblAmbientVolume"), labelFont, EnumTextOrientation.Right, left)
+            .AddHoverText(LangEntry("lblAmbientVolume.HoverText"), labelFont, 260, left)
+            .AddSlider(OnAmbientVolumeChanged, right, "sldAmbientVolume");
+
+
+        left = ElementBounds.FixedSize(200, 30).FixedUnder(left, 10);
+        right = ElementBounds.FixedSize(270, 30).FixedUnder(right, 10).FixedRightOf(left, 10);
+
+        composer
+            .AddStaticText(LangEntry("lblRespawnVolume"), labelFont, EnumTextOrientation.Right, left)
+            .AddHoverText(LangEntry("lblRespawnVolume.HoverText"), labelFont, 260, left)
+            .AddSlider(OnRespawnVolumeChanged, right, "sldRespawnVolume");
+
+
+        left = ElementBounds.FixedSize(200, 30).FixedUnder(left, 10);
         right = ElementBounds.FixedSize(270, 30).FixedUnder(right, 10).FixedRightOf(left, 10);
 
         composer
@@ -98,6 +121,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         {
             Enabled = _enabled,
             Radius = _radius,
+            AmbientVolume = _ambientVolume,
+            RespawnVolume = _respawnVolume,
             Position = _beacon.Pos
         });
         return TryClose();
@@ -111,6 +136,18 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     private bool OnRadiusChanged(int radius)
     {
         _radius = radius;
+        return true;
+    }
+
+    private bool OnAmbientVolumeChanged(int ambientVolume)
+    {
+        _ambientVolume = ambientVolume;
+        return true;
+    }
+
+    private bool OnRespawnVolumeChanged(int respawnVolume)
+    {
+        _respawnVolume = respawnVolume;
         return true;
     }
 }

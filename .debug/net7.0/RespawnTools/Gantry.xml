@@ -301,6 +301,62 @@
             A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
             </returns>
         </member>
+        <member name="T:Gantry.Core.Annotation.ClientSideAttribute">
+            <summary>
+                Indicates that the decorated member or object is only meant for used on the client. It is up to the developer to enforce this rule.
+            </summary>
+            <seealso cref="T:System.Attribute" />
+        </member>
+        <member name="M:Gantry.Core.Annotation.ClientSideAttribute.#ctor">
+            <summary>
+             	Initialises a new instance of the <see cref="T:Gantry.Core.Annotation.ClientSideAttribute"/> class.
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Annotation.RunsOnAttribute">
+            <summary>
+                Indicates that the decorated member or object is only meant for use on a specified app side. It is up to the developer to enforce this rule.
+            </summary>
+            <seealso cref="T:System.Attribute" />
+        </member>
+        <member name="P:Gantry.Core.Annotation.RunsOnAttribute.Side">
+            <summary>
+                Gets the acceptable app side.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Annotation.RunsOnAttribute.#ctor(Vintagestory.API.Common.EnumAppSide)">
+            <summary>
+             	Initialises a new instance of the <see cref="T:Gantry.Core.Annotation.RunsOnAttribute"/> class.
+            </summary>
+            <param name="side">The app side that this handler should be registered on.</param>
+        </member>
+        <member name="M:Gantry.Core.Annotation.RunsOnAttribute.ShouldRun(Vintagestory.API.Common.EnumAppSide)">
+            <summary>
+                Determines whether the target should run on the specified app side.
+            </summary>
+            <param name="side">The side.</param>
+        </member>
+        <member name="T:Gantry.Core.Annotation.ServerSideAttribute">
+            <summary>
+                Indicates that the decorated member or object is only meant for used on the server. It is up to the developer to enforce this rule.
+            </summary>
+            <seealso cref="T:System.Attribute" />
+        </member>
+        <member name="M:Gantry.Core.Annotation.ServerSideAttribute.#ctor">
+            <summary>
+             	Initialises a new instance of the <see cref="T:Gantry.Core.Annotation.ServerSideAttribute"/> class.
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Annotation.UniversalAttribute">
+            <summary>
+                Indicates that the decorated member or object is meant for used on both the client, and the server. It is up to the developer to enforce this rule.
+            </summary>
+            <seealso cref="T:System.Attribute" />
+        </member>
+        <member name="M:Gantry.Core.Annotation.UniversalAttribute.#ctor">
+            <summary>
+             	Initialises a new instance of the <see cref="T:Gantry.Core.Annotation.UniversalAttribute"/> class.
+            </summary>
+        </member>
         <member name="T:Gantry.Core.ApiEx">
             <summary>
                 Provides access to the game's core API from anywhere, within a static context.
@@ -308,6 +364,11 @@
             <remarks>
                 Use api.UseGantry(options) to configure this helper before use.
             </remarks>
+        </member>
+        <member name="P:Gantry.Core.ApiEx.MainThread">
+            <summary>
+                The main thread for the current app side.
+            </summary>
         </member>
         <member name="P:Gantry.Core.ApiEx.Client">
             <summary>
@@ -330,11 +391,6 @@
                 Cast to ICoreServerAPI, or ICoreClientAPI, to access side specific features.
             </summary>
         </member>
-        <member name="P:Gantry.Core.ApiEx.Log">
-            <summary>
-                Side-agnostic file-based logging facility.
-            </summary>
-        </member>
         <member name="P:Gantry.Core.ApiEx.ClientMain">
             <summary>
                 The concrete implementation of the <see cref="T:Vintagestory.API.Client.IClientWorldAccessor"/> interface.<br/>
@@ -353,34 +409,18 @@
                 The <see cref="T:Vintagestory.Server.ServerMain"/> instance that controls access to features within  the gameworld.
             </value>
         </member>
+        <member name="P:Gantry.Core.ApiEx.Side">
+            <summary>
+                Gets the current app-side.
+            </summary>
+            <value>A <see cref="T:Vintagestory.API.Common.EnumAppSide"/> value, representing current app-side; Client, or Server.</value>
+        </member>
         <member name="M:Gantry.Core.ApiEx.Run(System.Action,System.Action)">
             <summary>
                 Invokes an action, based on whether it's being called by the client, or the server.
             </summary>
             <param name="clientAction">The client action.</param>
             <param name="serverAction">The server action.</param>
-        </member>
-        <member name="M:Gantry.Core.ApiEx.Run(System.Action{Vintagestory.API.Client.ICoreClientAPI},System.Action{Vintagestory.API.Server.ICoreServerAPI})">
-            <summary>
-                Invokes an action, based on whether it's being called by the client, or the server.
-            </summary>
-            <param name="clientAction">The client action.</param>
-            <param name="serverAction">The server action.</param>
-        </member>
-        <member name="M:Gantry.Core.ApiEx.Run(Vintagestory.API.Common.EnumAppSide,System.Action{Vintagestory.API.Client.ICoreClientAPI},System.Action{Vintagestory.API.Server.ICoreServerAPI})">
-            <summary>
-                Invokes an action, based on whether it's being called by the client, or the server.
-            </summary>
-            <param name="side">The app-side to run the action on.</param>
-            <param name="clientAction">The client action.</param>
-            <param name="serverAction">The server action.</param>
-        </member>
-        <member name="M:Gantry.Core.ApiEx.Run(Vintagestory.API.Common.EnumAppSide,System.Action{Vintagestory.API.Common.ICoreAPI})">
-            <summary>
-                Invokes an action, based on whether it's being called by the client, or the server.
-            </summary>
-            <param name="side">The app-side to run the action on.</param>
-            <param name="universalAction">The universal action.</param>
         </member>
         <member name="M:Gantry.Core.ApiEx.Run``1(System.Action{``0},System.Action{``0},``0)">
             <summary>
@@ -392,6 +432,16 @@
             <param name="clientAction">The client action.</param>
             <param name="serverAction">The server action.</param>
             <param name="parameter">The parameter to pass to the invoked action.</param>
+        </member>
+        <member name="M:Gantry.Core.ApiEx.RunAsync(System.Func{Vintagestory.API.Client.ICoreClientAPI,System.Threading.Tasks.Task},System.Func{Vintagestory.API.Server.ICoreServerAPI,System.Threading.Tasks.Task})">
+            <summary>
+                Invokes an action, based on whether it's being called by the client, or the server.
+            </summary>
+            <remarks>
+                This generic method works best with the Options Pattern, rather than anonymous tuples, when passing in multiple values as a single parameter.
+            </remarks>
+            <param name="clientAction">The client action.</param>
+            <param name="serverAction">The server action.</param>
         </member>
         <member name="M:Gantry.Core.ApiEx.Return``1(System.Func{Vintagestory.API.Client.ICoreClientAPI,``0},System.Func{Vintagestory.API.Server.ICoreServerAPI,``0})">
             <summary>
@@ -413,17 +463,6 @@
             <param name="clientAction">The client action.</param>
             <param name="serverAction">The server action.</param>
         </member>
-        <member name="M:Gantry.Core.ApiEx.Return``1(System.Func{``0},System.Func{``0},``0)">
-            <summary>
-                Invokes an action, based on whether it's being called by the client, or the server.
-            </summary>
-            <remarks>
-                This generic method works best with the Options Pattern, rather than anonymous tuples, when passing in multiple values as a single parameter.
-            </remarks>
-            <param name="clientAction">The client action.</param>
-            <param name="serverAction">The server action.</param>
-            <param name="parameter">The parameter to pass to the invoked action.</param>
-        </member>
         <member name="M:Gantry.Core.ApiEx.OneOf``1(``0,``0)">
             <summary>
                 Chooses between one of two objects, based on whether it's being called by the client, or the server.
@@ -435,17 +474,6 @@
             <returns>
                 Returns <paramref name="clientObject"/> if called from the client, or <paramref name="serverObject"/> if called from the server.
             </returns>
-        </member>
-        <member name="P:Gantry.Core.ApiEx.Side">
-            <summary>
-                Gets the current app-side.
-            </summary>
-            <value>A <see cref="T:Vintagestory.API.Common.EnumAppSide"/> value, representing current app-side; Client, or Server.</value>
-        </member>
-        <member name="M:Gantry.Core.ApiEx.DumpThreadSideCache(Vintagestory.API.Common.ILogger)">
-            <summary>
-                Dumps the thread side cache to the log.
-            </summary>
         </member>
         <member name="T:Gantry.Core.Brighter.Abstractions.CommandBase">
             <summary>
@@ -460,6 +488,55 @@
         <member name="P:Gantry.Core.Brighter.Abstractions.CommandBase.Span">
             <summary>
                 Gets or sets the span that this operation lives within.
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Brighter.Abstractions.IPlayerSpecificCommand">
+            <summary>
+                Represents a command that is executed on behalf of a specific player.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.Brighter.Abstractions.IPlayerSpecificCommand.Player">
+            <summary>
+                The player that this command is being executed on behalf of.
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersCommand">
+            <summary>
+                Broadcasts a message to all players on the server.
+            </summary>
+            <seealso cref="T:Gantry.Core.Brighter.Abstractions.CommandBase" />
+        </member>
+        <member name="M:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersCommand.#ctor(System.String,System.Boolean,System.Object[])">
+            <summary>
+             	Initialises a new instance of the <see cref="T:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersCommand"/> class.
+            </summary>
+            <param name="messageCode">The i18n code for the message to send to all the players on the server.</param>
+            <param name="localiseForEachPlayer">Determines whether the message should be localised on the server, before sending.</param>
+            <param name="args">An options set of arguments to pass into the localised message.</param>
+        </member>
+        <member name="P:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersCommand.MessageCode">
+            <summary>
+                The i18n code for the message to send to all the players on the server.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersCommand.LocaliseForEachPlayer">
+            <summary>
+                Should the message be translated for each player individually?
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersCommand.Arguments">
+            <summary>
+                Any arguments that need to be passed into the message template.
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersHandler">
+            <summary>
+                Broadcasts a message to all players on the server.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Brighter.Common.BroadcastMessageToAllPlayersHandler.#ctor(Vintagestory.Server.ServerMain)">
+            <summary>
+                Broadcasts a message to all players on the server.
             </summary>
         </member>
         <member name="T:Gantry.Core.Brighter.Filters.SideAttribute">
@@ -492,13 +569,13 @@
         <member name="M:Gantry.Core.Brighter.Filters.SideAttribute.InitializerParams">
             <inheritdoc />
         </member>
-        <member name="T:Gantry.Core.Brighter.Filters.SideHandler`1">
+        <member name="T:Gantry.Core.Brighter.Filters.SideAttribute.SideHandler`1">
             <summary />
         </member>
-        <member name="M:Gantry.Core.Brighter.Filters.SideHandler`1.InitializeFromAttributeParams(System.Object[])">
+        <member name="M:Gantry.Core.Brighter.Filters.SideAttribute.SideHandler`1.InitializeFromAttributeParams(System.Object[])">
             <summary />
         </member>
-        <member name="M:Gantry.Core.Brighter.Filters.SideHandler`1.Handle(`0)">
+        <member name="M:Gantry.Core.Brighter.Filters.SideAttribute.SideHandler`1.Handle(`0)">
             <summary />
         </member>
         <member name="T:Gantry.Core.Brighter.Hosting.BrighterOptions">
@@ -547,11 +624,10 @@
                 Constructs Brighter message mappers and handlers
             </summary>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.AutoFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.AutoFromAssemblies(Vintagestory.API.Common.ICoreAPI)">
             <summary>
                 Scan the assemblies provided for implementations of IHandleRequests, IHandleRequestsAsync, IAmAMessageMapper and register them with ServiceCollection.
             </summary>
-            <param name="assemblies">The assemblies to scan</param>
         </member>
         <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.AsyncHandlers(System.Action{ApacheTech.Common.BrighterSlim.IAmAnAsyncSubcriberRegistry})">
             <summary>
@@ -560,10 +636,11 @@
             <param name="registerHandlers">A callback to register handlers</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.AsyncHandlersFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.AsyncHandlersFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies provided for implementations of IHandleRequests and register them with ServiceCollection.
             </summary>
+            <param name="side">Determines the app side to register the handlers on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
@@ -574,10 +651,11 @@
             <param name="registerHandlers">A callback to register handlers</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.HandlersFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.HandlersFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies provided for implementations of IHandleRequests and register them with ServiceCollection.
             </summary>
+            <param name="side">Determines the app side to register the handlers on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
@@ -588,17 +666,19 @@
             <param name="registerMappers">A callback to register mappers</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.MapperRegistryFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.MapperRegistryFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies provided for implementations of IAmAMessageMapper and register them with ServiceCollection.
             </summary>
+            <param name="side">Determines the app side to register the mappers on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.TransformsFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.IBrighterBuilder.TransformsFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies for implementations of IAmAMessageTransformAsync and register them with ServiceCollection.
             </summary>
+            <param name="side">Determines the app side to register the transforms on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
@@ -718,18 +798,18 @@
             <param name="registerHandlers">A callback to register handlers</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.AsyncHandlersFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.AsyncHandlersFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies provided for implementations of IHandleRequests and register them with ServiceCollection 
             </summary>
+            <param name="side">Determines the app side to register the handlers on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.AutoFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.AutoFromAssemblies(Vintagestory.API.Common.ICoreAPI)">
             <summary>
                 Scan the assemblies provided for implementations of IHandleRequests, IHandleRequestsAsync, IAmAMessageMapper and register them with ServiceCollection
             </summary>
-            <param name="extraAssemblies">The assemblies to scan</param>
             <returns></returns>
         </member>
         <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.MapperRegistry(System.Action{Gantry.Core.Brighter.Hosting.ServiceCollectionMessageMapperRegistry})">
@@ -739,10 +819,11 @@
             <param name="registerMappers">A callback to register mappers</param>
             <returns></returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.MapperRegistryFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.MapperRegistryFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies provided for implementations of IAmAMessageMapper and register them with ServiceCollection
             </summary>
+            <param name="side">Determines the app side to register the mappers on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
@@ -753,17 +834,19 @@
             <param name="registerHandlers">A callback to register handlers</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.HandlersFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.HandlersFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies provided for implementations of IHandleRequests and register them with ServiceCollection
             </summary>
+            <param name="side">Determines the app side to register the handlers on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
         </member>
-        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.TransformsFromAssemblies(System.Reflection.Assembly[])">
+        <member name="M:Gantry.Core.Brighter.Hosting.ServiceCollectionBrighterBuilder.TransformsFromAssemblies(Vintagestory.API.Common.EnumAppSide,System.Reflection.Assembly[])">
             <summary>
                 Scan the assemblies for implementations of IAmAMessageTransformAsync and register them with the ServiceCollection
             </summary>
+            <param name="side">Determines the app side to register the transforms on.</param>
             <param name="assemblies">The assemblies to scan</param>
             <returns>This builder, allows chaining calls</returns>
             <exception cref="T:System.ArgumentException">Thrown if there are no assemblies passed to the method</exception>
@@ -1198,363 +1281,6 @@
             <param name="initialHash">The initial hash key value used to generate the result.</param>
             <returns>A hash key compatible with GTA 5.</returns>
         </member>
-        <member name="T:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute">
-            <summary>
-            Marks the constructor to be used when activating type using <see cref="T:ApacheTech.Common.DependencyInjection.Abstractions.ActivatorUtilities" />.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute.Side">
-            <summary>
-                The app-side that this instance was instantiated on.
-            </summary>
-            <value>The side.</value>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute.#ctor">
-            <summary>
-            	Initialises a new instance of the <see cref="T:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute"/> class.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute.#ctor(Vintagestory.API.Common.EnumAppSide)">
-            <summary>
-            	Initialises a new instance of the <see cref="T:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute"/> class.
-            </summary>
-            <param name="side">The side.</param>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Extensions.ActivatorEx">
-            <summary>
-                Helper code for the various activator services.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.ActivatorEx.CreateInstance(System.IServiceProvider,System.Type,System.Object[])">
-            <summary>
-                Creates an instance of a specified type.
-            </summary>
-            <param name="provider">The service provider used to resolve dependencies</param>
-            <param name="instanceType">The type to activate</param>
-            <param name="parameters">Constructor arguments not provided by the <paramref name="provider"/>.</param>
-            <returns>An activated object of type instanceType</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.ActivatorEx.CreateInstance``1(System.Object[])">
-            <summary>
-                Creates an instance of a specified type.
-            </summary>
-            <typeparam name="T">The type of instance to create.</typeparam>
-            <param name="args">The arguments to pass to the constructor.</param>
-            <returns>T.</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.ActivatorEx.CreateFactory(System.Type,System.Type[])">
-            <summary>
-                Create a delegate that will instantiate a type with constructor arguments provided directly and/or from an instance of <see cref="T:System.IServiceProvider"/>.
-            </summary>
-            <param name="instanceType">The type to activate</param>
-            <param name="argumentTypes">
-                The types of objects, in order, that will be passed to the returned function as its second parameter
-            </param>
-            <returns>
-                A factory that will instantiate instanceType using an instance of <see cref="T:System.IServiceProvider"/>, and an argument array containing objects matching the types defined in argumentTypes
-            </returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.ActivatorEx.CreateInstance``1(System.IServiceProvider,System.Object[])">
-            <summary>
-                Instantiate a type with constructor arguments provided directly and/or from an instance of <see cref="T:System.IServiceProvider"/>.
-            </summary>
-            <typeparam name="T">The type to activate</typeparam>
-            <param name="provider">The service provider used to resolve dependencies</param>
-            <param name="parameters">Constructor arguments not provided by the <paramref name="provider"/>.</param>
-            <returns>An activated object of type T</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.ActivatorEx.GetServiceOrCreateInstance``1(System.IServiceProvider)">
-            <summary>
-                Retrieve an instance of the given type from the service provider. If one is not found then instantiate it directly.
-            </summary>
-            <typeparam name="T">The type of the service</typeparam>
-            <param name="provider">The service provider used to resolve dependencies</param>
-            <returns>The resolved service or created instance</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.ActivatorEx.GetServiceOrCreateInstance(System.IServiceProvider,System.Type)">
-            <summary>
-                Retrieve an instance of the given type from the service provider. If one is not found then instantiate it directly.
-            </summary>
-            <param name="provider">The service provider</param>
-            <param name="type">The type of the service</param>
-            <returns>The resolved service or created instance</returns>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Extensions.HostExtensions">
-            <summary>
-                Extension method that aid the registration and creation of services.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.IOCEnabled(System.Reflection.ConstructorInfo)">
-            <summary>
-                Determines whether a constructor is decorated with a <see cref="T:Gantry.Core.DependencyInjection.Annotation.SidedConstructorAttribute"/> attribute that matched the current app-side.
-            </summary>
-            <param name="constructor">The constructor to check.</param>
-            <returns><c>true</c> if the dependencies for the constructor should be resolved via the service provider, <c>false</c> otherwise.</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.CreateSidedInstance(System.IServiceProvider,System.Type,System.Object[])">
-            <summary>
-                Creates an object of a specified type, using the IOC Container to resolve dependencies.
-            </summary>
-            <param name="provider">The service provider to use to resolve dependencies for the instantiated class.</param>
-            <param name="serviceType">An object that specifies the type of service object to get.</param>
-            <param name="args">An optional list of arguments, sent the constructor of the instantiated class.</param>
-            <returns>A service object of type <paramref name="serviceType" />.
-            
-            -or-
-            
-            <see langword="null" /> if no object of type <paramref name="serviceType" /> can be instantiated from the service collection.</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.CreateSidedInstance``1(System.IServiceProvider,System.Object[])">
-            <summary>
-                Creates an object of a specified type, using the IOC Container to resolve dependencies.
-            </summary>
-            <typeparam name="T">The type of object to create.</typeparam>
-            <param name="provider">The service provider to use to resolve dependencies for the instantiated class.</param>
-            <param name="args">An optional list of arguments, sent the constructor of the instantiated class.</param>
-            <returns>An object of type <typeparamref name="T" />.
-            
-            -or-
-            
-            <see langword="null" /> if there is no object of type <typeparamref name="T" /> can be instantiated from the service collection.</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.AddModSystems(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.EnumAppSide)">
-            <summary>
-                Registers all <see cref="T:Vintagestory.API.Common.ModSystem"/>s in the current mod, into the service collection.
-            </summary>
-            <param name="services">The service collection to add the <see cref="T:Vintagestory.API.Common.ModSystem"/>s to.</param>
-            <param name="side">The app side to load systems from.</param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.AddModSystem``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection)">
-            <summary>
-                Registers a client side features into the service collection.
-            </summary>
-            <param name="services">The service collection to add the features to.</param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.TryResolve``1(System.IServiceProvider,``0@)">
-            <summary>
-                Gets the service object of the specified type.
-            </summary>
-            <param name="serviceProvider">And object that provides access to the service collection.</param>
-            <param name="service">The service being requested.</param>
-            <typeparam name="T">The type of service object to get.</typeparam>
-            <returns>A service object of type <typeparamref name="T" />.
-            
-            -or-
-            
-            <see langword="null" /> if there is no service object of type <typeparamref name="T" />.</returns>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Extensions.HostExtensions.GetService``1(System.IServiceProvider)">
-            <summary>
-                Gets the service object of the specified type.
-            </summary>
-            <param name="serviceProvider">And object that provides access to the service collection.</param>
-            <typeparam name="T">The type of service object to get.</typeparam>
-            <returns>A service object of type <typeparamref name="T" />.
-            
-            -or-
-            
-            <see langword="null" /> if there is no service object of type <typeparamref name="T" />.</returns>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.IOC">
-             <summary>
-                 Globally accessible services, populated through the IOC Container. If a derived
-                 instance of type <see cref="T:Gantry.Core.DependencyInjection.ModHost"/> has not been created within the
-                 Application layer, these services will not be available, and will have to be
-                 instantiated manually.<br/><br/>
-            
-                 Globally static objects like this are required because no <see cref="T:Vintagestory.API.Common.ModSystem"/>
-                 can make use of dependency injection directly, because they are instantiated by
-                 the game. Instead of using traditional singleton instances, where we'd need to
-                 add boilerplate every time it's needed, we can cache the instances here, and then
-                 used them anywhere they are needed, in lieu of being able to pass it in through
-                 an importing constructor.
-             </summary>
-        </member>
-        <member name="P:Gantry.Core.DependencyInjection.IOC.ServerIOC">
-            <summary>
-                Gets the IOC Resolver for the Server.
-            </summary>
-            <value>The IOC Resolver for the Server.</value>
-        </member>
-        <member name="P:Gantry.Core.DependencyInjection.IOC.ClientIOC">
-            <summary>
-                Gets the IOC Resolver for the Client.
-            </summary>
-            <value>The IOC Resolver for the Client.</value>
-        </member>
-        <member name="P:Gantry.Core.DependencyInjection.IOC.Services">
-            <summary>
-                Gets the IOC Resolver for the current app-side.
-            </summary>
-            <value>The IOC Resolver for the current app-side.</value>
-        </member>
-        <member name="P:Gantry.Core.DependencyInjection.IOC.Brighter">
-            <summary>
-                Universal access to the Brighter command processor.
-            </summary>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.ModHost">
-            <summary>
-                Only one derived instance of this base-class should be added to any single mod within
-                the VintageMods domain. This base-class will enable Dependency Injection, and add all
-                the domain services. Derived instances should only have minimal functionality, 
-                instantiating, and adding Application specific services to the IOC Container.
-            </summary>
-            <seealso cref="T:Vintagestory.API.Common.ModSystem" />
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.#ctor">
-            <summary>
-                Initialises a new instance of the <see cref="T:Gantry.Core.DependencyInjection.ModHost" /> class.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.ConfigureUniversalModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI)">
-            <summary>
-                Configures any services that need to be added to the IO Container, on the both app sides, equally.
-            </summary>
-            <param name="services">The as-of-yet un-built services container.</param>
-            <param name="api">Access to the universal API.</param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.ConfigureServerModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
-            <summary>
-                Configures any services that need to be added to the IO Container, on the server side.
-            </summary>
-            <param name="services">The as-of-yet un-built services container.</param>
-            <param name="sapi">Access to the server-side API.</param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.ConfigureClientModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Client.ICoreClientAPI)">
-            <summary>
-                Configures any services that need to be added to the IO Container, on the client side.
-            </summary>
-            <param name="services">The as-of-yet un-built services container.</param>
-            <param name="capi">Access to the client-side API.</param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.StartPreUniversal(Vintagestory.API.Common.ICoreAPI)">
-            <summary>
-                Called during initial mod loading, called before any mod receives the call to Start().
-            </summary>
-            <param name="api">
-                Common API Components that are available on the server and the client.
-                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
-            </param>
-            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.Start(Vintagestory.API.Common.ICoreAPI)">
-            <summary>
-                Side agnostic Start method, called after all mods received a call to StartPre().
-            </summary>
-            <param name="api">
-                Common API Components that are available on the server and the client.
-                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
-            </param>
-            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.StartPreUniversalSide(Vintagestory.API.Common.ICoreAPI)">
-            <summary>
-                Called during initial mod loading, called before any mod receives the call to Start().
-            </summary>
-            <param name="api">
-                Common API Components that are available on the server and the client.
-                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
-            </param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.StartUniversal(Vintagestory.API.Common.ICoreAPI)">
-            <summary>
-                Side agnostic Start method, called after all mods received a call to StartPre().
-            </summary>
-            <param name="api">
-                Common API Components that are available on the server and the client.
-                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
-            </param>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.ExecuteOrder">
-            <summary>
-                If you need mods to be executed in a certain order, adjust this method's return value.
-                The server will call each Mods Start() method the ascending order of each mod's execute order value.
-                And thus, as long as every mod registers it's event handlers in the Start() method, all event handlers
-                will be called in the same execution order. Default execute order of some survival mod parts.
-            
-                World Gen: 
-                - GenTerra: 0
-                - RockStrata: 0.1
-                - Deposits: 0.2
-                - Caves: 0.3
-                - BlockLayers: 0.4
-            
-                Asset Loading:
-                - Json Overrides loader: 0.05
-                - Load hardcoded mantle block: 0.1
-                - Block and Item Loader: 0.2
-                - Recipes (Smithing, Knapping, ClayForming, Grid recipes, Alloys) Loader: 1
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.ModHost.Dispose">
-            <summary>
-                If this mod allows runtime reloading, you must implement this method to unregister any listeners / handlers
-            </summary>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Registration.Api.ClientApiRegistrar">
-            <summary>
-                Handles registration of the Game's API within the client-side IOC Container.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Registration.Api.ClientApiRegistrar.RegisterClientApiEndpoints(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Client.ICoreClientAPI)">
-            <summary>
-                Registers the Game's API within the client-side IOC Container.
-            </summary>
-            <param name="services">The IOC container.</param>
-            <param name="capi">Access to the client-side API.</param>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Registration.Api.ServerApiRegistrar">
-            <summary>
-                Handles registration of the Game's API within the server-side IOC Container.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Registration.Api.ServerApiRegistrar.RegisterServerApiEndpoints(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
-            <summary>
-                Registers the Game's API within the server-side IOC Container.
-            </summary>
-            <param name="services">The IOC container.</param>
-            <param name="sapi">The Server-Side API to register.</param>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Registration.IClientServiceRegistrar">
-            <summary>
-                Represents a class that can add services to the Client IOC container. Implements <see cref="T:System.IDisposable" />.
-            </summary>
-            <seealso cref="T:System.IDisposable" />
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Registration.IClientServiceRegistrar.ConfigureClientModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Client.ICoreClientAPI)">
-            <summary>
-                Allows a mod to include Singleton, or Transient services to the IOC Container.
-            </summary>
-            <param name="services">The service collection.</param>
-            <param name="capi">Access to the client-side API.</param>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Registration.IServerServiceRegistrar">
-            <summary>
-                Represents a class that can add services to the Client IOC container.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Registration.IServerServiceRegistrar.ConfigureServerModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
-            <summary>
-                Allows a mod to include Singleton, or Transient services to the IOC Container.
-            </summary>
-            <param name="services">The service collection.</param>
-            <param name="sapi">Access to the server-side API.</param>
-        </member>
-        <member name="T:Gantry.Core.DependencyInjection.Registration.IUniversalServiceRegistrar">
-            <summary>
-                Represents a class that can add services to both the Client, and Server IOC containers.
-            </summary>
-            <seealso cref="T:Gantry.Core.DependencyInjection.Registration.IServerServiceRegistrar" />
-            <seealso cref="T:Gantry.Core.DependencyInjection.Registration.IClientServiceRegistrar" />
-        </member>
-        <member name="M:Gantry.Core.DependencyInjection.Registration.IUniversalServiceRegistrar.ConfigureUniversalModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI)">
-            <summary>
-                Allows a mod to include Singleton, or Transient services to the IOC Container.
-            </summary>
-            <param name="services">The service collection.</param>
-            <param name="api">Access to the universal API.</param>
-        </member>
         <member name="T:Gantry.Core.Diagnostics.Ensure">
             <summary>
                 Helper methods to ensure specific criteria.
@@ -1760,7 +1486,7 @@
         </member>
         <member name="M:Gantry.Core.Extensions.Api.ApiExtensions.ForClient(Vintagestory.API.Common.ICoreAPI)">
             <summary>
-                Converts an side-agnostic API to a client-side API.
+                Converts a side-agnostic API to a client-side API.
             </summary>
             <param name="api">The core game API.</param>
         </member>
@@ -1846,6 +1572,28 @@
             <param name="serverApi">The server API member to populate, if on the Server app side.</param>
             <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
+        <member name="T:Gantry.Core.Extensions.Api.BlockPosExtensions">
+            <summary>
+                Extension methods that aid scanning for blocks, and block entities.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Extensions.Api.BlockPosExtensions.GetBlock``1(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.ICoreAPI,Gantry.Core.Abstractions.BlockLayer)">
+            <summary>
+                Gets the block at the specified position within the gameworld.
+            </summary>
+            <typeparam name="TBlock">The type of the block.</typeparam>
+            <param name="this">The <see cref="T:Vintagestory.API.MathTools.BlockPos"/> to find the block at.</param>
+            <param name="api">The api to get the block accessor from.</param>
+            <param name="layer">Each block pos can house a liquid, and a solid. Defaults to solid blocks.</param>
+        </member>
+        <member name="M:Gantry.Core.Extensions.Api.BlockPosExtensions.GetBlockEntity``1(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Gets the block entity at the specified position within the gameworld.
+            </summary>
+            <typeparam name="TBlockEntity">The type of the block.</typeparam>
+            <param name="this">The <see cref="T:Vintagestory.API.MathTools.BlockPos"/> to find the block at.</param>
+            <param name="api">The api to get the block accessor from.</param>
+        </member>
         <member name="T:Gantry.Core.Extensions.Api.ClientMainExtensions">
             <summary>
                 Extensions methods for the <see cref="T:Vintagestory.Client.NoObf.ClientMain"/> class.
@@ -1865,26 +1613,6 @@
             <summary>
                 Adds a new <see cref="F:Vintagestory.API.Common.EnumLogType.Audit" /> log entry with the specified message, if debug mode is enabled.
             </summary>
-        </member>
-        <member name="T:Gantry.Core.Extensions.Api.BlockPosExtensions">
-            <summary>
-                Extension methods that aid scanning for blocks, and block entities.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.Extensions.Api.BlockPosExtensions.GetBlock``1(Vintagestory.API.MathTools.BlockPos,Gantry.Core.Abstractions.BlockLayer)">
-            <summary>
-                Gets the block at the specified position within the gameworld.
-            </summary>
-            <typeparam name="TBlock">The type of the block.</typeparam>
-            <param name="this">The <see cref="T:Vintagestory.API.MathTools.BlockPos"/> to find the block at.</param>
-            <param name="layer">Each block pos can house a liquid, and a solid. Defaults to solid blocks.</param>
-        </member>
-        <member name="M:Gantry.Core.Extensions.Api.BlockPosExtensions.GetBlockEntity``1(Vintagestory.API.MathTools.BlockPos)">
-            <summary>
-                Gets the block entity at the specified position within the gameworld.
-            </summary>
-            <typeparam name="TBlockEntity">The type of the block.</typeparam>
-            <param name="this">The <see cref="T:Vintagestory.API.MathTools.BlockPos"/> to find the block at.</param>
         </member>
         <member name="T:Gantry.Core.Extensions.Api.WorldAccessorExtensions">
             <summary>
@@ -2112,6 +1840,14 @@
             <param name="collection">The collection to filter.</param>
             <param name="predicate">A function used to filter the collection.</param>
         </member>
+        <member name="M:Gantry.Core.Extensions.DotNet.CollectionExtensions.IsOneOf``1(``0,``0[])">
+            <summary>
+                Determines whether a single item is within an arbitrary array of items of the same type.
+            </summary>
+            <typeparam name="T">The type of item.</typeparam>
+            <param name="item">The items to find.</param>
+            <param name="options">The array of items to test against.</param>
+        </member>
         <member name="T:Gantry.Core.Extensions.DotNet.EmbeddedResourcesExtensions">
             <summary>
                 Provides a means for interacting with embedded resources within mod assemblies.
@@ -2176,6 +1912,34 @@
             <param name="finishCondition">A predicate that determines whether the criteria for stopping the iteration has been met.</param>
             <returns></returns>
         </member>
+        <member name="T:Gantry.Core.Extensions.DotNet.ObjectExtensions">
+            <summary>
+                Extension methods to aid working with objects.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Extensions.DotNet.ObjectExtensions.CopyFrom``3(``1,``2)">
+            <summary>
+                Copies the properties from the source object into the target object.
+                Only properties that have both a public getter and setter will be copied.
+            </summary>
+            <param name="target">The target object where the properties will be copied to.</param>
+            <param name="source">The source object from which the properties will be copied.</param>
+        </member>
+        <member name="M:Gantry.Core.Extensions.DotNet.ObjectExtensions.CopyFrom``2(``0,``1)">
+            <summary>
+                Copies the properties from the source object into the target object.
+                Only properties that have both a public getter and setter will be copied.
+            </summary>
+            <param name="target">The target object where the properties will be copied to.</param>
+            <param name="source">The source object from which the properties will be copied.</param>
+        </member>
+        <member name="M:Gantry.Core.Extensions.DotNet.ObjectExtensions.CreateFrom``2(``0)">
+            <summary>
+                Creates a new instance, and copies the properties from the source object into the target object.
+                Only properties that have both a public getter and setter will be copied.
+            </summary>
+            <param name="source">The source object from which the properties will be copied.</param>
+        </member>
         <member name="T:Gantry.Core.Extensions.DotNet.OrphanedStaticsExtensions">
             <summary>
                 Extension methods to aid the cleaning up of code, when exiting a game world.
@@ -2198,6 +1962,26 @@
             </summary>
             <param name="param">The string to check.</param>
             <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Gantry.Core.Extensions.DotNet.StringExtensions.ToLowerCaseInitials(System.String)">
+            <summary>
+                Extracts the initials from a PascalCase string and converts them to lowercase.
+            </summary>
+            <param name="value">The PascalCase string from which to extract initials.</param>
+            <returns>A lowercase string containing the initials of the PascalCase string.</returns>
+            <example>
+            <code>
+            var result = "HelloWorld".ToLowerCaseInitials();
+            Console.WriteLine(result); // hw
+            </code>
+            </example>
+        </member>
+        <member name="M:Gantry.Core.Extensions.DotNet.StringExtensions.ToXml(System.Object)">
+            <summary>
+                Serialises an object to an XML string with indentation.
+            </summary>
+            <param name="this">The object to serialise.</param>
+            <returns>The XML string representation of the object.</returns>
         </member>
         <member name="T:Gantry.Core.Extensions.GameContent.EntityExtensions">
             <summary>
@@ -2439,10 +2223,11 @@
             <param name="blockRadius">The radius tolerance, in blocks.</param>
             <returns>System.Boolean.</returns>
         </member>
-        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointAtPos(Vintagestory.API.MathTools.BlockPos,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointAtPos(Vintagestory.API.Common.IWorldAccessor,Vintagestory.API.MathTools.BlockPos,System.String,System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
-                Adds a waypoint at the a position within the world, relative to the global spawn point.
+                Adds a waypoint at a position within the world, relative to the global spawn point.
             </summary>
+            <param name="world">The world to add the waypoint to.</param>
             <param name="pos">The position to add the waypoint at. World Pos - Not Relative to Spawn!</param>
             <param name="icon">The icon to use for the waypoint.</param>
             <param name="colour">The colour of the waypoint.</param>    
@@ -2450,10 +2235,11 @@
             <param name="pinned">if set to <c>true</c>, the waypoint will be pinned to the world map.</param>
             <param name="allowDuplicates">if set to <c>true</c>, the waypoint will not be placed, if another similar waypoint already exists at that position.</param>
         </member>
-        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointAtPosAsync(Vintagestory.API.MathTools.BlockPos,System.String,System.String,System.String,System.Boolean)">
+        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointAtPosAsync(Vintagestory.API.Common.IWorldAccessor,Vintagestory.API.MathTools.BlockPos,System.String,System.String,System.String,System.Boolean)">
             <summary>
-                Asynchronously adds a waypoint at the a position within the world, relative to the global spawn point.
+                Asynchronously adds a waypoint at a position within the world, relative to the global spawn point.
             </summary>
+            <param name="world">The world to add the waypoint to.</param>
             <param name="pos">The position to add the waypoint at. World Pos - Not Relative to Spawn!</param>
             <param name="icon">The icon to use for the waypoint.</param>
             <param name="colour">The colour of the waypoint.</param>    
@@ -2506,18 +2292,20 @@
             <param name="target">The target.</param>
             <returns>System.Boolean.</returns>
         </member>
-        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointForBlockPosPairAsync(System.Collections.Generic.KeyValuePair{Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.Block},System.String,System.String)">
+        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointForBlockPosPairAsync(Vintagestory.API.Common.IWorldAccessor,System.Collections.Generic.KeyValuePair{Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.Block},System.String,System.String)">
             <summary>
                 Asynchronously adds a <see cref="T:Vintagestory.GameContent.Waypoint"/> for a specific <see cref="T:Vintagestory.API.Common.Block"/>, at a given <see cref="T:Vintagestory.API.MathTools.BlockPos"/>.
             </summary>
+            <param name="world">The world to add the waypoints to.</param>
             <param name="blockPosPair">The <see cref="T:Vintagestory.API.Common.Block"/>, with its <see cref="T:Vintagestory.API.MathTools.BlockPos"/> as a key.</param>
             <param name="icon">The icon to add to the waypoint.</param>
             <param name="colour">The colour to set the waypoint as.</param>
         </member>
-        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointForBlockPosPair(System.Collections.Generic.KeyValuePair{Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.Block},System.String,System.String)">
+        <member name="M:Gantry.Core.Extensions.GameContent.WaypointExtensions.AddWaypointForBlockPosPair(Vintagestory.API.Common.IWorldAccessor,System.Collections.Generic.KeyValuePair{Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.Block},System.String,System.String)">
             <summary>
                 Adds a <see cref="T:Vintagestory.GameContent.Waypoint"/> for a specific <see cref="T:Vintagestory.API.Common.Block"/>, at a given <see cref="T:Vintagestory.API.MathTools.BlockPos"/>.
             </summary>
+            <param name="world">The world to add the waypoints to.</param>
             <param name="blockPosPair">The <see cref="T:Vintagestory.API.Common.Block"/>, with its <see cref="T:Vintagestory.API.MathTools.BlockPos"/> as a key.</param>
             <param name="icon">The icon to add to the waypoint.</param>
             <param name="colour">The colour to set the waypoint as.</param>
@@ -2604,7 +2392,7 @@
                 Extension methods to aid with cross-platform operations. 
             </summary>
         </member>
-        <member name="M:Gantry.Core.Extensions.Helpers.BrowserEx.OpenUrl(System.String)">
+        <member name="M:Gantry.Core.Extensions.Helpers.BrowserEx.TryOpenUrl(System.String)">
             <summary>
                 Opens a URL within the user's default browser.
             </summary>
@@ -2772,15 +2560,16 @@
                 Extension methods to aid working with gameworld positions.
             </summary>
         </member>
-        <member name="M:Gantry.Core.Extensions.PositionExtensions.RelativeToSpawn(Vintagestory.API.MathTools.BlockPos)">
+        <member name="M:Gantry.Core.Extensions.PositionExtensions.RelativeToSpawn(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.IWorldAccessor)">
             <summary>
                 Gets the position relative to spawn, given an absolute position within the game world.
             </summary>
             <param name="pos">The absolute position of the block being queried.</param>
+            <param name="world">The world being played.</param>
         </member>
-        <member name="M:Gantry.Core.Extensions.PositionExtensions.ClampToWorldBounds(Vintagestory.API.MathTools.BlockPos)">
+        <member name="M:Gantry.Core.Extensions.PositionExtensions.ClampToWorldBounds(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.IBlockAccessor)">
             <summary>
-                Ensures that a <see cref="T:Vintagestory.API.MathTools.BlockPos"/> is inside of the world borders.
+                Ensures that a <see cref="T:Vintagestory.API.MathTools.BlockPos"/> is inside the world borders.
             </summary>
         </member>
         <member name="M:Gantry.Core.Extensions.PositionExtensions.GetRandomPositionInRange(Vintagestory.API.MathTools.Vec3d,System.Int32,System.Int32)">
@@ -2792,12 +2581,13 @@
             <param name="verticalRadius">The radius away from the origin to use as the upper and lower bounds for the Y coordinates of the returned position.</param>
             <returns>A <see cref="T:Vintagestory.API.MathTools.Vec3d"/> representing a position in the game world, a random distance away from the origin position.</returns>
         </member>
-        <member name="M:Gantry.Core.Extensions.PositionExtensions.GetSurfaceLevel(Vintagestory.API.MathTools.BlockPos)">
+        <member name="M:Gantry.Core.Extensions.PositionExtensions.GetSurfaceLevel(Vintagestory.API.MathTools.BlockPos,Vintagestory.API.Common.IBlockAccessor)">
             <summary>
                 Gets the surface level at the specified block position. This is the highest point on the Y axis, where the block is solid, from above.
             </summary>
             <param name="pos">The position.</param>
-            <returns>An <see cref="T:System.Int32"/> value, representing the highest Y value with a solid block underneath it.</returns>
+            <param name="blockAccessor">The block accessor for the current world.</param>
+            <returns>A <see cref="T:System.Int32"/> value, representing the highest Y value with a solid block underneath it.</returns>
         </member>
         <member name="M:Gantry.Core.Extensions.PositionExtensions.CollisionCheck(Vintagestory.API.Common.Entities.Entity,Vintagestory.API.MathTools.Vec3d)">
             <summary>
@@ -3063,19 +2853,143 @@
             <param name="blockEntity">The <see cref="T:Vintagestory.API.Common.BlockEntity"/> this behaviour is applied to.</param>
             <exception cref="T:System.InvalidCastException">This behaviour cannot be applied to the specified block entity.</exception>
         </member>
-        <member name="T:Gantry.Core.GameContent.GUI.ButtonLayout">
+        <member name="T:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue">
             <summary>
-            Determines which buttons to display on the <see cref="T:Gantry.Core.GameContent.GUI.MessageBox" /> GUI window.
+                Acts as a base class for basic, automatically sized dialogue boxes.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Client.GuiDialog" />
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.#ctor(Vintagestory.API.Client.ICoreClientAPI)">
+            <summary>
+            	Initialises a new instance of the <see cref="T:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue"/> class.
+            </summary>
+            <param name="capi">The client API.</param>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.ToggleKeyCombinationCode">
+            <summary>
+                The key combination string that toggles this GUI object.
+            </summary>
+            <value>The toggle key combination code.</value>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.TryOpen">
+            <summary>
+                Attempts to open this dialogue.
+            </summary>
+            <returns>
+                Returns <see langword="true"/> if the dialogue window was opened correctly; otherwise, returns <see langword="false"/>
+            </returns>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.Compose">
+            <summary>
+                Composes the GUI components for this instance.
             </summary>
         </member>
-        <member name="F:Gantry.Core.GameContent.GUI.ButtonLayout.Ok">
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.Title">
             <summary>
-                Display only an OK button.
+                Sets the title of the dialogue box.
+            </summary>
+            <value>The raw, pre-localised, string literal to use for the title of the dialogue box.</value>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.Alignment">
+            <summary>
+                Sets the alignment of the form on the screen, when set to Fixed mode.
+            </summary>
+            <value>The <see cref="T:Vintagestory.API.Client.EnumDialogArea"/> alignment to set the window as.</value>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.DialogueBounds">
+            <summary>
+                The overall maximum bounds of the dialogue box.
             </summary>
         </member>
-        <member name="F:Gantry.Core.GameContent.GUI.ButtonLayout.OkCancel">
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.Movable">
             <summary>
-                Display both an OK button, and a Cancel button.
+                Determines whether or not to allow the user to be able to move the form, within the bounds of the screen.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.Modal">
+            <summary>
+                Modal forms will remain the topmost form, and not allow throughput, until the form is closed.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.ModalTransparency">
+            <summary>
+                Applies a transparency effect to the surrounding modal form.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.ShowTitleBar">
+            <summary>
+                Determines whether to display a title bar for this dialogue box.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.TransparentBackground">
+            <summary>
+                Determines whether to display an opaque background.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.RefreshValues">
+            <summary>
+                Refreshes the displayed values on the form.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.ComposeBody(Vintagestory.API.Client.GuiComposer)">
+            <summary>
+                Composes the header for the GUI.
+            </summary>
+            <param name="composer">The composer.</param>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue.DisableMouseGrab">
+            <summary>
+                Gets whether ability to grab the mouse cursor is disabled while
+                this dialog is opened. For example, the escape menu. (Default: false)
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue">
+            <summary>
+                A simple GUI that contains a single column of buttons, or other elements.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.#ctor(Vintagestory.API.Client.ICoreClientAPI)">
+            <summary>
+            	Initialises a new instance of the <see cref="T:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue"/> class.
+            </summary>
+            <param name="capi">The client API.</param>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.LangEntryPrefix">
+            <summary>
+                Sets the language entry prefix.
+            </summary>
+            <value>The language entry prefix.</value>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.ButtonWidth">
+            <summary>
+                Sets the width of the buttons.
+            </summary>
+            <value>The width of the buttons.</value>
+        </member>
+        <member name="P:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.HeightOffset">
+            <summary>
+                Sets the height offset.
+            </summary>
+            <value>The height offset.</value>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.LangEntry(System.String)">
+            <summary>
+                Gets an entry from the language files, for the feature this instance is representing.
+            </summary>
+            <param name="code">The entry to return.</param>
+            <returns>A localised <see cref="T:System.String"/>, for the specified language file code.</returns>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.AddButton(Vintagestory.API.Client.GuiComposer,System.String,Vintagestory.API.Common.ActionConsumable)">
+            <summary>
+                Adds a button to the dialogue, and increments the current row.
+            </summary>
+            <param name="composer">The composer.</param>
+            <param name="langEntry">The title.</param>
+            <param name="onClick">The on click handler.</param>
+        </member>
+        <member name="M:Gantry.Core.GameContent.GUI.Abstractions.RowedButtonMenuDialogue.IncrementRow">
+            <summary>
+                Increments the current row.
             </summary>
         </member>
         <member name="T:Gantry.Core.GameContent.GUI.Elements.GuiElementImage">
@@ -3140,96 +3054,6 @@
                 Releases unmanaged and - optionally - managed resources.
             </summary>
         </member>
-        <member name="T:Gantry.Core.GameContent.GUI.GenericDialogue">
-            <summary>
-                Acts as a base class for basic, automatically sized dialogue boxes.
-            </summary>
-            <seealso cref="T:Vintagestory.API.Client.GuiDialog" />
-        </member>
-        <member name="M:Gantry.Core.GameContent.GUI.GenericDialogue.#ctor(Vintagestory.API.Client.ICoreClientAPI)">
-            <summary>
-            	Initialises a new instance of the <see cref="T:Gantry.Core.GameContent.GUI.GenericDialogue"/> class.
-            </summary>
-            <param name="capi">The client API.</param>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.ToggleKeyCombinationCode">
-            <summary>
-                The key combination string that toggles this GUI object.
-            </summary>
-            <value>The toggle key combination code.</value>
-        </member>
-        <member name="M:Gantry.Core.GameContent.GUI.GenericDialogue.TryOpen">
-            <summary>
-                Attempts to open this dialogue.
-            </summary>
-            <returns>
-                Returns <see langword="true"/> if the dialogue window was opened correctly; otherwise, returns <see langword="false"/>
-            </returns>
-        </member>
-        <member name="M:Gantry.Core.GameContent.GUI.GenericDialogue.Compose">
-            <summary>
-                Composes the GUI components for this instance.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.Title">
-            <summary>
-                Sets the title of the dialogue box.
-            </summary>
-            <value>The raw, pre-localised, string literal to use for the title of the dialogue box.</value>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.Alignment">
-            <summary>
-                Sets the alignment of the form on the screen, when set to Fixed mode.
-            </summary>
-            <value>The <see cref="T:Vintagestory.API.Client.EnumDialogArea"/> alignment to set the window as.</value>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.DialogueBounds">
-            <summary>
-                The overall maximum bounds of the dialogue box.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.Movable">
-            <summary>
-                Determines whether or not to allow the user to be able to move the form, within the bounds of the screen.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.Modal">
-            <summary>
-                Modal forms will remain the topmost form, and not allow throughput, until the form is closed.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.ModalTransparency">
-            <summary>
-                Applies a transparency effect to the surrounding modal form.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.ShowTitleBar">
-            <summary>
-                Determines whether or not to display a title bar for this dialogue box.
-            </summary>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.TransparentBackground">
-            <summary>
-                Determines whether or not to display an opaque background.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.GameContent.GUI.GenericDialogue.RefreshValues">
-            <summary>
-                Refreshes the displayed values on the form.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.GameContent.GUI.GenericDialogue.ComposeBody(Vintagestory.API.Client.GuiComposer)">
-            <summary>
-                Composes the header for the GUI.
-            </summary>
-            <param name="composer">The composer.</param>
-        </member>
-        <member name="P:Gantry.Core.GameContent.GUI.GenericDialogue.DisableMouseGrab">
-            <summary>
-                Gets whether ability to grab the mouse cursor is disabled while
-                this dialog is opened. For example, the escape menu. (Default: false)
-            </summary>
-        </member>
         <member name="T:Gantry.Core.GameContent.GUI.Helpers.ElementBoundsEx">
             <summary>
                 Extension methods to aid adding elements to GUI forms.
@@ -3286,15 +3110,15 @@
             <summary>
                 A generic message box that can be used for basic confirmation within the game.
             </summary>
-            <seealso cref="T:Gantry.Core.GameContent.GUI.GenericDialogue" />
+            <seealso cref="T:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue" />
         </member>
-        <member name="M:Gantry.Core.GameContent.GUI.MessageBox.Show(System.String,System.String,Gantry.Core.GameContent.GUI.ButtonLayout,System.Action,System.Action)">
+        <member name="M:Gantry.Core.GameContent.GUI.MessageBox.Show(System.String,System.String,Gantry.Core.GameContent.GUI.Models.ButtonLayout,System.Action,System.Action)">
             <summary>
                 Displays a message box that has a message, title bar caption, and button; and that runs option callback options for positive and negative responses.
             </summary>
             <param name="title">A <see cref="T:System.String"/> that specifies the title bar caption to display.</param>
             <param name="message">A <see cref="T:System.String"/> that specifies the text to display.</param>
-            <param name="buttons">A <see cref="T:Gantry.Core.GameContent.GUI.ButtonLayout"/> value that specifies which button or buttons to display.</param>
+            <param name="buttons">A <see cref="T:Gantry.Core.GameContent.GUI.Models.ButtonLayout"/> value that specifies which button or buttons to display.</param>
             <param name="onOkButtonPressed">The <see cref="T:System.Action"/> to be invoked if the user selects the confirm option.</param>
             <param name="onCancelButtonPressed">The <see cref="T:System.Action"/> to be invoked if the user selects the cancel option.</param>
         </member>
@@ -3303,6 +3127,21 @@
                 Composes the header for the GUI.
             </summary>
             <param name="composer">The composer.</param>
+        </member>
+        <member name="T:Gantry.Core.GameContent.GUI.Models.ButtonLayout">
+            <summary>
+            Determines which buttons to display on the <see cref="T:Gantry.Core.GameContent.GUI.MessageBox" /> GUI window.
+            </summary>
+        </member>
+        <member name="F:Gantry.Core.GameContent.GUI.Models.ButtonLayout.Ok">
+            <summary>
+                Display only an OK button.
+            </summary>
+        </member>
+        <member name="F:Gantry.Core.GameContent.GUI.Models.ButtonLayout.OkCancel">
+            <summary>
+                Display both an OK button, and a Cancel button.
+            </summary>
         </member>
         <member name="T:Gantry.Core.GameContent.Shaders.IGenericRenderer`1">
             <summary>
@@ -3325,14 +3164,367 @@
                 Runs before every frame, to set the values for the shader pass.
             </summary>
         </member>
+        <member name="T:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute">
+            <summary>
+            Marks the constructor to be used when activating type using <see cref="T:ApacheTech.Common.DependencyInjection.Abstractions.ActivatorUtilities" />.
+            </summary>
+        </member>
+        <member name="P:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute.Side">
+            <summary>
+                The app-side that this instance was instantiated on.
+            </summary>
+            <value>The side.</value>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute.#ctor">
+            <summary>
+            	Initialises a new instance of the <see cref="T:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute.#ctor(Vintagestory.API.Common.EnumAppSide)">
+            <summary>
+            	Initialises a new instance of the <see cref="T:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute"/> class.
+            </summary>
+            <param name="side">The side.</param>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Extensions.ActivatorEx">
+            <summary>
+                Helper code for the various activator services.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.ActivatorEx.CreateInstance(System.IServiceProvider,System.Type,System.Object[])">
+            <summary>
+                Creates an instance of a specified type.
+            </summary>
+            <param name="provider">The service provider used to resolve dependencies</param>
+            <param name="instanceType">The type to activate</param>
+            <param name="parameters">Constructor arguments not provided by the <paramref name="provider"/>.</param>
+            <returns>An activated object of type instanceType</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.ActivatorEx.CreateInstance``1(System.Object[])">
+            <summary>
+                Creates an instance of a specified type.
+            </summary>
+            <typeparam name="T">The type of instance to create.</typeparam>
+            <param name="args">The arguments to pass to the constructor.</param>
+            <returns>T.</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.ActivatorEx.CreateFactory(System.Type,System.Type[])">
+            <summary>
+                Create a delegate that will instantiate a type with constructor arguments provided directly and/or from an instance of <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <param name="instanceType">The type to activate</param>
+            <param name="argumentTypes">
+                The types of objects, in order, that will be passed to the returned function as its second parameter
+            </param>
+            <returns>
+                A factory that will instantiate instanceType using an instance of <see cref="T:System.IServiceProvider"/>, and an argument array containing objects matching the types defined in argumentTypes
+            </returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.ActivatorEx.CreateInstance``1(System.IServiceProvider,System.Object[])">
+            <summary>
+                Instantiate a type with constructor arguments provided directly and/or from an instance of <see cref="T:System.IServiceProvider"/>.
+            </summary>
+            <typeparam name="T">The type to activate</typeparam>
+            <param name="provider">The service provider used to resolve dependencies</param>
+            <param name="parameters">Constructor arguments not provided by the <paramref name="provider"/>.</param>
+            <returns>An activated object of type T</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.ActivatorEx.GetServiceOrCreateInstance``1(System.IServiceProvider)">
+            <summary>
+                Retrieve an instance of the given type from the service provider. If one is not found then instantiate it directly.
+            </summary>
+            <typeparam name="T">The type of the service</typeparam>
+            <param name="provider">The service provider used to resolve dependencies</param>
+            <returns>The resolved service or created instance</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.ActivatorEx.GetServiceOrCreateInstance(System.IServiceProvider,System.Type)">
+            <summary>
+                Retrieve an instance of the given type from the service provider. If one is not found then instantiate it directly.
+            </summary>
+            <param name="provider">The service provider</param>
+            <param name="type">The type of the service</param>
+            <returns>The resolved service or created instance</returns>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Extensions.HostExtensions">
+            <summary>
+                Extension method that aid the registration and creation of services.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.IOCEnabled(System.Reflection.ConstructorInfo)">
+            <summary>
+                Determines whether a constructor is decorated with a <see cref="T:Gantry.Core.Hosting.Annotation.SidedConstructorAttribute"/> attribute that matched the current app-side.
+            </summary>
+            <param name="constructor">The constructor to check.</param>
+            <returns><c>true</c> if the dependencies for the constructor should be resolved via the service provider, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.CreateSidedInstance(System.IServiceProvider,System.Type,System.Object[])">
+            <summary>
+                Creates an object of a specified type, using the IOC Container to resolve dependencies.
+            </summary>
+            <param name="provider">The service provider to use to resolve dependencies for the instantiated class.</param>
+            <param name="serviceType">An object that specifies the type of service object to get.</param>
+            <param name="args">An optional list of arguments, sent the constructor of the instantiated class.</param>
+            <returns>A service object of type <paramref name="serviceType" />.
+            
+            -or-
+            
+            <see langword="null" /> if no object of type <paramref name="serviceType" /> can be instantiated from the service collection.</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.CreateSidedInstance``1(System.IServiceProvider,System.Object[])">
+            <summary>
+                Creates an object of a specified type, using the IOC Container to resolve dependencies.
+            </summary>
+            <typeparam name="T">The type of object to create.</typeparam>
+            <param name="provider">The service provider to use to resolve dependencies for the instantiated class.</param>
+            <param name="args">An optional list of arguments, sent the constructor of the instantiated class.</param>
+            <returns>An object of type <typeparamref name="T" />.
+            
+            -or-
+            
+            <see langword="null" /> if there is no object of type <typeparamref name="T" /> can be instantiated from the service collection.</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.AddModSystems(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.EnumAppSide)">
+            <summary>
+                Registers all <see cref="T:Vintagestory.API.Common.ModSystem"/>s in the current mod, into the service collection.
+            </summary>
+            <param name="services">The service collection to add the <see cref="T:Vintagestory.API.Common.ModSystem"/>s to.</param>
+            <param name="side">The app side to load systems from.</param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.AddModSystem``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Registers a client side features into the service collection.
+            </summary>
+            <param name="services">The service collection to add the features to.</param>
+            <param name="api">The api to load systems from.</param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.TryResolve``1(System.IServiceProvider,``0@)">
+            <summary>
+                Gets the service object of the specified type.
+            </summary>
+            <param name="serviceProvider">And object that provides access to the service collection.</param>
+            <param name="service">The service being requested.</param>
+            <typeparam name="T">The type of service object to get.</typeparam>
+            <returns>A service object of type <typeparamref name="T" />.
+            
+            -or-
+            
+            <see langword="null" /> if there is no service object of type <typeparamref name="T" />.</returns>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Extensions.HostExtensions.GetService``1(System.IServiceProvider)">
+            <summary>
+                Gets the service object of the specified type.
+            </summary>
+            <param name="serviceProvider">And object that provides access to the service collection.</param>
+            <typeparam name="T">The type of service object to get.</typeparam>
+            <returns>A service object of type <typeparamref name="T" />.
+            
+            -or-
+            
+            <see langword="null" /> if there is no service object of type <typeparamref name="T" />.</returns>
+        </member>
+        <member name="T:Gantry.Core.Hosting.IOC">
+             <summary>
+                 Globally accessible services, populated through the IOC Container. If a derived
+                 instance of type <see cref="T:Gantry.Core.Hosting.ModHost"/> has not been created within the
+                 Application layer, these services will not be available, and will have to be
+                 instantiated manually.<br/><br/>
+            
+                 Globally static objects like this are required because no <see cref="T:Vintagestory.API.Common.ModSystem"/>
+                 can make use of dependency injection directly, because they are instantiated by
+                 the game. Instead of using traditional singleton instances, where we'd need to
+                 add boilerplate every time it's needed, we can cache the instances here, and then
+                 used them anywhere they are needed, in lieu of being able to pass it in through
+                 an importing constructor.
+             </summary>
+        </member>
+        <member name="P:Gantry.Core.Hosting.IOC.ServerIOC">
+            <summary>
+                Gets the IOC Resolver for the Server.
+            </summary>
+            <value>The IOC Resolver for the Server.</value>
+        </member>
+        <member name="P:Gantry.Core.Hosting.IOC.ClientIOC">
+            <summary>
+                Gets the IOC Resolver for the Client.
+            </summary>
+            <value>The IOC Resolver for the Client.</value>
+        </member>
+        <member name="P:Gantry.Core.Hosting.IOC.Services">
+            <summary>
+                Gets the IOC Resolver for the current app-side.
+            </summary>      
+            <value>The IOC Resolver for the current app-side.</value>
+        </member>
+        <member name="P:Gantry.Core.Hosting.IOC.Brighter">
+            <summary>
+                Universal access to the Brighter command processor.
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Hosting.ModHost">
+            <summary>
+                Only one derived instance of this base-class should be added to any single mod within
+                the VintageMods domain. This base-class will enable Dependency Injection, and add all
+                the domain services. Derived instances should only have minimal functionality, 
+                instantiating, and adding Application specific services to the IOC Container.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ModSystem" />
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.#ctor(System.Boolean)">
+            <summary>
+                Initialises a new instance of the <see cref="T:Gantry.Core.Hosting.ModHost" /> class.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.ConfigureUniversalModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Configures any services that need to be added to the IO Container, on the both app sides, equally.
+            </summary>
+            <param name="services">The as-of-yet un-built services container.</param>
+            <param name="api">Access to the universal API.</param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.ConfigureServerModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
+            <summary>
+                Configures any services that need to be added to the IO Container, on the server side.
+            </summary>
+            <param name="services">The as-of-yet un-built services container.</param>
+            <param name="sapi">Access to the server-side API.</param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.ConfigureClientModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Client.ICoreClientAPI)">
+            <summary>
+                Configures any services that need to be added to the IO Container, on the client side.
+            </summary>
+            <param name="services">The as-of-yet un-built services container.</param>
+            <param name="capi">Access to the client-side API.</param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.StartPreUniversal(Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Called during initial mod loading, called before any mod receives the call to Start().
+            </summary>
+            <param name="api">
+                Common API Components that are available on the server and the client.
+                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.Start(Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Side agnostic Start method, called after all mods received a call to StartPre().
+            </summary>
+            <param name="api">
+                Common API Components that are available on the server and the client.
+                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
+            </param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.StartPreUniversalSide(Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Called during initial mod loading, called before any mod receives the call to Start().
+            </summary>
+            <param name="api">
+                Common API Components that are available on the server and the client.
+                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
+            </param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.StartUniversal(Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Side agnostic Start method, called after all mods received a call to StartPre().
+            </summary>
+            <param name="api">
+                Common API Components that are available on the server and the client.
+                Cast to ICoreServerAPI or ICoreClientAPI to access side specific features.
+            </param>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.ExecuteOrder">
+            <summary>
+                If you need mods to be executed in a certain order, adjust this method's return value.
+                The server will call each Mods Start() method the ascending order of each mod's execute order value.
+                And thus, as long as every mod registers it's event handlers in the Start() method, all event handlers
+                will be called in the same execution order. Default execute order of some survival mod parts.
+            
+                World Gen: 
+                - GenTerra: 0
+                - RockStrata: 0.1
+                - Deposits: 0.2
+                - Caves: 0.3
+                - BlockLayers: 0.4
+            
+                Asset Loading:
+                - Json Overrides loader: 0.05
+                - Load hardcoded mantle block: 0.1
+                - Block and Item Loader: 0.2
+                - Recipes (Smithing, Knapping, ClayForming, Grid recipes, Alloys) Loader: 1
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.ModHost.Dispose">
+            <summary>
+                If this mod allows runtime reloading, you must implement this method to unregister any listeners / handlers
+            </summary>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Registration.Api.ClientApiRegistrar">
+            <summary>
+                Handles registration of the Game's API within the client-side IOC Container.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Registration.Api.ClientApiRegistrar.RegisterClientApiEndpoints(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Client.ICoreClientAPI)">
+            <summary>
+                Registers the Game's API within the client-side IOC Container.
+            </summary>
+            <param name="services">The IOC container.</param>
+            <param name="capi">Access to the client-side API.</param>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Registration.Api.ServerApiRegistrar">
+            <summary>
+                Handles registration of the Game's API within the server-side IOC Container.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Registration.Api.ServerApiRegistrar.RegisterServerApiEndpoints(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
+            <summary>
+                Registers the Game's API within the server-side IOC Container.
+            </summary>
+            <param name="services">The IOC container.</param>
+            <param name="sapi">The Server-Side API to register.</param>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Registration.IClientServiceRegistrar">
+            <summary>
+                Represents a class that can add services to the Client IOC container. Implements <see cref="T:System.IDisposable" />.
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="M:Gantry.Core.Hosting.Registration.IClientServiceRegistrar.ConfigureClientModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Client.ICoreClientAPI)">
+            <summary>
+                Allows a mod to include Singleton, or Transient services to the IOC Container.
+            </summary>
+            <param name="services">The service collection.</param>
+            <param name="capi">Access to the client-side API.</param>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Registration.IServerServiceRegistrar">
+            <summary>
+                Represents a class that can add services to the Client IOC container.
+            </summary>
+        </member>
+        <member name="M:Gantry.Core.Hosting.Registration.IServerServiceRegistrar.ConfigureServerModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
+            <summary>
+                Allows a mod to include Singleton, or Transient services to the IOC Container.
+            </summary>
+            <param name="services">The service collection.</param>
+            <param name="sapi">Access to the server-side API.</param>
+        </member>
+        <member name="T:Gantry.Core.Hosting.Registration.IUniversalServiceRegistrar">
+            <summary>
+                Represents a class that can add services to both the Client, and Server IOC containers.
+            </summary>
+            <seealso cref="T:Gantry.Core.Hosting.Registration.IServerServiceRegistrar" />
+            <seealso cref="T:Gantry.Core.Hosting.Registration.IClientServiceRegistrar" />
+        </member>
+        <member name="M:Gantry.Core.Hosting.Registration.IUniversalServiceRegistrar.ConfigureUniversalModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI)">
+            <summary>
+                Allows a mod to include Singleton, or Transient services to the IOC Container.
+            </summary>
+            <param name="services">The service collection.</param>
+            <param name="api">Access to the universal API.</param>
+        </member>
         <member name="T:Gantry.Core.LangEx">
             <summary>
                 Extended functionality for the <see cref="T:Vintagestory.API.Config.Lang"/> class.
-            </summary>
-        </member>
-        <member name="M:Gantry.Core.LangEx.#cctor">
-            <summary>
-                Initialises the <see cref="T:Gantry.Core.LangEx"/> class.
             </summary>
         </member>
         <member name="M:Gantry.Core.LangEx.BooleanString(System.Boolean)">
@@ -3393,6 +3585,24 @@
             <param name="featureName">The name of the feature.</param>
             <param name="path">The path to the feature based string to translate.</param>
             <returns>A localised string representation of the abbreviated name of the day of the week.</returns>
+        </member>
+        <member name="M:Gantry.Core.LangEx.EmbeddedFeatureString(System.String,System.String,System.Object[])">
+            <summary>
+                Returns a localised string.
+            </summary>
+            <param name="featureName">The name of the feature.</param>
+            <param name="path">The path to the feature based string to translate.</param>
+            <param name="args">The arguments to pass to the lang file.</param>
+            <returns>A localised string representation of the abbreviated name of the day of the week.</returns>
+        </member>
+        <member name="M:Gantry.Core.LangEx.GetGantryEmbedded(System.String,System.String,System.Object[])">
+            <summary>
+                Returns a localised string.
+            </summary>
+            <param name="category">The category determines the embedded file to use for translations.</param>
+            <param name="path">The path to the feature based string to translate.</param>
+            <param name="args">The arguments to pass to the lang file.</param>
+            <returns>A localised string from the current mod's language files.</returns>
         </member>
         <member name="M:Gantry.Core.LangEx.Get(System.String)">
             <summary>
@@ -4209,7 +4419,6 @@
             <summary>
                 The main assembly for the mod that initialised the Gantry MDK.
             </summary>
-            HACK: Potential Integration Bug: Is this global, static object shared among disparate mods?
         </member>
         <member name="P:Gantry.Core.ModEx.DebugMode">
             <summary>
@@ -4234,11 +4443,12 @@
                 Cleans up the mess I made of the previous attempt to fix Linux being a pain!
             </summary>
         </member>
-        <member name="M:Gantry.Core.ModEx.IsModEnabled(System.String)">
+        <member name="M:Gantry.Core.ModEx.IsModEnabled(System.String,Vintagestory.API.Common.ICoreAPI)">
             <summary>
                 Determines whether a given mod is installed, and enabled, on the current app-side.
             </summary>
             <param name="modId">The mod identifier.</param>
+            <param name="api">The api.</param>
             <returns><c>true</c> if the mod is enabled; otherwise, <c>false</c>.</returns>
         </member>
         <member name="M:Gantry.Core.ModEx.IsCurrentlyOnMainThread">
@@ -4259,7 +4469,7 @@
         </member>
         <member name="P:Gantry.Core.ModSystems.ClientModSystem.Capi">
             <summary>
-                The core API implemented by the client. The main interface for accessing the client. Contains all sub-components, and some miscellaneous methods.
+                The core API implemented by the client. The main interface for accessing the client. Contains all subcomponents, and some miscellaneous methods.
             </summary>
         </member>
         <member name="M:Gantry.Core.ModSystems.ClientModSystem.ShouldLoad(Vintagestory.API.Common.EnumAppSide)">
@@ -4321,8 +4531,8 @@
         </member>
         <member name="M:Gantry.Core.ModSystems.Generic.ModSystemBase.ExecuteOrder">
             <summary>
-                If you need mods to be executed in a certain order, adjust this methods return value.<br/>
-                The server will call each Mods Start() method the ascending order of each mods execute order value.<br/>
+                If you need mods to be executed in a certain order, adjust these methods return value.<br/>
+                The server will call each Mods Start() method the ascending order of each mod's execute order value.<br/>
                 And thus, as long as every mod registers it's event handlers in the Start() method, all event handlers<br/>
                 will be called in the same execution order.<br/>
                 Default execute order of some survival mod parts.<br/><br/>
@@ -4349,7 +4559,7 @@
         </member>
         <member name="P:Gantry.Core.ModSystems.ServerModSystem.Sapi">
             <summary>
-                The core API implemented by the server. The main interface for accessing the server. Contains all sub-components, and some miscellaneous methods.
+                The core API implemented by the server. The main interface for accessing the server. Contains all subcomponents, and some miscellaneous methods.
             </summary>
         </member>
         <member name="M:Gantry.Core.ModSystems.ServerModSystem.ShouldLoad(Vintagestory.API.Common.EnumAppSide)">
@@ -4376,12 +4586,12 @@
         </member>
         <member name="P:Gantry.Core.ModSystems.UniversalModSystem.Capi">
             <summary>
-                The core API implemented by the client. The main interface for accessing the client. Contains all sub-components, and some miscellaneous methods.
+                The core API implemented by the client. The main interface for accessing the client. Contains all subcomponents, and some miscellaneous methods.
             </summary>
         </member>
         <member name="P:Gantry.Core.ModSystems.UniversalModSystem.Sapi">
             <summary>
-                The core API implemented by the server. The main interface for accessing the server. Contains all sub-components, and some miscellaneous methods.
+                The core API implemented by the server. The main interface for accessing the server. Contains all subcomponents, and some miscellaneous methods.
             </summary>
         </member>
         <member name="M:Gantry.Core.ModSystems.UniversalModSystem.ShouldLoad(Vintagestory.API.Common.EnumAppSide)">
@@ -4390,6 +4600,410 @@
             </summary>
             <param name="forSide">For side.</param>
             <returns><c>true</c> if the mod should be loaded on the specified side, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Abstractions.EasyXClientSystemBase`1">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="F:Gantry.Services.EasyX.Abstractions.EasyXClientSystemBase`1.Settings">
+            <summary>
+                The settings used to configure the mod.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXClientSystemBase`1.StartClientSide(Vintagestory.API.Client.ICoreClientAPI)">
+            <inheritdoc />
+        </member>
+        <member name="T:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3">
+            <summary>
+                Acts as a base class for all EasyX features, on the server.
+            </summary>
+            <typeparam name="TSettings">The type of the settings.</typeparam>
+            <typeparam name="TServerSettings">The type of the server settings.</typeparam>
+            <typeparam name="TClientSettings">The type of the client settings.</typeparam>
+        </member>
+        <member name="F:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.ServerChannel">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.Settings">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.ConfigureServerModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
+            <summary>
+            Allows a mod to include Singleton, or Transient services to the IOC Container.
+            </summary>
+            <param name="services">The service collection.</param>
+            <param name="sapi">Access to the server-side API.</param>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.SubCommandName">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.CommandName">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.FeatureSpecificCommands(Vintagestory.API.Common.IChatCommand,Vintagestory.API.Common.CommandArgumentParsers)">
+            <summary>
+                Adds feature specific sub-commands to the feature command. 
+            </summary>
+            <param name="subCommand">The sub-command to add features to.</param>
+            <param name="parsers">The collection of parsers that can be used to parse command arguments.</param>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.StartServerSide(Vintagestory.API.Server.ICoreServerAPI)">
+            <summary>
+                Full start to the mod on the server side
+            <br /><br />In 1.17+ do NOT use this to add or update behaviors or attributes or other fixed properties of any block, item or entity, in code (additional to what is read from JSON).
+            It is already too late to do that here, it will not be seen client-side.  Instead, code which needs to do that should be registered for event sapi.Event.AssetsFinalizers.  See VSSurvivalMod system BlockReinforcement.cs for an example.
+            </summary>
+            <param name="api"></param>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.GeneratePacket(Vintagestory.API.Common.IPlayer)">
+            <summary>
+                Generates a packet, to send to the specified player.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.GeneratePacketPerPlayer(Vintagestory.API.Common.IPlayer,System.Boolean)">
+            <summary>
+                Generates a packet, to send to the specified player.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.IsEnabledForAll(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+                Determines whether this feature is enabled, for all the specified players.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.IsEnabledForAny(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+                Determines whether this feature is enabled, for all the specified players.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.IsEnabledFor(Vintagestory.API.Common.IPlayer)">
+            <summary>
+                Determines whether this feature is enabled, for the specified player.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.IsEnabledFor(System.String)">
+            <summary>
+                Determines whether this feature is enabled, for the specified player.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.DisplayInfo(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <summary>
+                Call Handler: /ChatCommandName (X)
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.ExtraDisplayInfo(System.Text.StringBuilder)">
+            <summary>
+                Add extra info to the details of the sub command.
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.OnChangeMode(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <summary>
+                Call Handler: /ChatCommandName (X) mode
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.HandleWhitelist(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <summary>
+                Call Handler: /ChatCommandName (X) whitelist
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.HandleBlacklist(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <summary>
+                Call Handler: /ChatCommandName (X) blacklist
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Abstractions.EasyXServerSystemBase`3.OnChange``1(Vintagestory.API.Common.TextCommandCallingArgs,System.String,System.Action{``0})">
+            <summary>
+                Base Call Handler
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Abstractions.IEasyXClientSettings">
+            <summary>
+                Represents the base settings for each EasyX feature within this mod.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.IEasyXClientSettings.Enabled">
+            <summary>
+                Determines whether the feature should be used.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Abstractions.IEasyXServerSettings">
+            <summary>
+                Represents the base settings for each EasyX feature within this mod.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.IEasyXServerSettings.Mode">
+            <summary>
+                Determines whether the feature should be used.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.IEasyXServerSettings.Whitelist">
+            <summary>
+                When the mode is set to `Whitelist`, only the players on this list will have the feature enabled.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Abstractions.IEasyXServerSettings.Blacklist">
+            <summary>
+                When the mode is set to `Blacklist`, the players on this list will have the feature disabled.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode">
+            <summary>
+                The mode of access for specific feature.
+            </summary>
+        </member>
+        <member name="F:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode.Disabled">
+            <summary>
+                The feature is disabled for all players on the server.
+            </summary>
+        </member>
+        <member name="F:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode.Enabled">
+            <summary>
+                The feature is enabled for all players on the server.
+            </summary>
+        </member>
+        <member name="F:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode.Whitelist">
+            <summary>
+                The feature is only enabled for players on the whitelist.
+            </summary>
+        </member>
+        <member name="F:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode.Blacklist">
+            <summary>
+                The feature is enabled all for players, except for player on the blacklist.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.ChatCommands.DataStructures.Player">
+            <summary>
+                Represents a player that's been added to a whitelist, or blacklist.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.DataStructures.Player.#ctor(System.String,System.String)">
+            <summary>
+                Represents a player that's been added to a whitelist, or blacklist.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser">
+            <summary>
+                Parses a string as a <see cref="T:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode"/> value, allowing partial matches.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ArgumentParserBase" />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser.#ctor(System.String,System.Boolean)">
+            <summary>
+                Parses a string as a <see cref="T:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode"/> value, allowing partial matches.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ArgumentParserBase" />
+        </member>
+        <member name="P:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser.Mode">
+            <summary />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser.PreProcess(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser.TryProcess(Vintagestory.API.Common.TextCommandCallingArgs,System.Action{Vintagestory.API.Common.AsyncParseResults})">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser.GetValue">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.AccessModeParser.SetValue(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:Gantry.Services.EasyX.ChatCommands.Parsers.Extensions.ParserExtensions">
+            <summary>
+                Extension methods that add new functionality to the <see cref="T:Vintagestory.API.Common.CommandArgumentParsers"/> class
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.Extensions.ParserExtensions.AccessMode(Vintagestory.API.Common.CommandArgumentParsers)">
+            <summary>
+                Parses a string as a <see cref="T:Gantry.Services.EasyX.ChatCommands.DataStructures.AccessMode"/> value, allowing partial matches.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.Extensions.ParserExtensions.FileScope(Vintagestory.API.Common.CommandArgumentParsers)">
+            <summary>
+                Parses a string as a <see cref="M:Gantry.Services.EasyX.ChatCommands.Parsers.Extensions.ParserExtensions.FileScope(Vintagestory.API.Common.CommandArgumentParsers)"/> value, allowing partial matches.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.Extensions.ParserExtensions.FuzzyPlayerSearch(Vintagestory.API.Common.CommandArgumentParsers)">
+            <summary>
+                Allows the user to search for an online player, based on a partial match of their username.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.Extensions.ParserExtensions.FloatRange(Vintagestory.API.Common.CommandArgumentParsers,System.String,System.Single,System.Single)">
+            <summary>
+                Parses a float value that is only allowed within a specific inclusive range.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser">
+            <summary>
+                Parses a string as a <see cref="T:Gantry.Services.FileSystem.Enums.FileScope"/> value, allowing partial matches.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ArgumentParserBase" />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser.#ctor(System.String,System.Boolean)">
+            <summary>
+                Parses a string as a <see cref="T:Gantry.Services.FileSystem.Enums.FileScope"/> value, allowing partial matches.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ArgumentParserBase" />
+        </member>
+        <member name="P:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser.Scope">
+            <summary>
+                Specifies whether to use world, or global settings to save feature settings to.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser.PreProcess(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser.TryProcess(Vintagestory.API.Common.TextCommandCallingArgs,System.Action{Vintagestory.API.Common.AsyncParseResults})">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser.GetValue">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FileScopeParser.SetValue(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser">
+            <summary>
+                Allows the user to search for an online player, based on a partial match of their username.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ArgumentParserBase" />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.#ctor(System.String,System.Boolean)">
+            <summary>
+                Allows the user to search for an online player, based on a partial match of their username.
+            </summary>
+            <seealso cref="T:Vintagestory.API.Common.ArgumentParserBase" />
+        </member>
+        <member name="P:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.Results">
+            <summary>
+                The list of players whose username matches the <see cref="P:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.Value"/> search term.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.Value">
+            <summary>
+                The search term to filter the list of players with.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.PreProcess(Vintagestory.API.Common.TextCommandCallingArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.TryProcess(Vintagestory.API.Common.TextCommandCallingArgs,System.Action{Vintagestory.API.Common.AsyncParseResults})">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.GetValue">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.ChatCommands.Parsers.FuzzyPlayerParser.SetValue(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="T:Gantry.Services.EasyX.Extensions.ChatCommandExtensions">
+            <summary>
+                Extension methods to aid building sub-commands for EasyX features.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Extensions.ChatCommandExtensions.WithFeatureSpecifics(Vintagestory.API.Common.IChatCommand,System.Action{Vintagestory.API.Common.IChatCommand,Vintagestory.API.Common.CommandArgumentParsers},Vintagestory.API.Common.CommandArgumentParsers)">
+            <summary>
+                Adds feature specific sub-commands to the feature command. 
+            </summary>
+            <param name="subCommand">The sub-command to add features to.</param>
+            <param name="builder">The extra details to add to the command.</param>
+            <param name="parsers">The collection of parsers that can be used to parse command arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Extensions.EnumerableExtensions">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Extensions.EnumerableExtensions.IsOneOf``1(``0,``0[])">
+            <summary>
+                
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Extensions.NetworkExtensions">
+            <summary>
+                Extension methods to aid broadcasting unique packets to players.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Extensions.NetworkExtensions.BroadcastUniquePacket``1(Vintagestory.API.Server.IServerNetworkChannel,System.Func{Vintagestory.API.Common.IPlayer,``0},Vintagestory.API.Server.IServerPlayer[])">
+            <summary>
+                Broadcasts unique packets to players, using a factory method to build packets for each online client.
+            </summary>
+            <typeparam name="TPacket">The type of the packet.</typeparam>
+            <param name="serverNetworkChannel">The server network channel.</param>
+            <param name="packetFactory">The packet factory.</param>
+            <param name="skipPlayers">A list of players the packets should not be created for, or sent to.</param>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Extensions.StringExtensions">
+            <summary>
+                Extension methods to aid broadcasting unique packets to players.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.EasyX.Extensions.StringExtensions.PascalCaseToSentence(System.String)">
+            <summary>
+                Humanises a PascalCase phrase.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Hosting.ConfigurationSettings">
+            <summary>
+                The settings used to configure the mod.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Hosting.ConfigurationSettings.Scope">
+            <summary>
+                Specifies whether to use world, or global settings to save feature settings to.
+            </summary>
+        </member>
+        <member name="P:Gantry.Services.EasyX.Hosting.ConfigurationSettings.CommandName">
+            <summary>
+                The name of the command used to administrate the mod.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.EasyX.Hosting.EasyXHost">
+            <summary>
+                Entry-point for the mod. This class will configure and build the IOC Container, and Service list for the rest of the mod.
+                
+                Registrations performed within this class should be global scope; by convention, features should aim to be as stand-alone as they can be.
+            </summary>
+            <remarks>
+                Only one derived instance of this class should be added to any single mod within
+                the VintageMods domain. This class will enable Dependency Injection, and add all
+                the domain services. Derived instances should only have minimal functionality, 
+                instantiating, and adding Application specific services to the IOC Container.
+            </remarks>
+            <seealso cref="T:Gantry.Core.Hosting.ModHost" />
+        </member>
+        <member name="M:Gantry.Services.EasyX.Hosting.EasyXHost.#ctor(System.String)">
+            <summary>
+                Entry-point for the mod. This class will configure and build the IOC Container, and Service list for the rest of the mod.
+                
+                Registrations performed within this class should be global scope; by convention, features should aim to be as stand-alone as they can be.
+            </summary>
+            <remarks>
+                Only one derived instance of this class should be added to any single mod within
+                the VintageMods domain. This class will enable Dependency Injection, and add all
+                the domain services. Derived instances should only have minimal functionality, 
+                instantiating, and adding Application specific services to the IOC Container.
+            </remarks>
+            <seealso cref="T:Gantry.Core.Hosting.ModHost" />
+        </member>
+        <member name="M:Gantry.Services.EasyX.Hosting.EasyXHost.ConfigureServerModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Server.ICoreServerAPI)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.Hosting.EasyXHost.ConfigureUniversalModServices(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gantry.Services.EasyX.Hosting.EasyXHost.StartServerSide(Vintagestory.API.Server.ICoreServerAPI)">
+            <inheritdoc />
         </member>
         <member name="T:Gantry.Services.FileSystem.Abstractions.Contracts.IBinaryModFile">
             <summary>
@@ -4507,13 +5121,11 @@
             </summary>
             <returns>An instance of type <see cref="T:Vintagestory.API.Datastructures.JsonObject"/>, populated with data from this file.</returns>
         </member>
-        <member name="M:Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile.SaveFrom``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Formatting)">
+        <member name="M:Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile.SaveFrom(Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile)">
             <summary>
                 Serialises the specified collection of objects, and saves the resulting data to file.
             </summary>
-            <typeparam name="TModel">The type of the object to serialise.</typeparam>
-            <param name="collection">The collection of the objects to save to a single file.</param>
-            <param name="formatting">The JSON formatting style to use when serialising the data.</param>
+            <param name="file">The file to save.</param>
         </member>
         <member name="M:Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile.SaveFrom(System.String)">
             <summary>
@@ -4926,7 +5538,7 @@
             <param name="fileName">The name of the file, including file extension.</param>
             <param name="scope">The scope of the file, be it global, or per-world.</param>
         </member>
-        <member name="M:Gantry.Services.FileSystem.Configuration.Extensions.FileSystemServiceExtensions.RegisterSettingsFiles(Gantry.Services.FileSystem.Abstractions.Contracts.IFileSystemService)">
+        <member name="M:Gantry.Services.FileSystem.Configuration.Extensions.FileSystemServiceExtensions.RegisterSettingsFiles(Gantry.Services.FileSystem.Abstractions.Contracts.IFileSystemService,Vintagestory.API.Common.ICoreAPI)">
             <summary>
                 Registers settings files.
             </summary>
@@ -5033,6 +5645,12 @@
                 The mod settings for a specific <see cref="T:Gantry.Services.FileSystem.Enums.FileScope"/>.
             </summary>
             <value>The global settings.</value>
+        </member>
+        <member name="M:Gantry.Services.FileSystem.Configuration.ModSettings.CopyTo(Gantry.Services.FileSystem.Enums.FileScope)">
+            <summary>
+                Copies the settings from one scope to another.
+            </summary>
+            <param name="scope">The scope to copy the settings to.</param>
         </member>
         <member name="M:Gantry.Services.FileSystem.Configuration.ModSettings.Dispose">
             <summary>
@@ -5145,50 +5763,12 @@
                 Occurs when a property value is changed, within the observed POCO class.
             </summary>
         </member>
-        <member name="T:Gantry.Services.FileSystem.DependencyInjection.GantryDependencyInjectionExtensions">
-            <summary>
-                Extension methods to aid the registration of the File System service, into a Gantry MDK IOC Container.
-            </summary>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.DependencyInjection.GantryDependencyInjectionExtensions.AddFileSystemService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.Action{Gantry.Services.FileSystem.FileSystemServiceOptions})">
-            <summary>
-                Attempts to add the file system service to the service collection, as service type <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IFileSystemService"/>.
-            </summary>
-            <param name="services">The services collection to add the service to.</param>
-            <param name="options">The options to pass to the service.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.DependencyInjection.GantryDependencyInjectionExtensions.AddFileSystemService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection)">
-            <summary>
-                Attempts to add the file system service to the service collection, as service type <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IFileSystemService"/>.
-            </summary>
-            <param name="services">The services collection to add the service to.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.DependencyInjection.GantryDependencyInjectionExtensions.AddFeatureWorldSettings``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.String)">
-            <summary>
-                Adds a per-world settings service for a specific feature.
-            </summary>
-            <typeparam name="TSettings">The type of the settings.</typeparam>
-            <param name="services">The services collection to add the service to.</param>
-            <param name="featureName">The name of the feature.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.DependencyInjection.GantryDependencyInjectionExtensions.AddFeatureGlobalSettings``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.String)">
-            <summary>
-                Adds a global settings service for a specific feature.
-            </summary>
-            <typeparam name="TSettings">The type of the settings.</typeparam>
-            <param name="services">The services collection to add the service to.</param>
-            <param name="featureName">The name of the feature.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
         <member name="T:Gantry.Services.FileSystem.Dialogue.AutomaticFeatureSettingsDialogue`1">
             <summary>
                 Acts as a base class for dialogue boxes that
             </summary>
             <typeparam name="TFeatureSettings">The strongly-typed settings for the feature under use.</typeparam>
-            <seealso cref="T:Gantry.Core.GameContent.GUI.GenericDialogue" />
+            <seealso cref="T:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue" />
         </member>
         <member name="M:Gantry.Services.FileSystem.Dialogue.AutomaticFeatureSettingsDialogue`1.#ctor(Vintagestory.API.Client.ICoreClientAPI,`0,System.String)">
             <summary>
@@ -5214,7 +5794,7 @@
                 Acts as a base class for dialogue boxes that 
             </summary>
             <typeparam name="TFeatureSettings">The strongly-typed settings for the feature under use.</typeparam>
-            <seealso cref="T:Gantry.Core.GameContent.GUI.GenericDialogue" />
+            <seealso cref="T:Gantry.Core.GameContent.GUI.Abstractions.GenericDialogue" />
         </member>
         <member name="P:Gantry.Services.FileSystem.Dialogue.FeatureSettingsDialogue`1.Settings">
             <summary>
@@ -5318,12 +5898,6 @@
             <typeparam name="T">The type of interface to scan the assembly for concrete implementations of.</typeparam>
             <param name="assembly">The assembly to scan.</param>
             <returns></returns>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.Extensions.AssemblyExtensions.InitialiseSettingsConsumers(System.Reflection.Assembly)">
-            <summary>
-                Initialises classes that implement the <see cref="T:Gantry.Services.FileSystem.Configuration.Consumers.ISettingsConsumer"/> interface, within the given assembly.
-            </summary>
-            <param name="assembly">The assembly.</param>
         </member>
         <member name="M:Gantry.Services.FileSystem.Extensions.AssemblyExtensions.RunClassConstructor(System.Type)">
             <summary>
@@ -5568,6 +6142,11 @@
             </summary>
             <seealso cref="T:Gantry.Services.FileSystem.Abstractions.ModFile" />
         </member>
+        <member name="P:Gantry.Services.FileSystem.FileAdaptors.JsonModFile.JsonSerialiserSettings">
+            <summary>
+                Gets the json serialiser settings.
+            </summary>
+        </member>
         <member name="M:Gantry.Services.FileSystem.FileAdaptors.JsonModFile.#ctor(System.String)">
             <summary>
             	Initialises a new instance of the <see cref="T:Gantry.Services.FileSystem.FileAdaptors.JsonModFile"/> class.
@@ -5625,6 +6204,12 @@
             <typeparam name="TModel">The type of the object to serialise.</typeparam>
             <param name="instance">The instance of the object to serialise.</param>
         </member>
+        <member name="M:Gantry.Services.FileSystem.FileAdaptors.JsonModFile.SaveFrom(Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile)">
+            <summary>
+                Serialises the specified collection of objects, and saves the resulting data to file.
+            </summary>
+            <param name="file">The file to save.</param>
+        </member>
         <member name="M:Gantry.Services.FileSystem.FileAdaptors.JsonModFile.SaveFromAsync``1(``0)">
             <summary>
                 Serialises the specified instance, and saves the resulting data to file.
@@ -5658,14 +6243,6 @@
                 Parses the file into Vintage Story's bespoke JsonObject wrapper.
             </summary>
             <returns>An instance of type <see cref="T:Vintagestory.API.Datastructures.JsonObject" />, populated with data from this file.</returns>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.FileAdaptors.JsonModFile.SaveFrom``1(System.Collections.Generic.IEnumerable{``0},Newtonsoft.Json.Formatting)">
-            <summary>
-                Serialises the specified collection of objects, and saves the resulting data to file.
-            </summary>
-            <typeparam name="TModel">The type of the object to serialise.</typeparam>
-            <param name="collection">The collection of the objects to save to a single file.</param>
-            <param name="formatting">The JSON formatting style to use when serialising the data.</param>
         </member>
         <member name="M:Gantry.Services.FileSystem.FileAdaptors.JsonModFile.SaveFrom``1(System.Collections.Generic.IEnumerable{``0})">
             <summary>
@@ -5734,12 +6311,7 @@
                 Provides a means for handling files, including embedded resources, used within a mod.
             </summary>
         </member>
-        <member name="M:Gantry.Services.FileSystem.FileSystemService.#ctor">
-            <summary>
-                Initialises a new instance of the <see cref="T:Gantry.Services.FileSystem.FileSystemService"/> class.
-            </summary>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.FileSystemService.#ctor(Gantry.Services.FileSystem.FileSystemServiceOptions)">
+        <member name="M:Gantry.Services.FileSystem.FileSystemService.#ctor(Vintagestory.API.Common.ICoreAPI,Gantry.Services.FileSystem.FileSystemServiceOptions)">
             <summary>
                 Initialises a new instance of the <see cref="T:Gantry.Services.FileSystem.FileSystemService"/> class.
             </summary>
@@ -5760,7 +6332,7 @@
                 Retrieves a file that has previously been registered with the FileSystem Service.
             </summary>
             <param name="fileName">Name of the file.</param>
-            <returns>Return an <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IModFile" /> representation of the file, on disk.</returns>
+            <returns>Return a <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IModFile" /> representation of the file, on disk.</returns>
         </member>
         <member name="M:Gantry.Services.FileSystem.FileSystemService.GetRegisteredFile``1(System.String)">
             <summary>
@@ -5768,21 +6340,21 @@
             </summary>
             <typeparam name="TFileType">The type of the file type to return as.</typeparam>
             <param name="fileName">The name of the file, including file extension.</param>
-            <returns>Return an <typeparamref name="TFileType" /> representation of the file, on disk.</returns>
+            <returns>Return a <typeparamref name="TFileType" /> representation of the file, on disk.</returns>
         </member>
         <member name="M:Gantry.Services.FileSystem.FileSystemService.GetJsonFile(System.String)">
             <summary>
             Retrieves a file that has previously been registered with the FileSystem Service.
             </summary>
             <param name="fileName">Name of the file.</param>
-            <returns>Return an <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile" /> representation of the file, on disk.</returns>
+            <returns>Return a <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IJsonModFile" /> representation of the file, on disk.</returns>
         </member>
         <member name="M:Gantry.Services.FileSystem.FileSystemService.GetBinaryFile(System.String)">
             <summary>
             Retrieves a file that has previously been registered with the FileSystem Service.
             </summary>
             <param name="fileName">The name of the file, including file extension.</param>
-            <returns>Return an <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IBinaryModFile" /> representation of the file, on disk.</returns>
+            <returns>Return a <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IBinaryModFile" /> representation of the file, on disk.</returns>
         </member>
         <member name="M:Gantry.Services.FileSystem.FileSystemService.ParseEmbeddedJsonFile``1(System.String)">
             <summary>
@@ -5807,7 +6379,7 @@
             Retrieves a file that has previously been registered with the FileSystem Service.
             </summary>
             <param name="fileName">Name of the file.</param>
-            <returns>Return an <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.ITextModFile" /> representation of the file, on disk.</returns>
+            <returns>Return a <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.ITextModFile" /> representation of the file, on disk.</returns>
         </member>
         <member name="M:Gantry.Services.FileSystem.FileSystemService.Dispose">
             <summary>
@@ -5835,20 +6407,57 @@
         </member>
         <member name="P:Gantry.Services.FileSystem.FileSystemServiceOptions.RegisterSettingsFiles">
             <summary>
-                Determines whether or not to register the standard settings files for the mod. Default: False.
+                Determines whether to register the standard settings files for the mod. Default: False.
             </summary>
             <remarks>
                 "%VINTAGE_STORY_DATA%\ModData\{RootFolderName}\{Scope}\settings-{scope}-{side}.json"
             </remarks>
         </member>
+        <member name="T:Gantry.Services.FileSystem.Hosting.GantryDependencyInjectionExtensions">
+            <summary>
+                Extension methods to aid the registration of the File System service, into a Gantry MDK IOC Container.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.FileSystem.Hosting.GantryDependencyInjectionExtensions.AddFileSystemService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI,System.Action{Gantry.Services.FileSystem.FileSystemServiceOptions})">
+            <summary>
+                Attempts to add the file system service to the service collection, as service type <see cref="T:Gantry.Services.FileSystem.Abstractions.Contracts.IFileSystemService"/>.
+            </summary>
+            <param name="services">The services collection to add the service to.</param>
+            <param name="api">The universal Core API.</param>
+            <param name="options">The options to pass to the service.</param>
+            <returns>A reference to this instance, after this operation has completed.</returns>
+        </member>
+        <member name="M:Gantry.Services.FileSystem.Hosting.GantryDependencyInjectionExtensions.AddFeatureSettings``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Gantry.Services.FileSystem.Enums.FileScope,System.String)">
+            <summary>
+                Adds a per-world settings service for a specific feature.
+            </summary>
+            <typeparam name="TSettings">The type of the settings.</typeparam>
+            <param name="services">The services collection to add the service to.</param>
+            <param name="scope">The settings file to add the feature to.</param>
+            <param name="featureName">The name of the feature.</param>
+            <returns>A reference to this instance, after this operation has completed.</returns>
+        </member>
+        <member name="M:Gantry.Services.FileSystem.Hosting.GantryDependencyInjectionExtensions.AddFeatureWorldSettings``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.String)">
+            <summary>
+                Adds a per-world settings service for a specific feature.
+            </summary>
+            <typeparam name="TSettings">The type of the settings.</typeparam>
+            <param name="services">The services collection to add the service to.</param>
+            <param name="featureName">The name of the feature.</param>
+            <returns>A reference to this instance, after this operation has completed.</returns>
+        </member>
+        <member name="M:Gantry.Services.FileSystem.Hosting.GantryDependencyInjectionExtensions.AddFeatureGlobalSettings``1(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.String)">
+            <summary>
+                Adds a global settings service for a specific feature.
+            </summary>
+            <typeparam name="TSettings">The type of the settings.</typeparam>
+            <param name="services">The services collection to add the service to.</param>
+            <param name="featureName">The name of the feature.</param>
+            <returns>A reference to this instance, after this operation has completed.</returns>
+        </member>
         <member name="T:Gantry.Services.FileSystem.ModPaths">
             <summary>
                 Helper class for determining mod paths.
-            </summary>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.ModPaths.Initialise(System.String,System.String)">
-            <summary>
-            	Initialises static members of the <see cref="T:Gantry.Services.FileSystem.ModPaths" /> class.
             </summary>
         </member>
         <member name="P:Gantry.Services.FileSystem.ModPaths.WorldGuid">
@@ -5898,11 +6507,6 @@
             </summary>
             <param name="path">A path on the filesystem, used to store mod files.</param>
             <returns>Returns the absolute path to the directory that has been created.</returns>
-        </member>
-        <member name="M:Gantry.Services.FileSystem.ModPaths.Dispose">
-            <summary>
-                DEV NOTE: Stops world settings files from being transferred between worlds.
-            </summary>
         </member>
         <member name="T:Gantry.Services.FileSystem.v2.Abstractions.IFileCollection">
             <summary>
@@ -6178,26 +6782,29 @@
             <param name="scope">The scope of the file.</param>
             <returns>A <see cref="T:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.IJsonSettingsFile"/> representation of the file, on the file system.</returns>
         </member>
-        <member name="M:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.JsonSettingsFileProviderExtensions.GetSettings(Gantry.Services.FileSystem.v2.Abstractions.IFileProvider,Gantry.Services.FileSystem.v2.DataStructures.FileScope)">
+        <member name="M:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.JsonSettingsFileProviderExtensions.GetSettings(Gantry.Services.FileSystem.v2.Abstractions.IFileProvider,Gantry.Services.FileSystem.v2.DataStructures.FileScope,Vintagestory.API.Common.EnumAppSide)">
             <summary>
                 Gets the settings file for the specific scope, for the current app side.
             </summary>
             <param name="provider">The provider.</param>
             <param name="scope">The scope of the file.</param>
+            <param name="side">Which side to get the settings for.</param>
             <returns>A <see cref="T:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.IJsonSettingsFile"/> representation of the file, on the file system.</returns>
         </member>
-        <member name="M:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.JsonSettingsFileProviderExtensions.GetWorldSettings(Gantry.Services.FileSystem.v2.Abstractions.IFileProvider)">
+        <member name="M:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.JsonSettingsFileProviderExtensions.GetWorldSettings(Gantry.Services.FileSystem.v2.Abstractions.IFileProvider,Vintagestory.API.Common.EnumAppSide)">
             <summary>
                 Gets the world settings file for the current app side.
             </summary>
             <param name="provider">The provider.</param>
+            <param name="side">Which side to get the settings for.</param>
             <returns>A <see cref="T:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.IJsonSettingsFile"/> representation of the file, on the file system.</returns>
         </member>
-        <member name="M:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.JsonSettingsFileProviderExtensions.GetGlobalSettings(Gantry.Services.FileSystem.v2.Abstractions.IFileProvider)">
+        <member name="M:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.JsonSettingsFileProviderExtensions.GetGlobalSettings(Gantry.Services.FileSystem.v2.Abstractions.IFileProvider,Vintagestory.API.Common.EnumAppSide)">
             <summary>
                 Gets the global settings file for the current app side.
             </summary>
             <param name="provider">The provider.</param>
+            <param name="side">Which side to get the settings for.</param>
             <returns>A <see cref="T:Gantry.Services.FileSystem.v2.FileTypes.JsonSettings.IJsonSettingsFile"/> representation of the file, on the file system.</returns>
         </member>
         <member name="T:Gantry.Services.FileSystem.v2.FileTypes.Json.IJsonFile">
@@ -6241,6 +6848,23 @@
         <member name="M:Gantry.Services.FileSystem.v2.Hosting.FileHost.#ctor">
             <summary>
                 Initialises a new instance of the <see cref="T:Gantry.Services.FileSystem.v2.Hosting.FileHost"/> class.
+            </summary>
+        </member>
+        <member name="T:Gantry.Services.HarmonyPatches.Annotations.RequiresModAttribute">
+            <summary>
+                Denotes that the decorated object requires a specific mod to be enabled within the gameworld.
+                It is up to the developer to enforce this restriction.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.HarmonyPatches.Annotations.RequiresModAttribute.#ctor(System.String)">
+            <summary>
+             	Initialises a new instance of the <see cref="T:Gantry.Services.HarmonyPatches.Annotations.RequiresModAttribute"/> class.
+            </summary>
+            <param name="modId">The mod identifier of the required mod.</param>
+        </member>
+        <member name="P:Gantry.Services.HarmonyPatches.Annotations.RequiresModAttribute.ModId">
+            <summary>
+                The ModID of the required mod.
             </summary>
         </member>
         <member name="T:Gantry.Services.HarmonyPatches.Annotations.HarmonySidedPatchAttribute">
@@ -6415,26 +7039,6 @@
             <param name="argumentTypes">The argument types, to further identify the method to patch.</param>
             <param name="argumentVariations">The argument variations, to further identify the method to patch.</param>
         </member>
-        <member name="T:Gantry.Services.HarmonyPatches.DependencyInjection.GantryDependencyInjectionExtensions">
-            <summary>
-                Extension methods to aid the registration of the Harmony Patching service, into a Gantry MDK IOC Container.
-            </summary>
-        </member>
-        <member name="M:Gantry.Services.HarmonyPatches.DependencyInjection.GantryDependencyInjectionExtensions.AddHarmonyPatchingService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.Action{Gantry.Services.HarmonyPatches.HarmonyPatchingServiceOptions})">
-            <summary>
-                Adds the embedded resources service to the service collection.
-            </summary>
-            <param name="services">The services collection to add the service to.</param>
-            <param name="options">The options to pass to the service.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
-        <member name="M:Gantry.Services.HarmonyPatches.DependencyInjection.GantryDependencyInjectionExtensions.AddHarmonyPatchingService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection)">
-            <summary>
-                Adds the embedded resources service to the service collection.
-            </summary>
-            <param name="services">The services collection to add the service to.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
         <member name="T:Gantry.Services.HarmonyPatches.HarmonyPatchingService">
             <summary>
                 Provides methods of applying Harmony patches to the game.
@@ -6444,15 +7048,11 @@
                 be processed at launch. Manual patches can be processed later on at runtime.
             </remarks>
         </member>
-        <member name="M:Gantry.Services.HarmonyPatches.HarmonyPatchingService.#ctor">
+        <member name="M:Gantry.Services.HarmonyPatches.HarmonyPatchingService.#ctor(Vintagestory.API.Common.ICoreAPI,Gantry.Services.HarmonyPatches.HarmonyPatchingServiceOptions)">
             <summary>
                 Initialises a new instance of the <see cref="T:Gantry.Services.HarmonyPatches.HarmonyPatchingService"/> class.
             </summary>
-        </member>
-        <member name="M:Gantry.Services.HarmonyPatches.HarmonyPatchingService.#ctor(Gantry.Services.HarmonyPatches.HarmonyPatchingServiceOptions)">
-            <summary>
-                Initialises a new instance of the <see cref="T:Gantry.Services.HarmonyPatches.HarmonyPatchingService"/> class.
-            </summary>
+            <param name="api">The api to use for game related calls.</param>
             <param name="options">The options.</param>
         </member>
         <member name="M:Gantry.Services.HarmonyPatches.HarmonyPatchingService.CreateOrUseInstance(System.String)">
@@ -6514,6 +7114,20 @@
                 The ID of the default <see cref="T:HarmonyLib.Harmony"/> instance used by the mod. Default: ModEx.ModAssembly.FullName.
             </summary>
         </member>
+        <member name="T:Gantry.Services.HarmonyPatches.Hosting.GantryDependencyInjectionExtensions">
+            <summary>
+                Extension methods to aid the registration of the Harmony Patching service, into a Gantry MDK IOC Container.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.HarmonyPatches.Hosting.GantryDependencyInjectionExtensions.AddHarmonyPatchingService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI,System.Action{Gantry.Services.HarmonyPatches.HarmonyPatchingServiceOptions})">
+            <summary>
+                Adds the embedded resources service to the service collection.
+            </summary>
+            <param name="services">The services collection to add the service to.</param>
+            <param name="api">The universal Core API.</param>
+            <param name="options">The options to pass to the service.</param>
+            <returns>A reference to this instance, after this operation has completed.</returns>
+        </member>
         <member name="T:Gantry.Services.HarmonyPatches.IHarmonyPatchingService">
             <summary>
                 Provides methods of applying Harmony patches to the game.
@@ -6542,26 +7156,6 @@
             By default, all annotated [HarmonyPatch] classes in the executing assembly will
             be processed at launch. Manual patches can be processed later on at runtime.
             </summary>
-        </member>
-        <member name="T:Gantry.Services.Network.DependencyInjection.GantryDependencyInjectionExtensions">
-            <summary>
-                Extension methods to aid the registration of the Network service, into a Gantry MDK IOC Container.
-            </summary>
-        </member>
-        <member name="M:Gantry.Services.Network.DependencyInjection.GantryDependencyInjectionExtensions.AddNetworkService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,System.Action{Gantry.Services.Network.NetworkServiceOptions})">
-            <summary>
-                Adds the embedded resources service to the service collection.
-            </summary>
-            <param name="services">The services collection to add the service to.</param>
-            <param name="options">The services collection to add the service to.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
-        </member>
-        <member name="M:Gantry.Services.Network.DependencyInjection.GantryDependencyInjectionExtensions.AddNetworkService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection)">
-            <summary>
-                Adds the embedded resources service to the service collection.
-            </summary>
-            <param name="services">The services collection to add the service to.</param>
-            <returns>A reference to this instance, after this operation has completed.</returns>
         </member>
         <member name="T:Gantry.Services.Network.Extensions.NetworkChannelExtensions">
             <summary>
@@ -6694,6 +7288,20 @@
                 Registers a network channel on the app side this method is called from.
             </summary>
             <param name="channelName">The name of the channel to register.</param>
+        </member>
+        <member name="T:Gantry.Services.Network.Hosting.GantryDependencyInjectionExtensions">
+            <summary>
+                Extension methods to aid the registration of the Network service, into a Gantry MDK IOC Container.
+            </summary>
+        </member>
+        <member name="M:Gantry.Services.Network.Hosting.GantryDependencyInjectionExtensions.AddNetworkService(ApacheTech.Common.DependencyInjection.Abstractions.IServiceCollection,Vintagestory.API.Common.ICoreAPI,System.Action{Gantry.Services.Network.NetworkServiceOptions})">
+            <summary>
+                Adds the embedded resources service to the service collection.
+            </summary>
+            <param name="services">The services collection to add the service to.</param>
+            <param name="api">The api to run game commands on.</param>
+            <param name="options">The services collection to add the service to.</param>
+            <returns>A reference to this instance, after this operation has completed.</returns>
         </member>
         <member name="T:Gantry.Services.Network.IClientNetworkService">
             <summary>

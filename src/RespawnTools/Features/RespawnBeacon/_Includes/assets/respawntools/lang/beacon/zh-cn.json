@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "已启用：",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "只有在信标启用时，玩家才会在信标处重生。",
   "Features.RespawnBeacon.Dialogue.lblRadius": "范围：",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "在这个范围内的玩家将在此信标处重生，而不是在自己的重生点。"
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "在这个范围内的玩家将在此信标处重生，而不是在自己的重生点。",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "环境音量：",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "环境声音播放的音量。",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "重生音量：",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "重生声音播放的音量。"
 }

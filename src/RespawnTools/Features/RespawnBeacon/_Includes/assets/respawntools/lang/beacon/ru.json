@@ -7,5 +7,11 @@
   "Features.RespawnBeacon.Dialogue.lblEnabled": "Включено:",
   "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText": "Игроки могут возрождаться у маяка только при его включении.",
   "Features.RespawnBeacon.Dialogue.lblRadius": "Радиус:",
-  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Игроки в пределах этого радиуса будут возрождаться у этого маяка, а не у своей собственной точки возрождения."
+  "Features.RespawnBeacon.Dialogue.lblRadius.HoverText": "Игроки в пределах этого радиуса будут возрождаться у этого маяка, а не у своей собственной точки возрождения.",
+
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume": "Громкость окружения:",
+  "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText": "Громкость, на которой воспроизводятся звуки окружения.",
+
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume": "Громкость возрождения:",
+  "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText": "Громкость, на которой воспроизводятся звуки возрождения."
 }
