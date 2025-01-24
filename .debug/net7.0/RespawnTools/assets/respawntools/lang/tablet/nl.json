@@ -1,9 +1,0 @@
-{
-  "item-respawntablet": "Herrijstablet",
-
-  "handbooktitle-respawntablet-usage": "Gebruik",
-  "handbooktext-respawntablet-usage": "Als de speler een herrijstablet in hun hoofdhand, offhand of rugzakslot heeft en anders dodelijke schade oploopt, redt de totem de speler van de dood. Het herrijstablet moet in de hand van de speler (hoofdhand of offhand) of in een rugzakslot zitten om te werken. Het werkt niet als het in de werkbalk staat, tenzij geselecteerd. Het tablet kan slechts eenmaal worden gebruikt; het verdwijnt na gebruik.",
-
-  "handbooktitle-respawntablet-effect": "Effect",
-  "handbooktext-respawntablet-effect": "Bij activering herrijst het herrijstablet de speler naar volledige gezondheid, verwijdert alle bestaande negatieve effecten en laat de speler kortstondig gloeien. Het tablet wordt geconsumeerd bij overlijden."
-}

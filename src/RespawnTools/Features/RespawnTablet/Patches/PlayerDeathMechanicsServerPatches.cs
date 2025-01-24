@@ -8,7 +8,7 @@ using Vintagestory.API.Common;
 
 namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.Patches;
 
-[HarmonySidedPatch(EnumAppSide.Server)]
+[HarmonyServerSidePatch]
 [UsedImplicitly(ImplicitUseTargetFlags.All)]
 public class PlayerDeathMechanicsServerPatches
 {

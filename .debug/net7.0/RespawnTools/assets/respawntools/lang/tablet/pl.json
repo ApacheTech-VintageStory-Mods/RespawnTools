@@ -1,9 +1,0 @@
-﻿{
-  "item-respawntablet": "Tabletka Odrodzenia",
-
-  "handbooktitle-respawntablet-usage": "Użycie",
-  "handbooktext-respawntablet-usage": "Jeśli gracz trzyma tabletkę odrodzenia w swojej głównej ręce, ręce pobocznej lub w slocie plecaka i otrzyma inaczej śmiertelne obrażenia, totem ocali gracza przed śmiercią. Tabletka odrodzenia musi być w ręce gracza (głównej lub pobocznej) lub w slocie plecaka, aby działała. Nie działa, jeśli jest na pasku narzędzi, chyba że zostanie wybrana. Tabletka może być użyta tylko raz; znika po użyciu.",
-
-  "handbooktitle-respawntablet-effect": "Efekt",
-  "handbooktext-respawntablet-effect": "Po aktywacji tabletka odrodzenia przywraca graczowi pełne zdrowie, usuwa wszystkie istniejące efekty negatywne i sprawia, że gracz świeci się przez krótki czas. Tabletka jest zużywana przy śmierci."
-}

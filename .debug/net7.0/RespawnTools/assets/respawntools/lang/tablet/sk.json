@@ -1,9 +1,0 @@
-﻿{
-  "item-respawntablet": "Tableta oživenia",
-
-  "handbooktitle-respawntablet-usage": "Použitie",
-  "handbooktext-respawntablet-usage": "Ak hráč drží tableta oživenia v jeho hlavnej ruke, vedľajšej ruke alebo v rukoväti batohu a inak dostane smrteľné poškodenie, totem zachráni hráča pred smrťou. Tableta oživenia musí byť v ruke hráča (hlavná ruka alebo vedľajšia ruka) alebo v rukoväti batohu, aby fungovala. Nepracuje, ak je v paneli nástrojov, okrem výberu. Tabletu možno použiť iba raz; zmizne po použití.",
-
-  "handbooktitle-respawntablet-effect": "Efekt",
-  "handbooktext-respawntablet-effect": "Po aktivácii tableta oživenia oživí hráča na plné zdravie, odstráni všetky existujúce negatívne efekty a urobí hráča žiarivým na krátku dobu. Tableta sa spotrebuje pri smrti."
-}

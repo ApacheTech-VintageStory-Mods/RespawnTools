@@ -1,9 +1,0 @@
-{
-  "item-respawntablet": "Respawn Tablet",
-
-  "handbooktitle-respawntablet-usage": "Usage",
-  "handbooktext-respawntablet-usage": "If the player is holding a respawn tablet in their main-hand, off-hand, or backpack slot, and receives otherwise fatal damage, the totem saves the player from death. The respawn tablet must be in the player's hand (main hand, or offhand), or within a backpack slot, for it to work. It does not work if it is in the hotbar, unless selected. The tablet can be used only once; it disappears after use.",
- 
-  "handbooktitle-respawntablet-effect": "Effect",
-  "handbooktext-respawntablet-effect": "When activated, the respawn tablet revives the player to full health, removes all existing status effects, and makes the player glow for a short time. The tablet is consumed on death. "
-}

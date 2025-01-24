@@ -1,9 +1,0 @@
-﻿{
-  "item-respawntablet": "부활 태블릿",
-
-  "handbooktitle-respawntablet-usage": "사용 방법",
-  "handbooktext-respawntablet-usage": "플레이어가 부활 태블릿을 주무기, 보조무기 또는 배낭 슬롯에 가지고 있고 그 외 치명적인 피해를 입는 경우 토템이 플레이어를 죽음에서 구해줍니다. 부활 태블릿은 작동하려면 플레이어의 손 (주무기 또는 보조무기) 또는 배낭 슬롯에 있어야 합니다. 단축키에 있는 경우 선택되지 않는 한 작동하지 않습니다. 태블릿은 한 번만 사용할 수 있으며 사용 후 사라집니다.",
-
-  "handbooktitle-respawntablet-effect": "효과",
-  "handbooktext-respawntablet-effect": "활성화되면 부활 태블릿은 플레이어를 완전한 체력으로 부활시키고 모든 기존 부정적인 효과를 제거하며 플레이어를 잠깐 동안 빛나게 만듭니다. 태블릿은 사망시 소비됩니다."
-}

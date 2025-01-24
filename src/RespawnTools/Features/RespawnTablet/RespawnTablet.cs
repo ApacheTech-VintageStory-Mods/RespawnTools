@@ -1,6 +1,6 @@
-﻿using ApacheTech.VintageMods.RespawnTools.Core.Extensions;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Behaviours;
+﻿using ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Behaviours;
 using ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Items;
+using Gantry.Core.Extensions;
 using Gantry.Core.ModSystems;
 using Vintagestory.API.Common;
 

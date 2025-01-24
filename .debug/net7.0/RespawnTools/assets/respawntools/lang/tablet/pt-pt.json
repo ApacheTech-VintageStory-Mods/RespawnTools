@@ -1,9 +1,0 @@
-{
-  "item-respawntablet": "Tablete de Ressurreição",
-
-  "handbooktitle-respawntablet-usage": "Utilização",
-  "handbooktext-respawntablet-usage": "Se o jogador estiver a segurar um tablete de ressurreição na mão principal, mão secundária ou slot da mochila e receber danos fatais de outra forma, o totem salvará o jogador da morte. O tablete de ressurreição deve estar na mão do jogador (mão principal ou secundária) ou dentro de um slot da mochila para funcionar. Não funciona se estiver na barra de atalhos, a menos que seja seleccionado. O tablete só pode ser usado uma vez; desaparece após o uso.",
-
-  "handbooktitle-respawntablet-effect": "Efeito",
-  "handbooktext-respawntablet-effect": "Quando activado, o tablete de ressurreição reviverá o jogador com saúde completa, removerá todos os efeitos negativos existentes e fará o jogador brilhar por um curto período de tempo. O tablete é consumido na morte."
-}

@@ -1,9 +1,0 @@
-{
-  "item-respawntablet": "Wiedergeburts-Tablette",
-
-  "handbooktitle-respawntablet-usage": "Verwendung",
-  "handbooktext-respawntablet-usage": "Wenn der Spieler eine Wiedergeburts-Tablette in seiner Haupt- oder Nebenhand oder im Rucksackfach h�lt und sonst t�dlichen Schaden erleidet, rettet der Totem den Spieler vor dem Tod. Die Wiedergeburts-Tablette muss sich in der Hand des Spielers (Haupt- oder Nebenhand) oder in einem Rucksackfach befinden, um zu funktionieren. Sie funktioniert nicht, wenn sie in der Werkzeugleiste ist, es sei denn, sie ist ausgew�hlt. Die Tablette kann nur einmal verwendet werden; sie verschwindet nach der Verwendung.",
-
-  "handbooktitle-respawntablet-effect": "Effekt",
-  "handbooktext-respawntablet-effect": "Bei Aktivierung belebt die Wiedergeburts-Tablette den Spieler auf volle Gesundheit, entfernt alle bestehenden negativen Effekte und l�sst den Spieler f�r kurze Zeit leuchten. Die Tablette wird beim Tod verbraucht."
-}

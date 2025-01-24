@@ -28,6 +28,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RespawnTools", "src\RespawnTools\RespawnTools.csproj", "{58E39605-7077-4B59-B9BE-92881D1547B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gantry", "Gantry", "{AE9824FB-D46B-4318-BAF3-4949DDD1C784}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Gantry\src\Directory.Build.props = ..\..\..\Gantry\src\Directory.Build.props
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gantry", "..\..\..\Gantry\src\Gantry\Gantry.csproj", "{B69465F3-CC2A-4B7C-9FBB-CA431AD7BF60}"
 EndProject

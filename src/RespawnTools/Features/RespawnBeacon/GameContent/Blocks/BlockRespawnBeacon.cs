@@ -4,7 +4,7 @@ using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.Dialogue;
 using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 using Gantry.Core;
 using Gantry.Core.Annotation;
-using Gantry.Core.Extensions.GameContent.Gui;
+using Gantry.Core.GameContent.Extensions.Gui;
 using Gantry.Core.Hosting;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -54,11 +54,11 @@ public class BlockRespawnBeacon : Block
     /// </summary>
     /// <param name="world">The world.</param>
     /// <param name="pos">The position.</param>
-    public override bool ShouldPlayAmbientSound(IWorldAccessor world, BlockPos pos)
+    public override float GetAmbientSoundStrength(IWorldAccessor world, BlockPos pos)
     {
-        if (pos is null || world.BlockAccessor.GetBlockEntity(pos) is not BlockEntityRespawnBeacon beacon) return false;
-        Sounds.AmbientBlockCount = 100f - beacon.AmbientVolume;
-        return beacon.Enabled;
+        if (pos is null || world.BlockAccessor.GetBlockEntity(pos) is not BlockEntityRespawnBeacon beacon) return 0f;
+        if (!beacon.Enabled) return 0f;
+        return beacon.AmbientVolume / 100f;
     }
 
     /// <summary>

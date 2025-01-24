@@ -1,9 +1,0 @@
-﻿{
-  "item-respawntablet": "Tabletă de Reapariție",
-
-  "handbooktitle-respawntablet-usage": "Utilizare",
-  "handbooktext-respawntablet-usage": "Dacă jucătorul ține o tabletă de reapariție în mâna principală, mâna secundară sau în slotul rucsacului și primește altfel un prejudiciu fatal, totemul îl salvează de la moarte. Tableta de reapariție trebuie să fie în mâna jucătorului (mâna principală sau secundară) sau într-un slot al rucsacului pentru a funcționa. Nu funcționează dacă este în bara rapidă, cu excepția cazului în care este selectată. Tableta poate fi folosită doar o dată; ea dispare după utilizare.",
-
-  "handbooktitle-respawntablet-effect": "Efect",
-  "handbooktext-respawntablet-effect": "La activare, tableta de reapariție îl readuce pe jucător la sănătate completă, elimină toate efectele negative existente și îl face să strălucească pentru o perioadă scurtă de timp. Tableta este consumată la moarte."
-}

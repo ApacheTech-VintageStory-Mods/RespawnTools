@@ -1,9 +1,0 @@
-{
-  "item-respawntablet": "Tablette de R�surrection",
-
-  "handbooktitle-respawntablet-usage": "Utilisation",
-  "handbooktext-respawntablet-usage": "Si le joueur tient une tablette de r�surrection dans sa main principale, main secondaire ou sac � dos, et re�oit sinon des d�g�ts mortels, le totem sauve le joueur de la mort. La tablette de r�surrection doit �tre dans la main du joueur (main principale ou secondaire) ou dans un compartiment du sac � dos pour fonctionner. Elle ne fonctionne pas si elle est dans la barre d'acc�s rapide, sauf si elle est s�lectionn�e. La tablette ne peut �tre utilis�e qu'une seule fois ; elle dispara�t apr�s utilisation.",
-
-  "handbooktitle-respawntablet-effect": "Effet",
-  "handbooktext-respawntablet-effect": "Lorsqu'elle est activ�e, la tablette de r�surrection ram�ne le joueur � la sant� compl�te, supprime tous les effets n�gatifs existants et fait briller le joueur pendant un court laps de temps. La tablette est consomm�e � la mort."
-}
