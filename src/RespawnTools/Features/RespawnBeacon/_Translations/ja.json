@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "周囲の音が再生される音量。",
+    "handbooktext-respawnbeacon-usage":  "ビーコンの範囲内にいる間にプレイヤーが死亡した場合、自分のリスポーンポイントではなくビーコンでリスポーンします。プレイヤーは、ビーコンが有効になっている場合にのみビーコンでリスポーンします。ビーコンの範囲は変更でき、ビーコンの GUI 内で有効または無効にすることができます。",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "半径：",
+    "handbooktitle-respawnbeacon-usage":  "使い",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "この半径内のプレイヤーは、自分のリスポーンポイントではなく、このビーコンでリスポーンします。",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "リスポーン音が再生される音量。",
+    "Features.RespawnBeacon.Dialogue.Title":  "リスポーンビーコン設定",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "プレイヤーは、ビーコンが有効になっている場合にのみビーコンでリスポーンします。",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "リスポーンボリューム:",
+    "block-respawnbeacon":  "リスポーンビーコン",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "周囲音量:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "有効：",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "設定の変更"
+}

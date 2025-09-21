@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Die Lautstärke, in der die Umgebungsgeräusche wiedergegeben werden.",
+    "handbooktext-respawnbeacon-usage":  "Wenn ein Spieler stirbt, während er sich in Reichweite des Leuchtfeuers befindet, respawnt er am Leuchtfeuer und nicht an seinem eigenen Respawn-Punkt. Spieler respawnen nur am Leuchtfeuer, wenn es aktiviert ist. Die Reichweite des Beacons kann geändert und in der GUI für das Beacon aktiviert und deaktiviert werden.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radius:",
+    "handbooktitle-respawnbeacon-usage":  "Verwendung",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Spieler innerhalb dieses Radius respawnen an diesem Leuchtfeuer und nicht an ihrem eigenen Respawn-Punkt.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Die Lautstärke, mit der die Respawn-Geräusche abgespielt werden.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Einstellungen für das Respawn-Leuchtfeuer",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Spieler respawnen nur am Leuchtfeuer, wenn es aktiviert ist.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Respawn-Volumen:",
+    "block-respawnbeacon":  "Respawn-Leuchtfeuer",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Umgebungslautstärke:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Ermöglichte:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Einstellungen ändern"
+}

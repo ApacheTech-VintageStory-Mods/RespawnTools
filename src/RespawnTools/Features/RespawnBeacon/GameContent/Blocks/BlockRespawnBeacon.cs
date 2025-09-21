@@ -1,20 +1,8 @@
-﻿using ApacheTech.Common.DependencyInjection.Abstractions.Extensions;
-using ApacheTech.Common.Extensions.System;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.Dialogue;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
-using Gantry.Core;
-using Gantry.Core.Annotation;
-using Gantry.Core.GameContent.Extensions.Gui;
-using Gantry.Core.Hosting;
-using Vintagestory.API.Client;
-using Vintagestory.API.Common;
-using Vintagestory.API.MathTools;
-using Vintagestory.API.Server;
+﻿using RespawnTools.Features.RespawnBeacon.Dialogue;
+using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 using Vintagestory.API.Util;
 
-// ReSharper disable ClassNeverInstantiated.Global
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
+namespace RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
 
 /// <summary>
 ///     Represents the template for a Respawn Beacon block, within the game.
@@ -25,12 +13,12 @@ public class BlockRespawnBeacon : Block
     /// <summary>
     ///     Gets the particles to emit from the block, when it is enabled.
     /// </summary>
-    public SimpleParticleProperties IdleParticles { get; private set; }
+    public SimpleParticleProperties? IdleParticles { get; private set; }
 
     /// <summary>
     ///     The particles to emit from the block, when a player re-spawns at the beacon.
     /// </summary>
-    public SimpleParticleProperties ActiveParticles { get; private set; }
+    public SimpleParticleProperties? ActiveParticles { get; private set; }
 
     /// <summary>
     ///     Should return the light HSV values.
@@ -40,13 +28,11 @@ public class BlockRespawnBeacon : Block
     /// <param name="pos">May be null</param>
     /// <param name="stack">Set if its an item-stack for which the engine wants to check the light level</param>
     /// <returns>System.Byte[].</returns>
-    public override byte[] GetLightHsv(IBlockAccessor blockAccessor, BlockPos pos, ItemStack stack = null)
+    public override byte[] GetLightHsv(IBlockAccessor blockAccessor, BlockPos pos, ItemStack? stack = null)
     {
-        if (pos is not null && blockAccessor.GetBlockEntity(pos) is BlockEntityRespawnBeacon beacon)
-        {
-            return beacon.LightHsv;
-        }
-        return base.GetLightHsv(blockAccessor, pos, stack);
+        return pos is not null && blockAccessor.GetBlockEntity(pos) is BlockEntityRespawnBeacon beacon
+            ? beacon.LightHsv
+            : base.GetLightHsv(blockAccessor, pos, stack);
     }
 
     /// <summary>
@@ -78,10 +64,10 @@ public class BlockRespawnBeacon : Block
         if (!byPlayer.Entity.Controls.Sneak) return false;
         if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is not BlockEntityRespawnBeacon beacon) return false;
 
-        var dialogue = IOC.Services.CreateInstance<RespawnBeaconDialogue>(beacon);
+        var dialogue = world.Api.GantryCore().Services.CreateInstance<RespawnBeaconDialogue>(beacon);
         dialogue.OnOkAction = packet =>
         {
-            ApiEx.Client.Network.GetChannel("RespawnBeacon").SendPacket(packet);            
+            world.Api.ForClient()!.Network.GetChannel("RespawnBeacon").SendPacket(packet);            
         };
         dialogue.ToggleGui();
         return true;
@@ -116,8 +102,12 @@ public class BlockRespawnBeacon : Block
         {
             SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
         };
+        IdleParticles.WindAffected = false;
         IdleParticles.AddPos.Set(1.0, 2.0, 1.0);
         IdleParticles.addLifeLength = 0.5f;
+
+
+
 
 
         ActiveParticles = new SimpleParticleProperties(
@@ -135,6 +125,7 @@ public class BlockRespawnBeacon : Block
         {
             SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
         };
+        ActiveParticles.WindAffected = false;
         ActiveParticles.AddPos.Set(1.0, 2.0, 1.0);
         ActiveParticles.addLifeLength = 0.5f;
     }
@@ -153,7 +144,8 @@ public class BlockRespawnBeacon : Block
             var blockAccessor = sapi.World.BlockAccessor;
             if (blockAccessor.GetBlockEntity(pos) is not BlockEntityRespawnBeacon beacon) return;
             if (!beacon.Pos.Equals(pos)) return;
-            RespawnBeacon.UpdateBeaconCache(beacon, false);
+            var system = sapi.ModLoader.GetModSystem<RespawnBeacon>();
+            system.UpdateBeaconCache(beacon, false);
         }
         base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
     }
@@ -166,7 +158,8 @@ public class BlockRespawnBeacon : Block
     [RunsOn(EnumAppSide.Server)]
     private static void OnClientPacketReceived(IServerPlayer fromPlayer, RespawnBeaconPacket packet)
     {
-        var blockAccessor = ApiEx.ServerMain.GetBlockAccessorBulkUpdate(true, true);
+        var sapi = fromPlayer.Entity.Api;
+        var blockAccessor = sapi.World.GetBlockAccessorBulkUpdate(true, true);
         if (blockAccessor.GetBlockEntity(packet.Position) is not BlockEntityRespawnBeacon beacon) return;
         if (!beacon.Pos.Equals(packet.Position)) return;
 
@@ -175,7 +168,8 @@ public class BlockRespawnBeacon : Block
         beacon.RespawnVolume = packet.RespawnVolume;
         beacon.Enabled = packet.Enabled;
 
-        RespawnBeacon.UpdateBeaconCache(beacon, packet.Enabled);
+        var system = sapi.ModLoader.GetModSystem<RespawnBeacon>();
+        system.UpdateBeaconCache(beacon, packet.Enabled);
 
         blockAccessor.RemoveBlockLight(beacon.LightHsv.With(p => p[2] = 31), beacon.Pos);
         blockAccessor.MarkBlockDirty(beacon.Pos);

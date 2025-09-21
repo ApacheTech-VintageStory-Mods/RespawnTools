@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mod", "Mod", "{866164D1-2A2B-4A0D-A98B-4521DDF1E068}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1891BCA-D603-48C3-8DB0-44F6D97D657E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Launcher", "Launcher", "{7F2A8EEF-577B-4025-835C-FE7AD4D8D326}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{8C9D74AB-AA4D-4B1A-BB4B-5797E7C2D1B9}"
@@ -21,6 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientLauncher", "..\..\..\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{8CA6AFDB-25BB-41B1-9BB8-F8DBA8E9698D}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		src\Directory.Build.props = src\Directory.Build.props
 		src\Directory.Build.targets = src\Directory.Build.targets
 	EndProjectSection
@@ -95,5 +94,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6CDE7FD7-065A-4557-BC82-4C82F4C5DA35}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\Gantry\shared\Gantry.Shared\Gantry.Shared.projitems*{58e39605-7077-4b59-b9be-92881d1547b4}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

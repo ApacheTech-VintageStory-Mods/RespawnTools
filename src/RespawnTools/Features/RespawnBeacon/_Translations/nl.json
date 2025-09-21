@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Het volume waarop de omgevingsgeluiden worden afgespeeld.",
+    "handbooktext-respawnbeacon-usage":  "Als een speler sterft terwijl hij zich binnen het bereik van het baken bevindt, zal hij respawnen bij het baken, in plaats van zijn eigen respawnpunt. Spelers zullen alleen respawnen bij het baken, als het is ingeschakeld. Het bereik van het baken kan worden gewijzigd en het kan worden ingeschakeld en uitgeschakeld binnen de GUI voor het baken.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radius:",
+    "handbooktitle-respawnbeacon-usage":  "Gebruik",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Spelers binnen deze straal zullen respawnen bij dit baken, in plaats van bij hun eigen respawnpunt.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Het volume waarop de respawn-geluiden worden afgespeeld.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Instellingen voor Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Spelers zullen alleen respawnen bij het baken, als het is ingeschakeld.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Respawn-volume:",
+    "block-respawnbeacon":  "Respawn baken",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Omgevingsvolume:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Ingeschakeld:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Instellingen wijzigen"
+}

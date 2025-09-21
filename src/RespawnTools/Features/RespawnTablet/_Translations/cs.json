@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Tableta Respawn",
+    "handbooktitle-respawntablet-effect":  "Efekt",
+    "handbooktext-respawntablet-effect":  "Po aktivaci obnovovací tableta oživí hráče do plného zdraví, odstraní všechny existující stavové efekty a hráč se na krátkou dobu rozzáří. Tableta se konzumuje při smrti. ",
+    "handbooktext-respawntablet-usage":  "Pokud hráč drží respawn tablet ve svém hlavním slotu, mimo ruku nebo v batohu a obdrží jinak smrtelné poškození, totem zachrání hráče před smrtí. Aby mohl respawn tablet fungovat, musí být v hráčově ruce (hlavní nebo mimo něj) nebo ve slotu v batohu. Nefunguje, pokud je v hotbaru, pokud není vybrána. Tabletu lze použít pouze jednou; Po použití zmizí.",
+    "handbooktitle-respawntablet-usage":  "Zvyk"
+}

@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Yeniden Doğma Tableti",
+    "handbooktitle-respawntablet-effect":  "Etki",
+    "handbooktext-respawntablet-effect":  "Etkinleştirildiğinde, yeniden doğma tableti oyuncuyu tam sağlığına kavuşturur, mevcut tüm durum etkilerini kaldırır ve oyuncunun kısa bir süreliğine parlamasını sağlar. Tablet ölümde tüketilir. ",
+    "handbooktext-respawntablet-usage":  "Oyuncu ana elinde, el dışında veya sırt çantası yuvasında bir yeniden doğma tableti tutuyorsa ve başka türlü ölümcül hasar alırsa, totem oyuncuyu ölümden kurtarır. Yeniden doğma tabletinin çalışması için oyuncunun elinde (ana el veya hazırlıksız) veya bir sırt çantası yuvasında olması gerekir. Seçilmediği sürece hotbar\u0027daysa çalışmaz. Tablet yalnızca bir kez kullanılabilir; Kullanımdan sonra kaybolur.",
+    "handbooktitle-respawntablet-usage":  "Kullanım"
+}

@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Respawn Tablet",
+    "handbooktitle-respawntablet-effect":  "Effekt",
+    "handbooktext-respawntablet-effect":  "Når den er aktiveret, genopliver respawn-tabletten spilleren til fuld sundhed, fjerner alle eksisterende statuseffekter og får spilleren til at gløde i kort tid. Tabletten indtages ved døden. ",
+    "handbooktext-respawntablet-usage":  "Hvis spilleren holder en respawn-tablet i deres main-hand, off-hand eller rygsæk slot og på anden måde får dødelig skade, redder totemet spilleren fra døden. Respawn-tabletten skal være i spillerens hånd (hovedhånd eller offhand) eller i en rygsækplads, for at den kan fungere. Det virker ikke, hvis det er i hotbaren, medmindre det er valgt. Tabletten kan kun bruges én gang; Det forsvinder efter brug.",
+    "handbooktitle-respawntablet-usage":  "Brug"
+}

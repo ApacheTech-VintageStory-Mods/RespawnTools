@@ -1,9 +1,0 @@
-{
-  "item-respawntablet": "Återupplivningstablett",
-
-  "handbooktitle-respawntablet-usage": "Användning",
-  "handbooktext-respawntablet-usage": "Om spelaren håller en återupplivningstablett i sin huvudhand, offhand eller ryggsäcks-fack och annars får dödlig skada, räddar totem spelaren från döden. Återupplivningstabletten måste vara i spelarens hand (huvudhand eller offhand) eller i ett ryggsäcks-fack för att fungera. Den fungerar inte om den är i verktygsfältet, om den inte är vald. Tabletten kan bara användas en gång; den försvinner efter användning.",
-
-  "handbooktitle-respawntablet-effect": "Effekt",
-  "handbooktext-respawntablet-effect": "När den aktiveras återupplivar återupplivningstabletten spelaren till full hälsa, tar bort alla befintliga negativa effekter och låter spelaren lysa under en kort tid. Tabletten förbrukas vid död."
-}

@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Tablet odrodzenia",
+    "handbooktitle-respawntablet-effect":  "Efekt",
+    "handbooktext-respawntablet-effect":  "Po aktywacji, tablet odrodzenia reanimuje gracza do pełnego zdrowia, usuwa wszystkie istniejące efekty statusu i sprawia, że gracz świeci przez krótki czas. Tabletkę przyjmuje się w przypadku śmierci. ",
+    "handbooktext-respawntablet-usage":  "Jeśli gracz trzyma tabliczkę odrodzenia w miejscu w swojej ręce głównej, drugiej ręce lub w plecaku i otrzyma śmiertelne obrażenia, totem uratuje gracza przed śmiercią. Tabletka odrodzenia musi znajdować się w ręce gracza (głównej lub drugiej ręki) lub w miejscu na plecaku, aby działała. Nie działa, jeśli znajduje się na pasku skrótów, chyba że zostanie wybrany. Tablet może być użyty tylko raz; Znika po użyciu.",
+    "handbooktitle-respawntablet-usage":  "Zwyczaj"
+}

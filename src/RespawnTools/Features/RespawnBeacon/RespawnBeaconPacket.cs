@@ -1,7 +1,4 @@
-﻿using ProtoBuf;
-using Vintagestory.API.MathTools;
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon;
+﻿namespace RespawnTools.Features.RespawnBeacon;
 
 /// <summary>
 ///     A DTO, containing meta data information, required to synchronise Respawn Beacon block entities between the client, and the server.
@@ -28,7 +25,7 @@ public sealed class RespawnBeaconPacket
     /// </summary>
     /// <value>An instance of <see cref="BlockPos"/>, giving an absolute position within the gameworld.</value>
     [ProtoMember(3)]
-    public BlockPos Position { get; init; }
+    public BlockPos Position { get; init; } = default!;
 
     /// <summary>
     ///     Gets or sets the volume at which the ambient sounds are played.

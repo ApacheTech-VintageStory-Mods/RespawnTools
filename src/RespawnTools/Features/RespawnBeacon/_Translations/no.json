@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Volumet som omgivelseslydene spilles av.",
+    "handbooktext-respawnbeacon-usage":  "Hvis en spiller dør mens de er innenfor rekkevidden til beacon, vil de respawne ved beacon, i stedet for sitt eget respawn-punkt. Spillere vil bare respawne ved beacon, når det er aktivert. Rekkevidden til beacon kan endres, og den kan aktiveres, og deaktivert i GUI for beacon.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radius:",
+    "handbooktitle-respawnbeacon-usage":  "Bruk",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Spillere innenfor denne radiusen vil respawne ved dette fyret, i stedet for sitt eget respawn-punkt.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Volumet som respawn-lydene spilles av.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Innstillinger for Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Spillere vil bare respawne ved beacon, når det er aktivert.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Respawn volum:",
+    "block-respawnbeacon":  "Gjenoppstå fyrtårn",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Omgivelsesvolum:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Aktivert:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Endre innstillinger"
+}

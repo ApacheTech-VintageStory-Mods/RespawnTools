@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "مستوى الصوت الذي يتم به تشغيل الأصوات المحيطة.",
+    "handbooktext-respawnbeacon-usage":  "إذا مات لاعب أثناء وجوده في نطاق المنارة ، فسوف يعود إلى الظهور عند المنارة ، بدلا من نقطة إعادة الظهور الخاصة به. لن يعود اللاعبون إلا عند المنارة ، عند تمكينها. يمكن تغيير نطاق المنشد, ويمكن تمكينه, وتعطيله داخل واجهة المستخدم الرسومية للمنارة.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "نصف قطر:",
+    "handbooktitle-respawnbeacon-usage":  "استخدام",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "سيعود اللاعبون داخل هذا نصف القطر إلى الظهور عند هذه المنارة ، بدلا من نقطة إعادة الظهور الخاصة بهم.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "مستوى الصوت الذي يتم به تشغيل أصوات إعادة النشر.",
+    "Features.RespawnBeacon.Dialogue.Title":  "إعدادات Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "لن يعود اللاعبون إلا عند المنارة ، عند تمكينها.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "حجم إعادة النشر:",
+    "block-respawnbeacon":  "منارة إعادة النشر",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "الحجم المحيط:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "تمكين:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "تغيير الإعدادات"
+}

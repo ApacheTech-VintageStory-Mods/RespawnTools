@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Respawn-tablet",
+    "handbooktitle-respawntablet-effect":  "Effect",
+    "handbooktext-respawntablet-effect":  "Indien geactiveerd, brengt de respawn-tablet de speler weer tot volle gezondheid, verwijdert alle bestaande statuseffecten en laat de speler voor een korte tijd gloeien. De tablet wordt bij de dood geconsumeerd. ",
+    "handbooktext-respawntablet-usage":  "Als de speler een respawn-tablet in zijn hoofdhand-, off-hand- of rugzaksleuf houdt en anderszins fatale schade oploopt, redt de totem de speler van de dood. De respawn-tablet moet in de hand van de speler zijn (hoofdhand of uit de hand), of in een rugzaksleuf, om te kunnen werken. Het werkt niet als het in de hotbar staat, tenzij geselecteerd. De tablet kan slechts één keer worden gebruikt; Het verdwijnt na gebruik.",
+    "handbooktitle-respawntablet-usage":  "Gebruik"
+}

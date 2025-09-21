@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Respawn-Tablette",
+    "handbooktitle-respawntablet-effect":  "Effekt",
+    "handbooktext-respawntablet-effect":  "Wenn die Respawn-Tafel aktiviert ist, belebt sie den Spieler zu voller Gesundheit, entfernt alle vorhandenen Statuseffekte und lässt den Spieler für kurze Zeit leuchten. Die Tablette wird nach dem Tod eingenommen. ",
+    "handbooktext-respawntablet-usage":  "Wenn der Spieler eine Respawn-Tablette in seinem Haupthand-, Nebenhand- oder Rucksack-Slot hält und ansonsten tödlichen Schaden erleidet, rettet das Totem den Spieler vor dem Tod. Die Respawn-Tafel muss sich in der Hand des Spielers (Haupthand oder Nebenhand) oder in einem Rucksackschlitz befinden, damit sie funktioniert. Es funktioniert nicht, wenn es sich in der Hotbar befindet, es sei denn, es ist ausgewählt. Das Tablet kann nur einmal verwendet werden; Es verschwindet nach dem Gebrauch.",
+    "handbooktitle-respawntablet-usage":  "Verwendung"
+}

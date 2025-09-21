@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Il volume al quale vengono riprodotti i suoni ambientali.",
+    "handbooktext-respawnbeacon-usage":  "Se un giocatore muore mentre si trova nel raggio d\u0027azione del segnalatore, si rigenererà al segnalatore, piuttosto che al proprio punto di rientro. I giocatori si rigenereranno al faro solo quando è abilitato. La portata del beacon può essere modificata, può essere abilitata e disabilitata all\u0027interno della GUI del beacon.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Raggio:",
+    "handbooktitle-respawnbeacon-usage":  "Uso",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "I giocatori all\u0027interno di questo raggio si rigenereranno in questo segnalatore, piuttosto che nel proprio punto di rientro.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Il volume al quale vengono riprodotti i suoni di rigenerazione.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Impostazioni del segnalatore di respawn",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "I giocatori si rigenereranno al faro solo quando è abilitato.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Volume di rigenerazione:",
+    "block-respawnbeacon":  "Segnalatore di respawn",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Volume ambientale:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Abilitato:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Modifica impostazioni"
+}

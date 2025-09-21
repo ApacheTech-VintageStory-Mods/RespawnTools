@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Máy tính bảng hồi sinh",
+    "handbooktitle-respawntablet-effect":  "Hiệu lực",
+    "handbooktext-respawntablet-effect":  "Khi được kích hoạt, máy tính bảng hồi sinh sẽ hồi sinh người chơi về đầy đủ máu, loại bỏ tất cả các hiệu ứng trạng thái hiện có và làm cho người chơi phát sáng trong một thời gian ngắn. Máy tính bảng được tiêu thụ khi chết. ",
+    "handbooktext-respawntablet-usage":  "Nếu người chơi đang cầm một máy tính bảng hồi sinh trong ô tay chính, tay trái hoặc ba lô của họ và nhận sát thương chí mạng, vật tổ sẽ cứu người chơi khỏi cái chết. Máy tính bảng hồi sinh phải nằm trong tay người chơi (tay chính hoặc tay trái) hoặc trong khe ba lô để nó hoạt động. Nó không hoạt động nếu nó nằm trong thanh nóng, trừ khi được chọn. Máy tính bảng chỉ có thể được sử dụng một lần; nó biến mất sau khi sử dụng.",
+    "handbooktitle-respawntablet-usage":  "Sử dụng"
+}

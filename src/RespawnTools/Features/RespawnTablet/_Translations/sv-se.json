@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Respawn Tablett",
+    "handbooktitle-respawntablet-effect":  "Effekt",
+    "handbooktext-respawntablet-effect":  "När den är aktiverad återupplivar respawn-surfplattan spelaren till full hälsa, tar bort alla befintliga statuseffekter och får spelaren att lysa för en kort stund. Tabletten tas vid dödsfall. ",
+    "handbooktext-respawntablet-usage":  "Om spelaren håller en respawn-surfplatta i sin huvudhand, off-hand eller ryggsäcksfack och får annan dödlig skada, räddar totemet spelaren från döden. Respawn-surfplattan måste vara i spelarens hand (huvudhanden, eller offhand), eller i en ryggsäcksplats, för att den ska fungera. Det fungerar inte om det är i hotbar, om det inte är valt. Tabletten kan endast användas en gång; Den försvinner efter användning.",
+    "handbooktitle-respawntablet-usage":  "Användning"
+}

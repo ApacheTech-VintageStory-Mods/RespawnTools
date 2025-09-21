@@ -1,5 +1,3 @@
-﻿using Gantry.Core.Hosting;
+﻿namespace RespawnTools;
 
-namespace ApacheTech.VintageMods.RespawnTools;
-
-public sealed class Program() : ModHost;
+internal sealed class Program : G.Host<Program>;

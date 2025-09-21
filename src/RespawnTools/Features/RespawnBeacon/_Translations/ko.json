@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "주변 소리가 재생되는 볼륨입니다.",
+    "handbooktext-respawnbeacon-usage":  "플레이어가 비콘 범위 내에 있는 동안 사망하면 자신의 부활 지점이 아닌 비콘에서 부활합니다. 플레이어는 활성화된 비콘에서만 부활합니다. 비콘의 범위를 변경할 수 있으며 비콘의 GUI 내에서 활성화 및 비활성화할 수 있습니다.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "반지름:",
+    "handbooktitle-respawnbeacon-usage":  "사용법",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "이 반경 내의 플레이어는 자신의 부활 지점이 아닌 이 비콘에서 부활합니다.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "부활 소리가 재생되는 볼륨입니다.",
+    "Features.RespawnBeacon.Dialogue.Title":  "부활 비콘 설정",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "플레이어는 활성화된 비콘에서만 부활합니다.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "부활량:",
+    "block-respawnbeacon":  "부활 비콘",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "주변 볼륨:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "사용:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "설정 변경"
+}

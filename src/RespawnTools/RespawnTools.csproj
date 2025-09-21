@@ -1,21 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<Version>1.4.3.0</Version>
-		<RootNamespace>ApacheTech.VintageMods.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	<Import Project="..\..\..\..\..\Gantry\shared\Gantry.Shared\Gantry.Shared.projitems" Label="Shared" />
+
+	<PropertyGroup Label="Assembly Versioning">
+		<Version>2.0.0.0</Version>
+		<ModId>respawntools</ModId>
+		<ModName>Respawn Tools</ModName>
+		<PackageMod>true</PackageMod>
 	</PropertyGroup>
+
 	<ItemGroup>
-	  <Compile Remove="bin\**" />
-	  <EmbeddedResource Remove="bin\**" />
-	  <None Remove="bin\**" />
-	  <Resource Remove="bin\**" />
+		<None Remove="$(ProjectDir)\**\.gitkeep" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\..\docs\LICENCE.md" Link="_Includes\LICENCE.md" />
-		<None Include="..\..\docs\README.md" Link="_Includes\README.md" />
-	</ItemGroup>
-	
-	<ItemGroup>
-		<ProjectReference Include="..\..\..\..\..\Gantry\src\Gantry\Gantry.csproj" />
+	  <Content Include="Features\RespawnBeacon\_Translations\en.json" />
+	  <Content Include="Features\RespawnTablet\_Translations\en.json" />
 	</ItemGroup>
 </Project>

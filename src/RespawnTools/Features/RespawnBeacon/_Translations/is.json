@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Hljóðstyrkurinn sem umhverfishljóðin eru spiluð á.",
+    "handbooktext-respawnbeacon-usage":  "Ef leikmaður deyr á meðan hann er í færi við leiðarljósið, mun hann endurvekja við leiðarljósið, frekar en sinn eigin endurvakningarstað. Spilarar munu aðeins endurvekja við leiðarljósið, þegar það er virkt. Hægt er að breyta drægni leiðarljóssins, og það er hægt að virkja, og slökkva á því innan GUI fyrir leiðarljósið.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radíus:",
+    "handbooktitle-respawnbeacon-usage":  "Notkun",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Spilarar innan þessa radíus munu endurvekja á þessum leiðarljósi, frekar en sínum eigin endurvakningarpunkti.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Hljóðstyrkurinn sem endurvakningarhljóðin eru spiluð á.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Respawn Beacon stillingar",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Spilarar munu aðeins endurvekja við leiðarljósið, þegar það er virkt.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Rúmmál endurvakningar:",
+    "block-respawnbeacon":  "Endurvekja leiðarljós",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Umhverfismagn:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Virkjaðar:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Breyta stillingum"
+}

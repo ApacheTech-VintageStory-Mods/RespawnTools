@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Tavoletta di rigenerazione",
+    "handbooktitle-respawntablet-effect":  "Effetto",
+    "handbooktext-respawntablet-effect":  "Quando attivata, la tavoletta di rigenerazione rianima il giocatore alla massima salute, rimuove tutti gli effetti di stato esistenti e fa brillare il giocatore per un breve periodo. La compressa viene consumata alla morte. ",
+    "handbooktext-respawntablet-usage":  "Se il giocatore tiene in mano una tavoletta di rigenerazione nello slot della mano principale, della mano secondaria o dello zaino e riceve danni altrimenti fatali, il totem salva il giocatore dalla morte. La tavoletta di rigenerazione deve essere nella mano del giocatore (mano principale o secondaria) o all\u0027interno di uno slot dello zaino, affinché funzioni. Non funziona se si trova nella barra di scelta rapida, a meno che non sia selezionato. Il tablet può essere utilizzato una sola volta; Scompare dopo l\u0027uso.",
+    "handbooktitle-respawntablet-usage":  "Uso"
+}

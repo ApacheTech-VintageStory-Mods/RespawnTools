@@ -1,9 +1,0 @@
-﻿{
-  "item-respawntablet": "Tableta znovuoživení",
-
-  "handbooktitle-respawntablet-usage": "Použití",
-  "handbooktext-respawntablet-usage": "Pokud hráč drží tabletu znovuoživení v hlavní ruce, vedlejší ruce nebo v batohu a dostane jinak smrtelný poškození, totem hráče zachrání před smrtí. Tableta znovuoživení musí být v ruce hráče (hlavní ruka nebo vedlejší ruka) nebo v batohu, aby fungovala. Nefunguje, pokud je v liště s nástroji, pokud není vybrána. Tabletu lze použít pouze jednou; po použití zmizí.",
-
-  "handbooktitle-respawntablet-effect": "Efekt",
-  "handbooktext-respawntablet-effect": "Při aktivaci znovuoživovací tableta obnoví hráče na plné zdraví, odstraní všechny existující negativní efekty a na krátkou dobu rozsvítí hráče. Tableta je spotřebována při smrti."
-}

@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Äänenvoimakkuus, jolla ympäristön äänet toistetaan.",
+    "handbooktext-respawnbeacon-usage":  "Jos pelaaja kuolee ollessaan majakan kantaman sisällä, hän syntyy uudelleen majakassa oman uudelleensyntymispisteensä sijaan. Pelaajat syntyvät uudelleen vain majakassa, kun se on käytössä. Majakan kantamaa voidaan muuttaa, ja se voidaan ottaa käyttöön, ja poistaa käytöstä majakan graafisessa käyttöliittymässä.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Säde:",
+    "handbooktitle-respawnbeacon-usage":  "Käyttö",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Tällä säteellä olevat pelaajat syntyvät uudelleen tässä majakassa oman uudelleensyntymispisteensä sijaan.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Äänenvoimakkuus, jolla uudelleensyntymisäänet toistetaan.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Respawn Beacon -asetukset",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Pelaajat syntyvät uudelleen vain majakassa, kun se on käytössä.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Respawnin volyymi:",
+    "block-respawnbeacon":  "Respawn-majakka",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Ympäristön äänenvoimakkuus:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Käytössä:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Muuta asetuksia"
+}

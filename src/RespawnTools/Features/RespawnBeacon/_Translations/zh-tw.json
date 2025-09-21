@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "播放環境聲音的音量。",
+    "handbooktext-respawnbeacon-usage":  "如果玩家在信標範圍內死亡，他們將在信標處重生，而不是他們自己的重生點。玩家只有在信標啟用時才會在信標處重生。信標的範圍可以更改，並且可以在信標的 GUI 中啟用和禁用它。",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "半徑：",
+    "handbooktitle-respawnbeacon-usage":  "用法",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "此半徑內的玩家將在此信標處重生，而不是他們自己的重生點。",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "播放重生聲音的音量。",
+    "Features.RespawnBeacon.Dialogue.Title":  "重生信標設置",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "玩家只有在信標啟用時才會在信標處重生。",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "重生量：",
+    "block-respawnbeacon":  "重生信標",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "環境音量：",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "已啟用：",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "變更設定"
+}

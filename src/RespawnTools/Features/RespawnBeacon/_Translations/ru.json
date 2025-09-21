@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Громкость, с которой воспроизводятся окружающие звуки.",
+    "handbooktext-respawnbeacon-usage":  "Если игрок умрет, находясь в пределах досягаемости маяка, он возродится на маяке, а не в своей собственной точке возрождения. Игроки будут возрождаться у маяка только в том случае, если он включен. Дальность действия маяка может быть изменена, а также включена и отключена в графическом интерфейсе маяка.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Радиус:",
+    "handbooktitle-respawnbeacon-usage":  "Употребление",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Игроки в этом радиусе будут возрождаться на этом маяке, а не в своей собственной точке возрождения.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Громкость, с которой воспроизводятся звуки возрождения.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Настройки маяка возрождения",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Игроки будут возрождаться у маяка только в том случае, если он включен.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Объем возрождения:",
+    "block-respawnbeacon":  "Маяк возрождения",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Громкость окружающей среды:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Включен:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Изменение настроек"
+}

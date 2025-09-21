@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Comprimido Respawn",
+    "handbooktitle-respawntablet-effect":  "Efeito",
+    "handbooktext-respawntablet-effect":  "Quando ativado, o tablet respawn revive o jogador para a saúde total, remove todos os efeitos de status existentes e faz o jogador brilhar por um curto período de tempo. O comprimido é consumido na morte. ",
+    "handbooktext-respawntablet-usage":  "Se o jogador estiver segurando um tablet respawn em seu slot de mão principal, off-hand ou mochila, e receber dano fatal, o totem salva o jogador da morte. O tablet respawn deve estar na mão do jogador (mão principal, ou offhand), ou dentro de um slot de mochila, para que funcione. Não funciona se estiver na barra de atalho, a menos que seja selecionado. O comprimido só pode ser utilizado uma vez; desaparece após a utilização.",
+    "handbooktitle-respawntablet-usage":  "Utilização"
+}

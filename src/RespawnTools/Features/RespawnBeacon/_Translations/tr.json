@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Ortam seslerinin çalındığı ses seviyesi.",
+    "handbooktext-respawnbeacon-usage":  "Bir oyuncu işaretin menzilindeyken ölürse, kendi yeniden doğma noktası yerine işarette yeniden doğar. Oyuncular, yalnızca etkinleştirildiğinde işarette yeniden doğarlar. İşaretin menzili değiştirilebilir ve işaret için GUI içinde etkinleştirilebilir ve devre dışı bırakılabilir.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Yarıçap:",
+    "handbooktitle-respawnbeacon-usage":  "Kullanım",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Bu yarıçap içindeki oyuncular, kendi yeniden doğma noktaları yerine bu işarette yeniden doğacaklar.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Yeniden doğma seslerinin çalındığı ses seviyesi.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Yeniden Doğma İşareti Ayarları",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Oyuncular, yalnızca etkinleştirildiğinde işarette yeniden doğarlar.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Yeniden Doğma Hacmi:",
+    "block-respawnbeacon":  "Yeniden Doğma İşareti",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Ortam Hacmi:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Etkin:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Ayarları değiştir"
+}

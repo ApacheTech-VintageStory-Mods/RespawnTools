@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "重生平板電腦",
+    "handbooktitle-respawntablet-effect":  "作用",
+    "handbooktext-respawntablet-effect":  "激活後，重生平板電腦會使玩家恢復到完全生命值，消除所有現有的狀態效果，並使玩家短暫發光。藥片在死亡時被消耗掉。",
+    "handbooktext-respawntablet-usage":  "如果玩家在主手、副手或背包槽中持有重生板，並受到致命傷害，圖騰會使玩家免於死亡。重生平板電腦必須在玩家的手中（主手或副手）或背包槽內，才能工作。如果它位於快捷欄中，則不起作用，除非選擇。平板電腦只能使用一次;使用後它就會消失。",
+    "handbooktitle-respawntablet-usage":  "用法"
+}

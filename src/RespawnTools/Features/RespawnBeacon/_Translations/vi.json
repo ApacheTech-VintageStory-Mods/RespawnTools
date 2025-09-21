@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Âm lượng mà âm thanh xung quanh được phát.",
+    "handbooktext-respawnbeacon-usage":  "Nếu một người chơi chết khi họ đang ở trong phạm vi của đèn hiệu, họ sẽ hồi sinh tại đèn hiệu, thay vì điểm hồi sinh của chính họ. Người chơi sẽ chỉ hồi sinh tại đèn hiệu khi nó được kích hoạt. Phạm vi của đèn hiệu có thể được thay đổi, và nó có thể được bật và tắt trong GUI cho đèn hiệu.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Bán kính:",
+    "handbooktitle-respawnbeacon-usage":  "Sử dụng",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Người chơi trong bán kính này sẽ hồi sinh tại đèn hiệu này, thay vì điểm hồi sinh của chính họ.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Âm lượng mà âm thanh hồi sinh được phát.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Cài đặt Beacon hồi sinh",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Người chơi sẽ chỉ hồi sinh tại đèn hiệu khi nó được kích hoạt.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Khối lượng hồi sinh:",
+    "block-respawnbeacon":  "Đèn hiệu hồi sinh",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Âm lượng môi trường xung quanh:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Kích hoạt:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Thay đổi cài đặt"
+}

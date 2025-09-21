@@ -328,7 +328,7 @@
             </Assembly>
             <Assembly AssemblyName="ApacheTech.Common.DependencyInjection, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -340,7 +340,7 @@
             </Assembly>
             <Assembly AssemblyName="ApacheTech.Common.Extensions.Harmony, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -356,7 +356,7 @@
             </Assembly>
             <Assembly AssemblyName="ApacheTech.Common.Extensions, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -416,7 +416,7 @@
             </Assembly>
             <Assembly AssemblyName="ApacheTech.Common.DependencyInjection.Abstractions, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -476,7 +476,7 @@
             </Assembly>
             <Assembly AssemblyName="Gantry, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -1013,7 +1013,7 @@
             </Assembly>
             <Assembly AssemblyName="ApacheTech.Common.BrighterSlim, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -1073,7 +1073,7 @@
             </Assembly>
             <Assembly AssemblyName="ApacheTech.Common.FunctionalCSharp, Culture=neutral, PublicKeyToken=null">
                 <Merging Merge="1">
-                    <Pruning Prune="1">
+                    <Pruning Prune="0">
                         <Exclusion />
                     </Pruning>
                     <Obfuscation />
@@ -1081,6 +1081,10 @@
                     <MemberRefsProxy />
                     <ResourcesCompression />
                 </Merging>
+                <Embedding Compress="1" Encrypt="1" />
+            </Assembly>
+            <Assembly AssemblyName="System.Reflection.TypeExtensions, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
                 <Embedding Compress="1" Encrypt="1" />
             </Assembly>
         </Assemblies>

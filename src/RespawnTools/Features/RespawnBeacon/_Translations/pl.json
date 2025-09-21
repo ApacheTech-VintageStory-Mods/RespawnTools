@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Głośność, z jaką odtwarzane są dźwięki otoczenia.",
+    "handbooktext-respawnbeacon-usage":  "Jeśli gracz zginie, gdy znajdzie się w zasięgu nadajnika, odrodzi się w sygnalizatorze, a nie w swoim własnym punkcie odrodzenia. Gracze będą się odradzać przy sygnalizatorze tylko wtedy, gdy jest on włączony. Zasięg sygnalizatora można zmienić, a także włączyć lub wyłączyć w graficznym interfejsie użytkownika sygnalizatora.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Promień:",
+    "handbooktitle-respawnbeacon-usage":  "Zwyczaj",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Gracze w tym promieniu odrodzą się w tym sygnalizatorze, a nie w swoim własnym punkcie odrodzenia.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Głośność, z jaką odtwarzane są dźwięki odrodzenia.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Ustawienia sygnalizatora odrodzenia",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Gracze będą się odradzać przy sygnalizatorze tylko wtedy, gdy jest on włączony.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Objętość odrodzenia:",
+    "block-respawnbeacon":  "Sygnalizator odrodzenia",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Głośność otoczenia:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Włączone:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Zmienianie ustawień"
+}

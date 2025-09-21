@@ -1,19 +1,8 @@
-﻿using ApacheTech.Common.Extensions.System;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
-using Gantry.Core;
-using Gantry.Core.Extensions.Helpers;
-using Gantry.Core.GameContent.Blocks;
-using System;
-using System.Timers;
-using Vintagestory.API.Common;
-using Vintagestory.API.Common.Entities;
+﻿using RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
 using Vintagestory.API.Datastructures;
-using Vintagestory.API.MathTools;
-using Vintagestory.API.Server;
+using Gantry.GameContent.Blocks;
 
-// ReSharper disable ClassNeverInstantiated.Global
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
+namespace RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 
 /// <summary>
 ///     Represents a specific Respawn Beacon, placed within the game world. This class cannot be inherited.
@@ -22,37 +11,37 @@ namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent
 public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
 {
     /// <summary>
-    ///     Gets the spawn position to pass to the player, when they die in range of this beacon, when enabled.
+    ///     The spawn position to pass to the player, when they die in range of this beacon, when enabled.
     /// </summary>
     /// <value>The spawn position.</value>
-    public FuzzyEntityPos SpawnPosition { get; private set; }
+    public FuzzyEntityPos SpawnPosition { get; private set; } = default!;
 
     /// <summary>
-    ///     Gets the light colour and brightness.
+    ///     The light colour and brightness.
     /// </summary>
     /// <value>The light levels emitted from this block.</value>
     public byte[] LightHsv => [4, 1, (byte)(Enabled ? 18 : 4)];
 
     /// <summary>
-    ///     Gets or sets a value indicating whether the Respawn Beacon at the given BlockPos is enabled.
+    ///     Indicates whether the Respawn Beacon at the given BlockPos is enabled.
     /// </summary>
     /// <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
     public bool Enabled { get; set; }
 
     /// <summary>
-    ///     Gets or sets the radius at which the Respawn Beacon is active.
+    ///     The radius at which the Respawn Beacon is active.
     /// </summary>
     /// <value>An <see cref="int"/> value, determining the active radius of the beacon.</value>
     public int Radius { get; set; } = 128;
 
     /// <summary>
-    ///     Gets or sets the volume at which the ambient sounds are played.
+    ///     The volume at which the ambient sounds are played.
     /// </summary>
     /// <value>An <see cref="int"/> value, determining the volume of the ambient sounds.</value>
     public int AmbientVolume { get; set; } = 100;
 
     /// <summary>
-    ///     Gets or sets the volume at which the arespawn sounds are played.
+    ///     The volume at which the arespawn sounds are played.
     /// </summary>
     /// <value>An <see cref="int"/> value, determining the volume of the respawn sounds.</value>
     public int RespawnVolume { get; set; } = 100;
@@ -67,9 +56,9 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
     public override void Initialize(ICoreAPI api)
     {
         base.Initialize(api);
-        if (Api is not ICoreServerAPI)
+        if (api is ICoreClientAPI capi)
         {
-            api.Event.RegisterGameTickListener(OnClientGameTick, 50, 50);
+            capi.Event.RegisterGameTickListener(OnClientGameTick, 50, 50);
             return;
         }
         SpawnPosition = new FuzzyEntityPos(Pos.X + 0.5, Pos.Y + 1, Pos.Z + 0.5)
@@ -83,12 +72,13 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
     ///     Generally in situations where you probably want to drop the block entity contents, if it has any.
     /// </summary>
     /// <param name="byPlayer">The player that broke the block.</param>
-    public override void OnBlockBroken(IPlayer byPlayer = null)
+    public override void OnBlockBroken(IPlayer? byPlayer = null)
     {
         Enabled = false;
-        RespawnBeacon.UpdateBeaconCache(this, false);
         if (Api is ICoreServerAPI sapi)
         {
+            var system = sapi.ModLoader.GetModSystem<RespawnBeacon>();
+            system.UpdateBeaconCache(this, false);
             sapi.World.BlockAccessor.RemoveBlockLight(LightHsv, Pos);
         }
         base.OnBlockBroken(byPlayer);
@@ -105,8 +95,11 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
         tree.SetInt("Radius", Radius);
         tree.SetInt("AmbientVolume", AmbientVolume);
         tree.SetInt("RespawnVolume", RespawnVolume);
-        if (Api.Side.IsClient()) return;
-        RespawnBeacon.UpdateBeaconCache(this, true);
+        if (Api is ICoreServerAPI sapi)
+        {
+            var system = sapi.ModLoader.GetModSystem<RespawnBeacon>();
+            system.UpdateBeaconCache(beacon: this, addEnabled: true);
+        }
     }
 
     /// <summary>
@@ -125,16 +118,21 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
         Radius = tree.GetInt("Radius");
         AmbientVolume = tree.GetInt("AmbientVolume");
         RespawnVolume = tree.GetInt("RespawnVolume");
-        if (worldForResolving.Api.Side.IsClient()) return;
-        ApiEx.ServerMain.WorldMap.UpdateLighting(Block.Id, Block.Id, Pos);
+        if (worldForResolving is ICoreClientAPI capi)
+        {
+            capi.AsClientMain().WorldMap.UpdateLighting(Block.Id, Block.Id, Pos);
+        }
     }
 
+    [ClientSide]
     private void OnClientGameTick(float dt)
     {
+        if (Api is not ICoreClientAPI capi) return;
         if (Block is null) return;
         if (!Enabled) return;
-        var particles = OwnerBlock.IdleParticles.With(p =>
+        var particles = OwnerBlock?.IdleParticles.With(p =>
         {
+            if (p is null) return;
             p.UseLighting();
             p.MinPos = new Vec3d(Pos.X, Pos.Y + 1, Pos.Z);
             p.Color = ColorUtil.ColorFromRgba(
@@ -143,14 +141,14 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
                 GameMath.Clamp(RandomEx.RandomValueAround(178, 20), 0, 255),
                 GameMath.Clamp(RandomEx.RandomValueAround(128, 127), 0, 255));
         });
-        ApiEx.ClientMain.SpawnParticles(particles);
+        capi.AsClientMain().SpawnParticles(particles);
     }
 
     public void OnSpawn()
     {
         // Particles.
         var listenerId = Api.World.RegisterGameTickListener(SpawnActiveParticles, 40);
-        var timer = new Timer(TimeSpan.FromSeconds(3));
+        var timer = new System.Timers.Timer(TimeSpan.FromSeconds(3));
         timer.Elapsed += (_, _) =>
         {
             Api.World.UnregisterGameTickListener(listenerId);
@@ -166,8 +164,9 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
 
     private void SpawnActiveParticles(float dt)
     {
-        var particles = OwnerBlock.ActiveParticles.With(p =>
+        var particles = OwnerBlock?.ActiveParticles.With(p =>
         {
+            if (p is null) return;
             p.UseLighting();
             p.MinPos = new Vec3d(Pos.X, Pos.Y, Pos.Z);
             p.Color = ColorUtil.ColorFromRgba(

@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Гучність, на якій відтворюються навколишні звуки.",
+    "handbooktext-respawnbeacon-usage":  "Якщо гравець загине, перебуваючи в зоні досяжності маяка, він відродиться на маяку, а не на власній точці відродження. Гравці будуть відроджуватися лише біля маяка, коли він увімкнений. Радіус дії маяка може бути змінений, і його можна включити, і відключити в графічному інтерфейсі маяка.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Радіус:",
+    "handbooktitle-respawnbeacon-usage":  "Використання",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Гравці в цьому радіусі будуть відроджуватися на цьому маяку, а не на власній точці відродження.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Гучність, з якою відтворюються звуки відродження.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Налаштування Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Гравці будуть відроджуватися лише біля маяка, коли він увімкнений.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Об\u0027єм відродження:",
+    "block-respawnbeacon":  "Маяк відродження",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Гучність навколишнього середовища:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Включений:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Змінити налаштування"
+}

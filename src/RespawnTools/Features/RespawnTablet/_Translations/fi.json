@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Respawn-tabletti",
+    "handbooktitle-respawntablet-effect":  "Vaikutus",
+    "handbooktext-respawntablet-effect":  "Kun uudelleensyntymistabletti aktivoidaan, se herättää pelaajan täyteen terveyteen, poistaa kaikki olemassa olevat tilatehosteet ja saa pelaajan hehkumaan lyhyeksi ajaksi. Tabletti kulutetaan kuoleman yhteydessä. ",
+    "handbooktext-respawntablet-usage":  "Jos pelaaja pitää uudelleensyntymistablettia pääkädessä, kädestä tai repussa ja saa muuten kohtalokkaita vaurioita, toteemi pelastaa pelaajan kuolemalta. Respawn-tabletin on oltava pelaajan kädessä (pääkädessä tai kädessä) tai reppupaikassa, jotta se toimisi. Se ei toimi, jos se on hotbarissa, ellei sitä ole valittu. Tablettia voidaan käyttää vain kerran; se häviää käytön jälkeen.",
+    "handbooktitle-respawntablet-usage":  "Käyttö"
+}

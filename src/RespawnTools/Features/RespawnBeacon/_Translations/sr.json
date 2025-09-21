@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Jačina zvuka na kojoj se igraju ambijentalni zvuci.",
+    "handbooktext-respawnbeacon-usage":  "Ako igrač umre dok su u dometu svetionika, oni će se ponovo pojaviti na svetioniku, a ne na sopstvenoj tački oživljavanja. Igrači će se ponovo pojaviti samo na svetioniku, kada je omogućen. Opseg svetionika može da se menja, i može se omogućiti, i onemogućen u okviru GUI za svetionik.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radijus:",
+    "handbooktitle-respawnbeacon-usage":  "Korišćenje",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Igrači u ovom radijusu će se ponovo pojaviti na ovom svetioniku, a ne na sopstvenoj tački oživljavanja.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Jačina zvuka na kojoj se reprodukuju respawn zvuci.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Respawn Beacon podešavanja",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Igrači će se ponovo pojaviti samo na svetioniku, kada je omogućen.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Respawn Volume:",
+    "block-respawnbeacon":  "Respawn svetionik",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Ambijentalna zapremina:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Omogućen:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Promena podešavanja"
+}

@@ -1,25 +1,16 @@
-﻿using ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Items;
-using Gantry.Services.HarmonyPatches.Annotations;
-using HarmonyLib;
-using JetBrains.Annotations;
-using Vintagestory.API.Common;
+﻿using RespawnTools.Features.RespawnTablet.GameContent.Items;
 
-// ReSharper disable InconsistentNaming
+namespace RespawnTools.Features.RespawnTablet.Patches;
 
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.Patches;
-
-[HarmonyServerSidePatch]
-[UsedImplicitly(ImplicitUseTargetFlags.All)]
+[HarmonyServerPatch]
 public class PlayerDeathMechanicsServerPatches
 {
     [HarmonyPrefix]
-    [HarmonyPatch(typeof(EntityPlayer), nameof(EntityPlayer.Die))]
+    [HarmonyServerPatch(typeof(EntityPlayer), nameof(EntityPlayer.Die))]
     public static bool UniversalPatch_EntityPlayer_Die_Prefix(EntityPlayer __instance)
     {
-        if (!Helpers.TryGetItemInUsableSlot<ItemRespawnTablet>(__instance.Player, out var slot, out var tablet))
-        {
+        if (!__instance.Player.TryGetItemInUsableSlot<ItemRespawnTablet>(out var slot, out var tablet))
             return true;
-        }
         tablet!.OnPlayerDeath(__instance, slot!);
         return false;
     }

@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "ระดับเสียงที่เล่นเสียงรอบข้าง",
+    "handbooktext-respawnbeacon-usage":  "หากผู้เล่นตายในขณะที่อยู่ในระยะของบีคอน พวกเขาจะเกิดใหม่ที่บีคอน แทนที่จะเป็นจุดเกิดใหม่ของตัวเอง ผู้เล่นจะเกิดใหม่ที่บีคอนเมื่อเปิดใช้งานเท่านั้น ช่วงของบีคอนสามารถเปลี่ยนแปลงได้ และสามารถเปิดใช้งาน และปิดใช้งานได้ภายใน GUI สําหรับบีคอน",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "รัศมี:",
+    "handbooktitle-respawnbeacon-usage":  "การใช้",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "ผู้เล่นในรัศมีนี้จะเกิดใหม่ที่บีคอนนี้ แทนที่จะเป็นจุดเกิดใหม่ของตัวเอง",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "ระดับเสียงที่เล่นเสียงเกิดใหม่",
+    "Features.RespawnBeacon.Dialogue.Title":  "การตั้งค่าบีคอนเกิดใหม่",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "ผู้เล่นจะเกิดใหม่ที่บีคอนเมื่อเปิดใช้งานเท่านั้น",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "ปริมาณการเกิดใหม่:",
+    "block-respawnbeacon":  "รีเซลล์บีคอน",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "ปริมาณแวดล้อม:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "เปิด:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "เปลี่ยนการตั้งค่า"
+}

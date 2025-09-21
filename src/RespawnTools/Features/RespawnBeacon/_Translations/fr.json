@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Le volume auquel les sons ambiants sont diffusés.",
+    "handbooktext-respawnbeacon-usage":  "Si un joueur meurt alors qu’il est à portée de la balise, il réapparaîtra à la balise, plutôt qu’à son propre point de réapparition. Les joueurs ne réapparaîtront à la balise que lorsqu’elle sera activée. La portée de la balise peut être modifiée, et elle peut être activée et désactivée dans l’interface graphique de la balise.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Rayon:",
+    "handbooktitle-respawnbeacon-usage":  "Usage",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Les joueurs dans ce rayon réapparaîtront à cette balise, plutôt qu’à leur propre point de réapparition.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Le volume auquel les sons de réapparition sont joués.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Paramètres de la balise de réapparition",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Les joueurs ne réapparaîtront à la balise que lorsqu’elle sera activée.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Volume de réapparition :",
+    "block-respawnbeacon":  "Balise de réapparition",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Volume ambiant :",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Activé:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Modifier les paramètres"
+}

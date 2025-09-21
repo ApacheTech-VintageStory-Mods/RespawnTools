@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Volymen med vilken de omgivande ljuden spelas upp.",
+    "handbooktext-respawnbeacon-usage":  "Om en spelare dör medan de är inom räckhåll för fyren, kommer de att återuppstå vid fyren, snarare än sin egen återskapningspunkt. Spelare kommer bara att återuppstå vid beacon när den är aktiverad. Räckvidden för beacon kan ändras, och den kan aktiveras och inaktiveras i GUI för beacon.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radie:",
+    "handbooktitle-respawnbeacon-usage":  "Användning",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Spelare inom denna radie kommer att återuppstå vid denna fyr, snarare än sin egen återskapningspunkt.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Volymen som respawn-ljuden spelas upp med.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Inställningar för Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Spelare kommer bara att återuppstå vid beacon när den är aktiverad.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Respawn Volym:",
+    "block-respawnbeacon":  "Återskapa fyr",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Omgivande volym:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Aktiverat:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Ändra inställningar"
+}

@@ -1,14 +1,6 @@
-﻿using System;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
-using Gantry.Core;
-using Gantry.Core.GameContent.GUI.Abstractions;
-using Gantry.Core.Hosting.Annotation;
-using Vintagestory.API.Client;
-using Vintagestory.API.Common;
+﻿using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 
-// ReSharper disable ClassNeverInstantiated.Global
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.Dialogue;
+namespace RespawnTools.Features.RespawnBeacon.Dialogue;
 
 /// <summary>
 ///     GUI to allow user to change the settings for a specific Respawn Beacon. This class cannot be inherited.
@@ -21,15 +13,15 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     private int _radius;
     private int _ambientVolume;
     private int _respawnVolume;
-    
+
     /// <summary>
     /// 	Initialises a new instance of the <see cref="RespawnBeaconDialogue"/> class.
     /// </summary>
-    /// <param name="capi">The capi.</param>
+    /// <param name="gantry">The core Gantry API.</param>
     /// <param name="beacon">The beacon.</param>
-    [SidedConstructor(EnumAppSide.Universal)]
-    public RespawnBeaconDialogue(ICoreClientAPI capi, BlockEntityRespawnBeacon beacon)
-        : base(capi)
+    [SidedConstructor(EnumAppSide.Client)]
+    public RespawnBeaconDialogue(ICoreGantryAPI gantry, BlockEntityRespawnBeacon beacon)
+        : base(gantry)
     {
         _beacon = beacon;
         _enabled = _beacon.Enabled;
@@ -38,22 +30,14 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         _respawnVolume = _beacon.RespawnVolume;
         ModalTransparency = 0.4f;
         Alignment = EnumDialogArea.CenterMiddle;
-        Title = LangEntry("Title");
+        Title = T("Title");
     }
-
-    /// <summary>
-    ///     Gets an entry from the language files, for the feature this instance is representing.
-    /// </summary>
-    /// <param name="code">The entry to return.</param>
-    /// <returns>A localised <see cref="string"/>, for the specified language file code.</returns>
-    private static string LangEntry(string code) 
-        => LangEx.FeatureString("RespawnBeacon.Dialogue", code);
 
     /// <summary>
     ///     Gets or sets the action to perform when the used presses the OK button.
     /// </summary>
     /// <value>The <see cref="Action{RespawnBeaconPacket}"/> action to perform.</value>
-    public Action<RespawnBeaconPacket> OnOkAction { private get; set; }
+    public Action<RespawnBeaconPacket>? OnOkAction { private get; set; }
 
     /// <summary>
     ///     Refreshes the displayed values on the form.
@@ -81,8 +65,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         var controlRowBoundsRightFixed = ElementBounds.FixedSize(200, 30).WithAlignment(EnumDialogArea.RightFixed);
 
         composer
-            .AddStaticText(LangEntry("lblRadius"), labelFont, EnumTextOrientation.Right, left)
-            .AddHoverText(LangEntry("lblRadius.HoverText"), labelFont, 260, left)
+            .AddStaticText(T("lblRadius"), labelFont, EnumTextOrientation.Right, left)
+            .AddHoverText(T("lblRadius.HoverText"), labelFont, 260, left)
             .AddSlider(OnRadiusChanged, right, "sldRadius");
 
 
@@ -90,8 +74,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         right = ElementBounds.FixedSize(270, 30).FixedUnder(right, 10).FixedRightOf(left, 10);
 
         composer
-            .AddStaticText(LangEntry("lblAmbientVolume"), labelFont, EnumTextOrientation.Right, left)
-            .AddHoverText(LangEntry("lblAmbientVolume.HoverText"), labelFont, 260, left)
+            .AddStaticText(T("lblAmbientVolume"), labelFont, EnumTextOrientation.Right, left)
+            .AddHoverText(T("lblAmbientVolume.HoverText"), labelFont, 260, left)
             .AddSlider(OnAmbientVolumeChanged, right, "sldAmbientVolume");
 
 
@@ -99,8 +83,8 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         right = ElementBounds.FixedSize(270, 30).FixedUnder(right, 10).FixedRightOf(left, 10);
 
         composer
-            .AddStaticText(LangEntry("lblRespawnVolume"), labelFont, EnumTextOrientation.Right, left)
-            .AddHoverText(LangEntry("lblRespawnVolume.HoverText"), labelFont, 260, left)
+            .AddStaticText(T("lblRespawnVolume"), labelFont, EnumTextOrientation.Right, left)
+            .AddHoverText(T("lblRespawnVolume.HoverText"), labelFont, 260, left)
             .AddSlider(OnRespawnVolumeChanged, right, "sldRespawnVolume");
 
 
@@ -108,16 +92,16 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         right = ElementBounds.FixedSize(270, 30).FixedUnder(right, 10).FixedRightOf(left, 10);
 
         composer
-            .AddStaticText(LangEntry("lblEnabled"), labelFont, EnumTextOrientation.Right, left)
-            .AddHoverText(LangEntry("lblEnabled.HoverText"), labelFont, 260, left)
+            .AddStaticText(T("lblEnabled"), labelFont, EnumTextOrientation.Right, left)
+            .AddHoverText(T("lblEnabled.HoverText"), labelFont, 260, left)
             .AddSwitch(OnEnableToggle, right, "btnEnabled");
 
-        composer.AddSmallButton(LangEx.ConfirmationString("ok"), OnOkButtonPressed, controlRowBoundsRightFixed.FixedUnder(right, 10));
+        composer.AddSmallButton(Gantry.Lang.Confirmation("ok"), OnOkButtonPressed, controlRowBoundsRightFixed.FixedUnder(right, 10));
     }
 
     private bool OnOkButtonPressed()
     {
-        OnOkAction(new RespawnBeaconPacket
+        OnOkAction?.Invoke(new RespawnBeaconPacket
         {
             Enabled = _enabled,
             Radius = _radius,
@@ -150,4 +134,12 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
         _respawnVolume = respawnVolume;
         return true;
     }
+
+    /// <summary>
+    ///     Gets an entry from the language files, for the feature this instance is representing.
+    /// </summary>
+    /// <param name="code">The entry to return.</param>
+    /// <returns>A localised <see cref="string"/>, for the specified language file code.</returns>
+    private string T(string code)
+        => Gantry.Lang.Translate("RespawnBeacon.Dialogue", code);
 }

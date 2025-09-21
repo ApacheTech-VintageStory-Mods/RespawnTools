@@ -1,11 +1,6 @@
-﻿using System;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
-using Newtonsoft.Json;
-using Vintagestory.API.MathTools;
+﻿using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 
-// ReSharper disable MemberCanBePrivate.Global
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnBeacon.Model;
+namespace RespawnTools.Features.RespawnBeacon.Model;
 
 /// <summary>
 ///     Represents an enabled beacon, within the game world.
@@ -42,7 +37,7 @@ public class EnabledBeacon : IEquatable<EnabledBeacon>
     ///     Gets a value indicating whether the Respawn Beacon at the given BlockPos is enabled.
     /// </summary>
     /// <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
-    public BlockPos Position { get; }
+    public BlockPos Position { get; } = default!;
 
     /// <summary>
     ///     Gets the radius at which the Respawn Beacon is active.
@@ -67,30 +62,24 @@ public class EnabledBeacon : IEquatable<EnabledBeacon>
     /// </summary>
     /// <param name="other">The other.</param>
     /// <returns>true if the current object's block position is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
-    public bool Equals(BlockPos other)
-    {
-        return Equals(Position, other);
-    }
+    public bool Equals(BlockPos other) 
+        => Equals(Position, other);
 
     /// <summary>
     ///     Indicates whether the current object is equal to another object of the same type.
     /// </summary>
     /// <param name="other">An object to compare with this object.</param>
     /// <returns>true if the current object is equal to the <paramref name="other">other</paramref> parameter; otherwise, false.</returns>
-    public bool Equals(EnabledBeacon other)
-    {
-        return Equals(other?.Position) && Radius == other?.Radius;
-    }
+    public bool Equals(EnabledBeacon? other) 
+        => other is not null && Equals(other.Position) && Radius == other?.Radius;
 
     /// <summary>
     ///     Determines whether the specified <see cref="object" /> is equal to this instance.
     /// </summary>
     /// <param name="obj">The object to compare with the current object.</param>
     /// <returns><c>true</c> if the specified <see cref="object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
-    public override bool Equals(object obj)
-    {
-        return obj is EnabledBeacon other && Equals(other);
-    }
+    public override bool Equals(object? obj) 
+        => obj is EnabledBeacon other && Equals(other);
 
     /// <summary>
     ///     Returns a hash code for this instance.
@@ -99,10 +88,5 @@ public class EnabledBeacon : IEquatable<EnabledBeacon>
     ///     A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.
     /// </returns>
     public override int GetHashCode()
-    {
-        unchecked
-        {
-            return ((Position != null ? Position.GetHashCode() : 0) * 397) ^ Radius;
-        }
-    }
+        => HashCode.Combine(Position, Radius);
 }

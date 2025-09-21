@@ -1,15 +1,4 @@
-﻿#nullable enable
-using System;
-using System.Timers;
-using ApacheTech.Common.Extensions.System;
-using Gantry.Core.Annotation;
-using Gantry.Core.Extensions.Helpers;
-using Vintagestory.API.Common;
-using Vintagestory.API.MathTools;
-
-// ReSharper disable ClassNeverInstantiated.Global
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Items;
+﻿namespace RespawnTools.Features.RespawnTablet.GameContent.Items;
 
 /// <summary>
 ///     Represents the template for a Respawn Tablet block, within the game.
@@ -24,6 +13,7 @@ public class ItemRespawnTablet : Item
 
     /// <summary>
     ///     Called when the block is loaded by the game.
+    ///     This initialises the particle properties used when the tablet is activated.
     /// </summary>
     /// <param name="coreApi">The core API.</param>
     public override void OnLoaded(ICoreAPI coreApi)
@@ -49,12 +39,19 @@ public class ItemRespawnTablet : Item
         _particles.addLifeLength = 0.5f;
     }
 
+    /// <summary>
+    ///     Triggered on the server when the tablet is used on a dead player.
+    ///     This method spawns particle effects, plays a sound effect, revives the player
+    ///     and consumes the tablet item from the provided slot.
+    /// </summary>
+    /// <param name="byPlayer">The player to be revived.</param>
+    /// <param name="slot">The item slot from which the tablet is consumed.</param>
     [RunsOn(EnumAppSide.Server)]
     public void OnPlayerDeath(EntityPlayer byPlayer, ItemSlot slot)
     {
         // Particles.
         var listenerId = api.World.RegisterGameTickListener(_ => SpawnParticlesAtPlayer(byPlayer), 40);
-        var timer = new Timer(TimeSpan.FromSeconds(6));
+        var timer = new System.Timers.Timer(TimeSpan.FromSeconds(6));
         timer.Elapsed += (_, _) =>
         {
             api.World.UnregisterGameTickListener(listenerId);
@@ -75,6 +72,10 @@ public class ItemRespawnTablet : Item
         slot.MarkDirty();
     }
 
+    /// <summary>
+    ///     Spawns the configured particle effect at the player's current position.
+    /// </summary>
+    /// <param name="byPlayer">The player at whose position the particles will be spawned.</param>
     private void SpawnParticlesAtPlayer(EntityPlayer byPlayer)
     {
         var pos = byPlayer.Pos;

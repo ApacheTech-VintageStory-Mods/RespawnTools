@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "O volume no qual os sons ambientes são reproduzidos.",
+    "handbooktext-respawnbeacon-usage":  "Se um jogador morrer enquanto estiver ao alcance do farol, ele reaparecerá no farol, em vez de em seu próprio ponto de reaparecimento. Os jogadores só reaparecerão no sinalizador, quando ele estiver ativado. O alcance do beacon pode ser alterado e pode ser ativado e desabilitado na GUI do beacon.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Raio:",
+    "handbooktitle-respawnbeacon-usage":  "Uso",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Os jogadores dentro deste raio reaparecerão neste farol, em vez de em seu próprio ponto de reaparecimento.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "O volume no qual os sons de respawn são reproduzidos.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Configurações do Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Os jogadores só reaparecerão no sinalizador, quando ele estiver ativado.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Volume de respawn:",
+    "block-respawnbeacon":  "Sinalizador de Respawn",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Volume ambiente:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Habilitado:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Alterar configurações"
+}

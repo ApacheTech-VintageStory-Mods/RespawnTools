@@ -1,0 +1,7 @@
+﻿{
+    "item-respawntablet":  "Tablette Respawn",
+    "handbooktitle-respawntablet-effect":  "Effet",
+    "handbooktext-respawntablet-effect":  "Lorsqu’elle est activée, la tablette de réapparition ranime le joueur à sa pleine santé, supprime tous les effets de statut existants et fait briller le joueur pendant une courte période. La tablette est consommée à la mort. ",
+    "handbooktext-respawntablet-usage":  "Si le joueur tient une tablette de réapparition dans son emplacement de main principale, de main gauche ou de sac à dos, et qu’il subit des dégâts autrement mortels, le totem sauve le joueur de la mort. Pour qu’elle fonctionne, la tablette de réapparition doit être dans la main du joueur (main principale ou main gauche), ou dans un emplacement de sac à dos. Il ne fonctionne pas s’il se trouve dans la barre de raccourcis, sauf s’il est sélectionné. La tablette ne peut être utilisée qu’une seule fois ; Il disparaît après utilisation.",
+    "handbooktitle-respawntablet-usage":  "Usage"
+}

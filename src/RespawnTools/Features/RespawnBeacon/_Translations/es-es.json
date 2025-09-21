@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "El volumen al que se reproducen los sonidos ambientales.",
+    "handbooktext-respawnbeacon-usage":  "Si un jugador muere mientras está dentro del alcance de la baliza, reaparecerá en la baliza, en lugar de en su propio punto de reaparición. Los jugadores solo reaparecerán en la baliza, cuando esté habilitada. El alcance de la baliza se puede cambiar y se puede habilitar y deshabilitar dentro de la GUI de la baliza.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Radio:",
+    "handbooktitle-respawnbeacon-usage":  "Uso",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Los jugadores dentro de este radio reaparecerán en esta baliza, en lugar de en su propio punto de reaparición.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "El volumen al que se reproducen los sonidos de reaparición.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Configuración de la baliza de reaparición",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Los jugadores solo reaparecerán en la baliza, cuando esté habilitada.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Volumen de reaparición:",
+    "block-respawnbeacon":  "Baliza de reaparición",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Volumen ambiente:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Habilitado:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Cambiar configuración"
+}

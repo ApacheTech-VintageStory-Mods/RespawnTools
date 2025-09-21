@@ -1,0 +1,15 @@
+﻿{
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Hlasitosť, pri ktorej sa prehrávajú okolité zvuky.",
+    "handbooktext-respawnbeacon-usage":  "Ak hráč zomrie, keď je v dosahu majáku, oživí sa na majáku, a nie na svojom vlastnom mieste respawnu. Hráči sa znovu objavia na majáku iba vtedy, keď je povolený. Dosah majáku je možné zmeniť, a možno ho povoliť, a deaktivovať v rámci GUI pre maják.",
+    "Features.RespawnBeacon.Dialogue.lblRadius":  "Polomer:",
+    "handbooktitle-respawnbeacon-usage":  "Použitie",
+    "Features.RespawnBeacon.Dialogue.lblRadius.HoverText":  "Hráči v tomto okruhu sa respawnujú v tomto majáku, a nie vo svojom vlastnom bode respawnu.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Hlasitosť, pri ktorej sa prehrávajú zvuky respawnu.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Nastavenia majáka na oživenie",
+    "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Hráči sa znovu objavia na majáku iba vtedy, keď je povolený.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Objem respawnu:",
+    "block-respawnbeacon":  "Respawn Beacon",
+    "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Okolitá hlasitosť:",
+    "Features.RespawnBeacon.Dialogue.lblEnabled":  "Povolené:",
+    "Features.RespawnBeacon.Interactions.OpenGUI":  "Zmena nastavení"
+}

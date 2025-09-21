@@ -1,19 +1,13 @@
-﻿using ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Behaviours;
-using ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet.GameContent.Items;
-using Gantry.Core.Extensions;
-using Gantry.Core.ModSystems;
-using Vintagestory.API.Common;
+﻿using Gantry.GameContent.Behaviours;
+using RespawnTools.Features.RespawnTablet.GameContent.Items;
 
-// ReSharper disable StringLiteralTypo
-// ReSharper disable ClassNeverInstantiated.Global
-
-namespace ApacheTech.VintageMods.RespawnTools.Features.RespawnTablet;
+namespace RespawnTools.Features.RespawnTablet;
 
 /// <summary>
 ///     Mod Entry-point for the RespawnTablet feature.
 /// </summary>
 /// <seealso cref="UniversalModSystem" />
-public sealed class RespawnTablet : UniversalModSystem
+public sealed class RespawnTablet : UniversalModSystem<RespawnTablet>
 {
     public override void Start(ICoreAPI api)
     {
