@@ -1,13 +1,22 @@
-﻿[assembly: ModDependency("game", "1.21.0")]
+﻿[assembly: ModDependency("game", GameVersion.ShortGameVersion)]
 
-[assembly:ModInfo(
+[assembly: ModInfo(
     "Respawn Tools",
     "respawntools",
     Description = "Adds tools for servers, to alter the consequences of death, and respawning.",
     Side = "Universal",
-    Version = "2.0.0",
+#if DEBUG
+    Version = $"{ModVersion.Value}-dev.0",
+#else
+    Version = ModVersion.Value,
+#endif
     NetworkVersion = "1.0.0",
     IconPath = "modicon.png",
     Website = "https://apachetech.co.uk",
     Contributors = ["ApacheTech Solutions"],
     Authors = ["ApacheTech Solutions"])]
+
+file static class ModVersion
+{
+    public const string Value = "3.0.0";
+}

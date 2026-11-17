@@ -1,4 +1,6 @@
 ﻿{
+    "ModTitle":  "Respawn-gereedschappen",
     "ModDescription":  "Voegt items toe aan het spel waarmee spelers tijdelijke respawnlocaties kunnen instellen.",
-    "ModTitle":  "Hulpmiddelen voor respawnen"
+    "Features.ModSettings.Title":  "Respawn-gereedschappen",
+    "Features.ModSettings.Admin.Title":  "Respawn Tools (Admin)"
 }

@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Таблетка Respawn",
+    "item-respawntablet":  "Respawn Tablet",
+    "Features.RespawnTablet.Charges":  "Обвинения: {0}",
+    "handbooktitle-respawntablet-usage":  "Использование",
+    "handbooktext-respawntablet-usage":  "Если у игрока есть планшет для возрождения в основной, второй руке или в рюкзаке, и он получает смертельные повреждения, тотем спасает игрока от смерти. Планшет возрождения должен находиться в руке игрока (основной руке или в руке) или в слоте рюкзака, чтобы он работал. Он не работает, если он находится в панели горячей панели, если только не выбран. Планшет можно использовать только один раз; он исчезает после использования.",
     "handbooktitle-respawntablet-effect":  "Эффект",
-    "handbooktext-respawntablet-effect":  "При активации таблетка возрождения оживляет игрока до полного здоровья, снимает все существующие статусные эффекты и заставляет игрока светиться на короткое время. Таблетку употребляют после смерти. ",
-    "handbooktext-respawntablet-usage":  "Если игрок держит табличку возрождения в правой руке, левой руке или рюкзаке и получает смертельный урон, тотем спасает игрока от смерти. Таблетка возрождения должна находиться в руке игрока (в правой руке или в левой руке) или в слоте рюкзака, чтобы она работала. Он не работает, если он находится в панели быстрого доступа, если он не выбран. Таблетку можно использовать только один раз; Он исчезает после использования.",
-    "handbooktitle-respawntablet-usage":  "Употребление"
+    "handbooktext-respawntablet-effect":  "При активации планшет возрождения оживляет игрока до полного здоровья, удаляет все существующие статусные эффекты и заставляет игрока светиться на короткое время. Планшет расходуется при смерти. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Возможность использовать таблетки возрождения",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Настройки сервера Respawn Tablet",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Можно крафтить:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "При включённом устройстве игроки могут создать планшет Respawn. Он остаётся доступен в меню Creative при отключении.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Обвинения:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Сколько зарядов у Respawn Tablet до того, как он сломается."
 }

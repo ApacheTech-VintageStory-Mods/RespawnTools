@@ -1,4 +1,7 @@
 {
   "ModTitle": "Respawn Tools",
-  "ModDescription": "Adds items to the game that allow players to set temporary respawn locations."
+  "ModDescription": "Adds items to the game that allow players to set temporary respawn locations.",
+
+  "Features.ModSettings.Title": "Respawn Tools",
+  "Features.ModSettings.Admin.Title": "Respawn Tools (Admin)"
 }

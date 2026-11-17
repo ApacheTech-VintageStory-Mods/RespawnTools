@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Aggiunge oggetti al gioco che consentono ai giocatori di impostare posizioni di respawn temporanee.",
-    "ModTitle":  "Strumenti di respawn"
+    "ModTitle":  "Strumenti di respawn",
+    "ModDescription":  "Aggiunge oggetti al gioco che permettono ai giocatori di impostare posizioni temporanee di respawn.",
+    "Features.ModSettings.Title":  "Strumenti di respawn",
+    "Features.ModSettings.Admin.Title":  "Strumenti di respawn (Admin)"
 }

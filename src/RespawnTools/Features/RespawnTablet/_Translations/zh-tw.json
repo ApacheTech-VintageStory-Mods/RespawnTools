@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "重生平板電腦",
-    "handbooktitle-respawntablet-effect":  "作用",
-    "handbooktext-respawntablet-effect":  "激活後，重生平板電腦會使玩家恢復到完全生命值，消除所有現有的狀態效果，並使玩家短暫發光。藥片在死亡時被消耗掉。",
-    "handbooktext-respawntablet-usage":  "如果玩家在主手、副手或背包槽中持有重生板，並受到致命傷害，圖騰會使玩家免於死亡。重生平板電腦必須在玩家的手中（主手或副手）或背包槽內，才能工作。如果它位於快捷欄中，則不起作用，除非選擇。平板電腦只能使用一次;使用後它就會消失。",
-    "handbooktitle-respawntablet-usage":  "用法"
+    "item-respawntablet":  "重生平板",
+    "Features.RespawnTablet.Charges":  "指控： {0}",
+    "handbooktitle-respawntablet-usage":  "使用情況",
+    "handbooktext-respawntablet-usage":  "如果玩家在主手、副手或背包欄位持有復活平板，且受到致命傷害，圖騰會救玩家免於死亡。復活平板必須在玩家手中（主手或副手），或背包欄位內才能生效。若在快捷列中，除非選擇，否則無法使用。平板只能使用一次;使用後會消失。",
+    "handbooktitle-respawntablet-effect":  "影響",
+    "handbooktext-respawntablet-effect":  "啟動時，重生石板會將玩家恢復滿血，移除所有現有狀態效果，並讓玩家短暫發光。死後石板會被消耗。 ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "使用重生石板的能力",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn 平板伺服器設定",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "可製作：",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "啟用後，玩家可以製作重生平板。關閉後仍可在創意選單中使用。",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "收費：",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "重生石板有多少次電量才會壞掉。"
 }

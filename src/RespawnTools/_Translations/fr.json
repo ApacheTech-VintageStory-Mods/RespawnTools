@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Ajoute des objets au jeu qui permettent aux joueurs de définir des lieux de réapparition temporaires.",
-    "ModTitle":  "Outils de réapparition"
+    "ModTitle":  "Outils de réapparition",
+    "ModDescription":  "Ajoute des objets au jeu qui permettent aux joueurs de définir des emplacements de réapparition temporaires.",
+    "Features.ModSettings.Title":  "Outils de réapparition",
+    "Features.ModSettings.Admin.Title":  "Outils de réapparition (Admin)"
 }

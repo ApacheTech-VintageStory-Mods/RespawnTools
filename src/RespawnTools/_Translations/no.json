@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Legger til gjenstander i spillet som lar spillere angi midlertidige respawn-steder.",
-    "ModTitle":  "Gjenoppstå verktøy"
+    "ModTitle":  "Respawn-verktøy",
+    "ModDescription":  "Legger til gjenstander i spillet som lar spillere sette midlertidige respawn-steder.",
+    "Features.ModSettings.Title":  "Respawn-verktøy",
+    "Features.ModSettings.Admin.Title":  "Respawn-verktøy (Admin)"
 }

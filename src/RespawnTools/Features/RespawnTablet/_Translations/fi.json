@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Respawn-tabletti",
+    "item-respawntablet":  "Respawn-taulu",
+    "Features.RespawnTablet.Charges":  "Syytteet: {0}",
+    "handbooktitle-respawntablet-usage":  "Käyttö",
+    "handbooktext-respawntablet-usage":  "Jos pelaaja pitää respawn-tablettia pääkädessä, sivukädessä tai reppupaikassa ja saa muuten kohtalokkaan vahingon, totemi pelastaa pelaajan kuolemalta. Respawn-tabletin täytyy olla pelaajan kädessä (pääkäsi tai offhand) tai reppupaikassa, jotta se toimii. Se ei toimi, jos se on pikapalkissa, ellei se ole valittu. Tablettia voi käyttää vain kerran; se katoaa käytön jälkeen.",
     "handbooktitle-respawntablet-effect":  "Vaikutus",
-    "handbooktext-respawntablet-effect":  "Kun uudelleensyntymistabletti aktivoidaan, se herättää pelaajan täyteen terveyteen, poistaa kaikki olemassa olevat tilatehosteet ja saa pelaajan hehkumaan lyhyeksi ajaksi. Tabletti kulutetaan kuoleman yhteydessä. ",
-    "handbooktext-respawntablet-usage":  "Jos pelaaja pitää uudelleensyntymistablettia pääkädessä, kädestä tai repussa ja saa muuten kohtalokkaita vaurioita, toteemi pelastaa pelaajan kuolemalta. Respawn-tabletin on oltava pelaajan kädessä (pääkädessä tai kädessä) tai reppupaikassa, jotta se toimisi. Se ei toimi, jos se on hotbarissa, ellei sitä ole valittu. Tablettia voidaan käyttää vain kerran; se häviää käytön jälkeen.",
-    "handbooktitle-respawntablet-usage":  "Käyttö"
+    "handbooktext-respawntablet-effect":  "Kun se aktivoituu, respawn-tabletti herättää pelaajan täyteen terveyteen, poistaa kaikki olemassa olevat tilavaikutukset ja saa pelaajan hehkumaan hetkeksi. Tabletti kulutetaan kuollessaan. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Kyky käyttää Respawn-tabletteja",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn-tablettipalvelimen asetukset",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Valmistettavissa:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Kun se on käytössä, pelaajat voivat valmistaa Respawn-tabletin. Se pysyy saatavilla Luovassa valikossa, kun se on pois päältä.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Syytteet:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Kuinka monta latausta Respawn-tabletilla on ennen kuin se hajoaa."
 }

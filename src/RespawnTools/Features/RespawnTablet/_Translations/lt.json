@@ -1,0 +1,14 @@
+﻿{
+    "item-respawntablet":  "Respawn lentelė",
+    "Features.RespawnTablet.Charges":  "Kaltinimai: {0}",
+    "handbooktitle-respawntablet-usage":  "Naudojimas",
+    "handbooktext-respawntablet-usage":  "Jei žaidėjas laiko respawn planšetę pagrindinėje, kairėje rankoje ar kuprinėje ir patiria mirtiną žalą, totemas išgelbsti žaidėją nuo mirties. Respawn planšetė turi būti žaidėjo rankoje (pagrindinėje arba antrinėje rankoje) arba kuprinės lizde, kad veiktų. Ji neveikia, jei yra karštųjų klavišų juostoje, nebent pasirinkta. Planšetę galima naudoti tik vieną kartą; ji dingsta po naudojimo.",
+    "handbooktitle-respawntablet-effect":  "Poveikis",
+    "handbooktext-respawntablet-effect":  "Aktyvavus, atgimimo planšetė atgaivina žaidėją iki pilnos sveikatos, pašalina visus esamus būsenos efektus ir trumpam priverčia žaidėją švytėti. Planšetė sunaudojama mirus. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Galimybė naudoti Respawn planšetes",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn planšetės serverio nustatymai",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Galima pagaminti:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Įjungus, žaidėjai gali pasigaminti Respawn planšetę. Ji lieka prieinama Creative meniu, kai ji išjungta.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Kaltinimai:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Kiek įkrovimų turi Respawn planšetė, kol ji sugenda."
+}

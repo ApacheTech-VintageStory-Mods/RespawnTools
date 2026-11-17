@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Tablette Respawn",
+    "item-respawntablet":  "Tablette de réapparition",
+    "Features.RespawnTablet.Charges":  "Charges : {0}",
+    "handbooktitle-respawntablet-usage":  "Utilisation",
+    "handbooktext-respawntablet-usage":  "Si le joueur tient une tablette de réapparition dans sa main principale, secondaire ou sac à dos, et subit des dégâts mortels, le totem sauve le joueur de la mort. La tablette de réapparition doit être dans la main du joueur (main principale ou secondaire), ou dans un emplacement de sac à dos, pour qu’elle fonctionne. Elle ne fonctionne pas si elle est dans la barre d’achat, sauf si elle est sélectionnée. La tablette ne peut être utilisée qu’une seule fois ; elle disparaît après utilisation.",
     "handbooktitle-respawntablet-effect":  "Effet",
-    "handbooktext-respawntablet-effect":  "Lorsqu’elle est activée, la tablette de réapparition ranime le joueur à sa pleine santé, supprime tous les effets de statut existants et fait briller le joueur pendant une courte période. La tablette est consommée à la mort. ",
-    "handbooktext-respawntablet-usage":  "Si le joueur tient une tablette de réapparition dans son emplacement de main principale, de main gauche ou de sac à dos, et qu’il subit des dégâts autrement mortels, le totem sauve le joueur de la mort. Pour qu’elle fonctionne, la tablette de réapparition doit être dans la main du joueur (main principale ou main gauche), ou dans un emplacement de sac à dos. Il ne fonctionne pas s’il se trouve dans la barre de raccourcis, sauf s’il est sélectionné. La tablette ne peut être utilisée qu’une seule fois ; Il disparaît après utilisation.",
-    "handbooktitle-respawntablet-usage":  "Usage"
+    "handbooktext-respawntablet-effect":  "Lorsqu’elle est activée, la tablette de réapparition ramène le joueur à pleine santé, supprime tous les effets de statut existants et fait briller le joueur pendant un court moment. La tablette est consommée à la mort. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Possibilité d’utiliser les tablettes de réapparition",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Paramètres du serveur Tablette Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Fabriquable :",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Une fois activée, les joueurs peuvent fabriquer la tablette de réapparition. Elle reste disponible dans le menu Créatif lorsqu’elle est désactivée.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Accusations :",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Combien de charges la tablette de réapparition a avant de casser ?"
 }

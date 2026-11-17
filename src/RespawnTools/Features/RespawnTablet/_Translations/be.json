@@ -1,0 +1,14 @@
+﻿{
+    "item-respawntablet":  "Планшэт Адраджэння",
+    "Features.RespawnTablet.Charges":  "Абвінавачванні: {0}",
+    "handbooktitle-respawntablet-usage":  "Выкарыстанне",
+    "handbooktext-respawntablet-usage":  "Калі гулец трымае планшэт для адраджэння ў асноўнай, другой руцэ або ў заплечніку і атрымлівае смяротную шкоду, тотэм ратуе гульца ад смерці. Планшэт адраджэння павінен быць у руцэ гульца (асноўная або другая рука) або ў слоце для заплечніка, каб ён працаваў. Ён не працуе, калі ён знаходзіцца ў панэлі гарачай панэлі, калі не выбраны. Планшэт можна выкарыстоўваць толькі адзін раз; ён знікае пасля выкарыстання.",
+    "handbooktitle-respawntablet-effect":  "Эфект",
+    "handbooktext-respawntablet-effect":  "Пры актывацыі планшэт адраджэння ажыўляе гульца да поўнага здароўя, здымае ўсе існуючыя статусныя эфекты і прымушае гульца на кароткі час свяціцца. Планшэт з\u0027ядаецца пры смерці. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Магчымасць выкарыстання таблетак адраджэння",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Налады сервера планшэта Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Крафт:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Пры ўключэнні гульцы могуць стварыць планшэт Respawn. Ён застаецца даступным у меню Creative пры адключэнні.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Абвінавачванні:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Колькі зарадаў мае Планшэт Адраджэння, перш чым ён зламаецца."
+}

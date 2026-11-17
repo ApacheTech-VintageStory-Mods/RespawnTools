@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Tilføjer genstande til spillet, der giver spillere mulighed for at indstille midlertidige respawn-placeringer.",
-    "ModTitle":  "Respawn-værktøjer"
+    "ModTitle":  "Respawn-værktøjer",
+    "ModDescription":  "Tilføjer genstande til spillet, der tillader spillere at sætte midlertidige respawn-steder.",
+    "Features.ModSettings.Title":  "Respawn-værktøjer",
+    "Features.ModSettings.Admin.Title":  "Respawn-værktøjer (Admin)"
 }

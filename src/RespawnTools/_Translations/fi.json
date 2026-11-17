@@ -1,4 +1,6 @@
 ﻿{
+    "ModTitle":  "Respawn-työkalut",
     "ModDescription":  "Lisää peliin esineitä, joiden avulla pelaajat voivat asettaa väliaikaisia uudelleensyntymispaikkoja.",
-    "ModTitle":  "Respawn-työkalut"
+    "Features.ModSettings.Title":  "Respawn-työkalut",
+    "Features.ModSettings.Admin.Title":  "Respawn-työkalut (ylläpitäjä)"
 }

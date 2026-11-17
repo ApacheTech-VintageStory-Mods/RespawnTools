@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Bætir hlutum við leikinn sem gera leikmönnum kleift að stilla tímabundna endurvakningarstaði.",
-    "ModTitle":  "Endurvekja verkfæri"
+    "ModTitle":  "Endurkomutól",
+    "ModDescription":  "Bætir við hlutum í leikinn sem leyfa leikmönnum að stilla tímabundna endurkomustaði.",
+    "Features.ModSettings.Title":  "Endurkomutól",
+    "Features.ModSettings.Admin.Title":  "Respawn verkfæri (stjórnandi)"
 }

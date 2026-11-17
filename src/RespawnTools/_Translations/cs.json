@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Přidá do hry předměty, které hráčům umožní nastavit dočasné umístění pro znovuobjevení.",
-    "ModTitle":  "Nástroje pro znovuzrození"
+    "ModTitle":  "Nástroje pro respawn",
+    "ModDescription":  "Přidává do hry předměty, které umožňují hráčům nastavit dočasná místa znovuzrození.",
+    "Features.ModSettings.Title":  "Nástroje pro respawn",
+    "Features.ModSettings.Admin.Title":  "Nástroje pro respawn (administrátor)"
 }

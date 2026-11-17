@@ -30,10 +30,9 @@
   //  Materials
   // ==================================================
   "blockmaterial": "Metal",
-  "replaceable": 0,
-  "resistance": 90,
-  "storageFlags": 261,
-  "requiredMiningTier": 4,
+  "replaceable": 100,
+  "resistance": 2,
+  "storageFlags": 257,
 
   // ==================================================
   //  Lighting

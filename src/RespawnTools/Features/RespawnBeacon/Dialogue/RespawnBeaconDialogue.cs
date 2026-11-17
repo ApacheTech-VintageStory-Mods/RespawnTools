@@ -1,4 +1,5 @@
-﻿using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
+﻿using Gantry.Core.Hosting.Annotation;
+using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 
 namespace RespawnTools.Features.RespawnBeacon.Dialogue;
 
@@ -45,7 +46,7 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     protected override void RefreshValues()
     {
         if (!IsOpened()) return;
-        SingleComposer.GetSlider("sldRadius").SetValues(_radius, 0, 128, 1);
+        SingleComposer.GetSlider("sldRadius").SetValues(_radius, 0, 1280, 1);
         SingleComposer.GetSlider("sldAmbientVolume").SetValues(_ambientVolume, 0, 100, 1);
         SingleComposer.GetSlider("sldRespawnVolume").SetValues(_respawnVolume, 0, 100, 1);
         SingleComposer.GetSwitch("btnEnabled").SetValue(_enabled);
@@ -96,7 +97,7 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
             .AddHoverText(T("lblEnabled.HoverText"), labelFont, 260, left)
             .AddSwitch(OnEnableToggle, right, "btnEnabled");
 
-        composer.AddSmallButton(Gantry.Lang.Confirmation("ok"), OnOkButtonPressed, controlRowBoundsRightFixed.FixedUnder(right, 10));
+        composer.AddSmallButton(Core.Lang.Confirmation("ok"), OnOkButtonPressed, controlRowBoundsRightFixed.FixedUnder(right, 10));
     }
 
     private bool OnOkButtonPressed()
@@ -141,5 +142,5 @@ public sealed class RespawnBeaconDialogue : GenericDialogue
     /// <param name="code">The entry to return.</param>
     /// <returns>A localised <see cref="string"/>, for the specified language file code.</returns>
     private string T(string code)
-        => Gantry.Lang.Translate("RespawnBeacon.Dialogue", code);
+        => Core.Lang.Translate("RespawnBeacon.Dialogue", code);
 }

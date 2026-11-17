@@ -1,0 +1,14 @@
+﻿{
+    "item-respawntablet":  "Respawn Tablet",
+    "Features.RespawnTablet.Charges":  "Обвинения: {0}",
+    "handbooktitle-respawntablet-usage":  "Употреба",
+    "handbooktext-respawntablet-usage":  "Ако играчът държи таблет за възраждане в основната си ръка, свободната ръка или в раницата и получи смъртоносни щети, тотемът спасява играча от смърт. Таблетът за възраждане трябва да е в ръката на играча (основната или друга) или в слот за раница, за да работи. Не работи, ако е в горещата лента, освен ако не е избран. Таблетът може да се използва само веднъж; изчезва след употреба.",
+    "handbooktitle-respawntablet-effect":  "Ефект",
+    "handbooktext-respawntablet-effect":  "Когато се активира, таблетът за възраждане възражда играча до пълно здраве, премахва всички съществуващи статус ефекти и кара играча да свети за кратко. Таблетът се консумира при смърт. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Възможност за използване на Respawn таблети",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Настройки на сървъра на Respawn таблет",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Изработваеми:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Когато е активиран, играчите могат да изработят Respawn Tablet. Той остава достъпен в менюто Creative, когато е изключен.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Обвинения:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Колко заряда има Respawn Tablet, преди да се счупи."
+}

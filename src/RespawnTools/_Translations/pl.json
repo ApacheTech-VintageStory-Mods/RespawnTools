@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Dodaje do gry przedmioty, które pozwalają graczom ustawić tymczasowe miejsca odrodzenia.",
-    "ModTitle":  "Narzędzia do odradzania się"
+    "ModTitle":  "Narzędzia do odrodzenia",
+    "ModDescription":  "Dodaje do gry przedmioty, które pozwalają graczom ustawiać tymczasowe miejsca odrodzenia.",
+    "Features.ModSettings.Title":  "Narzędzia do odrodzenia",
+    "Features.ModSettings.Admin.Title":  "Narzędzia do respawnu (Administrator)"
 }

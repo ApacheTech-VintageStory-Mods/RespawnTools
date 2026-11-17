@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Thêm các vật phẩm vào trò chơi cho phép người chơi đặt vị trí hồi sinh tạm thời.",
-    "ModTitle":  "Công cụ hồi sinh"
+    "ModTitle":  "Công Cụ Hồi Sinh",
+    "ModDescription":  "Thêm các vật phẩm vào trò chơi cho phép người chơi thiết lập vị trí hồi sinh tạm thời.",
+    "Features.ModSettings.Title":  "Công Cụ Hồi Sinh",
+    "Features.ModSettings.Admin.Title":  "Công cụ hồi sinh (Quản trị viên)"
 }

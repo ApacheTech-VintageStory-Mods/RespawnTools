@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Respawn Tablett",
+    "item-respawntablet":  "Respawn-surfplatta",
+    "Features.RespawnTablet.Charges":  "Åtal: {0}",
+    "handbooktitle-respawntablet-usage":  "Användning",
+    "handbooktext-respawntablet-usage":  "Om spelaren håller en respawn-surfplatta i sin huvud-, off-hand- eller ryggsäcksplats och får annan dödlig skada, räddar totemet spelaren från döden. Respawn-tabletten måste vara i spelarens hand (huvudhand eller offhand), eller i en ryggsäcksplats för att fungera. Den fungerar inte om den är i snabbvalsfältet, om den inte är vald. Surfplattan kan bara användas en gång; den försvinner efter användning.",
     "handbooktitle-respawntablet-effect":  "Effekt",
-    "handbooktext-respawntablet-effect":  "När den är aktiverad återupplivar respawn-surfplattan spelaren till full hälsa, tar bort alla befintliga statuseffekter och får spelaren att lysa för en kort stund. Tabletten tas vid dödsfall. ",
-    "handbooktext-respawntablet-usage":  "Om spelaren håller en respawn-surfplatta i sin huvudhand, off-hand eller ryggsäcksfack och får annan dödlig skada, räddar totemet spelaren från döden. Respawn-surfplattan måste vara i spelarens hand (huvudhanden, eller offhand), eller i en ryggsäcksplats, för att den ska fungera. Det fungerar inte om det är i hotbar, om det inte är valt. Tabletten kan endast användas en gång; Den försvinner efter användning.",
-    "handbooktitle-respawntablet-usage":  "Användning"
+    "handbooktext-respawntablet-effect":  "När den aktiveras återupplivar respawn-tabletten spelaren till full hälsa, tar bort alla befintliga statuseffekter och får spelaren att lysa en kort stund. Surfplattan förbrukas vid döden. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Möjlighet att använda respawn-plattor",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet Server-inställningar",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Tillverkbart:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "När den är aktiverad kan spelare tillverka Respawn-plattan. Den finns kvar i Kreativa menyn när den är avstängd.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Avgifter:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Hur många laddningar Respawn-tavlan har innan den går sönder."
 }

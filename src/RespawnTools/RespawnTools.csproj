@@ -2,7 +2,7 @@
 	<Import Project="..\..\..\..\..\Gantry\shared\Gantry.Shared\Gantry.Shared.projitems" Label="Shared" />
 
 	<PropertyGroup Label="Assembly Versioning">
-		<Version>2.0.0.0</Version>
+		<Version>3.0.0.0</Version>
 		<ModId>respawntools</ModId>
 		<ModName>Respawn Tools</ModName>
 		<PackageMod>true</PackageMod>
@@ -10,10 +10,5 @@
 
 	<ItemGroup>
 		<None Remove="$(ProjectDir)\**\.gitkeep" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Features\RespawnBeacon\_Translations\en.json" />
-	  <Content Include="Features\RespawnTablet\_Translations\en.json" />
 	</ItemGroup>
 </Project>

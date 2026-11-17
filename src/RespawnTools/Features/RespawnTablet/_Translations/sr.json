@@ -1,7 +1,14 @@
 ﻿{
     "item-respawntablet":  "Respawn Tablet",
+    "Features.RespawnTablet.Charges":  "Optužbe: {0}",
+    "handbooktitle-respawntablet-usage":  "Uporediti",
+    "handbooktext-respawntablet-usage":  "Ako igrač drži respawn tablet u svom glavnom, off-hand, ili ranac slot, i primi inače fatalnu štetu, totem spašava igrača od smrti. Respawn tablet mora biti u ruci igrača (glavna ruka, ili offhand), ili u rancu, da bi radio. Ne radi ako je u hotbar, osim ako nije izabran. Tablet se može koristiti samo jednom; nestaje nakon upotrebe.",
     "handbooktitle-respawntablet-effect":  "Efekat",
-    "handbooktext-respawntablet-effect":  "Kada se aktivira, respawn tablet oživljava igrača u punom zdravlju, uklanja sve postojeće efekte statusa i čini da igrač sija za kratko vreme. Tableta se konzumira na smrt. ",
-    "handbooktext-respawntablet-usage":  "Ako igrač drži respawn tablet u svom glavnom, off-hand ili rancu slot, i primi inače fatalnu štetu, totem spašava igrača od smrti. Respawn tablet mora biti u ruci igrača (glavna ruka, ili iz ruke), ili unutar otvora za ranac, da bi radio. To ne radi ako je u hotbar, osim ako nije izabran. Tableta se može koristiti samo jednom; nestaje nakon upotrebe.",
-    "handbooktitle-respawntablet-usage":  "Korišćenje"
+    "handbooktext-respawntablet-effect":  "Kada se aktivira, respawn tablet oživljava igrača do punog zdravlja, uklanja sve postojeće efekte statusa i čini da igrač sija na kratko vreme. Tableta se troši na smrt. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Sposobnost da koristite Respawn tablete",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Podešavanja Respawn Tablet Servera",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Izraditi:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Kada je omogućeno, igrači mogu izraditi Respawn Tablet. Ostaje dostupan u Creative meniju kada je onemogućen.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Optužbe:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Koliko punjenja ima Respawn Tablet pre nego što se pokvari."
 }

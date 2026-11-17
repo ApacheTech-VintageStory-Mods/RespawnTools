@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Respawn-Tablette",
-    "handbooktitle-respawntablet-effect":  "Effekt",
-    "handbooktext-respawntablet-effect":  "Wenn die Respawn-Tafel aktiviert ist, belebt sie den Spieler zu voller Gesundheit, entfernt alle vorhandenen Statuseffekte und lässt den Spieler für kurze Zeit leuchten. Die Tablette wird nach dem Tod eingenommen. ",
-    "handbooktext-respawntablet-usage":  "Wenn der Spieler eine Respawn-Tablette in seinem Haupthand-, Nebenhand- oder Rucksack-Slot hält und ansonsten tödlichen Schaden erleidet, rettet das Totem den Spieler vor dem Tod. Die Respawn-Tafel muss sich in der Hand des Spielers (Haupthand oder Nebenhand) oder in einem Rucksackschlitz befinden, damit sie funktioniert. Es funktioniert nicht, wenn es sich in der Hotbar befindet, es sei denn, es ist ausgewählt. Das Tablet kann nur einmal verwendet werden; Es verschwindet nach dem Gebrauch.",
-    "handbooktitle-respawntablet-usage":  "Verwendung"
+    "item-respawntablet":  "Respawn-Tafel",
+    "Features.RespawnTablet.Charges":  "Anklagen: {0}",
+    "handbooktitle-respawntablet-usage":  "Verwendung",
+    "handbooktext-respawntablet-usage":  "Wenn der Spieler ein Respawn-Tablet in seinem Haupt-, Nebenhand- oder Rucksack-Slot hält und anderweitig tödlichen Schaden erleidet, rettet das Totem den Spieler vor dem Tod. Das Respawn-Tablet muss sich in der Hand des Spielers befinden (Haupt- oder Nebenhand) oder in einem Rucksack-Slot, damit es funktioniert. Es funktioniert nicht, wenn es sich in der Hotbar befindet, es sei denn, es ist ausgewählt. Das Tablet kann nur einmal verwendet werden; es verschwindet nach der Benutzung.",
+    "handbooktitle-respawntablet-effect":  "Wirkung",
+    "handbooktext-respawntablet-effect":  "Wenn aktiviert, belebt das Respawn-Tablet den Spieler wieder auf volle Gesundheit, entfernt alle bestehenden Statuseffekte und lässt den Spieler für kurze Zeit leuchten. Das Tablet wird beim Tod verbraucht. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Fähigkeit zur Nutzung von Respawn-Tafeln",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet-Server-Einstellungen",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Bastelbar:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Wenn aktiviert, können Spieler das Respawn-Tablet erstellen. Es bleibt im Kreativmenü verfügbar, wenn es deaktiviert ist.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Anklagen:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Wie viele Ladungen hat das Respawn-Tablet, bevor es zerbricht."
 }

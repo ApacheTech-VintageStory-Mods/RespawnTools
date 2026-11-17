@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "แท็บเล็ต Respawn",
-    "handbooktitle-respawntablet-effect":  "ผล",
-    "handbooktext-respawntablet-effect":  "เมื่อเปิดใช้งาน แท็บเล็ตการเกิดใหม่จะฟื้นคืนชีพผู้เล่นให้มีสุขภาพเต็ม ลบเอฟเฟกต์สถานะที่มีอยู่ทั้งหมด และทําให้ผู้เล่นเรืองแสงในช่วงเวลาสั้นๆ แท็บเล็ตถูกบริโภคเมื่อเสียชีวิต ",
-    "handbooktext-respawntablet-usage":  "หากผู้เล่นถือแท็บเล็ตเกิดใหม่ในช่องมือหลัก มือข้างนอก หรือกระเป๋าเป้สะพายหลัง และได้รับความเสียหายร้ายแรง โทเท็มจะช่วยผู้เล่นให้รอดพ้นจากความตาย แท็บเล็ตการเกิดใหม่ต้องอยู่ในมือของผู้เล่น (มือหลักหรือมือนอก) หรือภายในช่องกระเป๋าเป้สะพายหลังจึงจะใช้งานได้ จะไม่ทํางานหากอยู่ในแถบลัด เว้นแต่จะเลือกไว้ แท็บเล็ตสามารถใช้ได้เพียงครั้งเดียว มันจะหายไปหลังการใช้งาน",
-    "handbooktitle-respawntablet-usage":  "การใช้"
+    "item-respawntablet":  "แท็บเล็ตเกิดใหม่",
+    "Features.RespawnTablet.Charges":  "ข้อกล่าวหา: {0}",
+    "handbooktitle-respawntablet-usage":  "การใช้งาน",
+    "handbooktext-respawntablet-usage":  "หากผู้เล่นถือแท็บเล็ตเกิดใหม่ในมือหลัก มือรอง หรือกระเป๋าเป้ และได้รับความเสียหายร้ายแรง โทเท็มจะช่วยผู้เล่นจากความตายแท็บเล็ตเกิดใหม่ต้องอยู่ในมือผู้เล่น (มือหลัก หรือมือรอง) หรือในช่องกระเป๋าเป้ เพื่อให้มันทํางานได้แท็บเล็ตนี้จะไม่ทํางานหากอยู่ในแถบลัด เว้นแต่จะเลือกไว้แท็บเล็ตนี้ใช้ได้เพียงครั้งเดียวเท่านั้น;มันจะหายไปหลังจากใช้งาน",
+    "handbooktitle-respawntablet-effect":  "ผลกระทบ",
+    "handbooktext-respawntablet-effect":  "เมื่อเปิดใช้งาน แท็บเล็ตเกิดใหม่จะชุบชีวิตผู้เล่นให้กลับมามีพลังชีวิตเต็มที่ ลบสถานะทั้งหมดที่มีอยู่ และทําให้ผู้เล่นเรืองแสงในช่วงเวลาสั้น ๆแท็บเล็ตจะถูกใช้เมื่อตาย ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "ความสามารถในการใช้แท็บเล็ตเกิดใหม่",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "การตั้งค่าเซิร์ฟเวอร์แท็บเล็ต Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "สามารถคราฟต์ได้:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "เมื่อเปิดใช้งาน ผู้เล่นสามารถสร้างแท็บเล็ตเกิดใหม่ได้แท็บเล็ตนี้จะยังคงมีให้ใช้งานในเมนู Creative เมื่อปิดใช้งาน",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "ข้อกล่าวหา:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "จํานวนชาร์จที่แท็บเล็ต Respawn มีก่อนจะพัง"
 }

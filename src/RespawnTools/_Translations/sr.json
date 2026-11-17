@@ -1,4 +1,6 @@
 ﻿{
+    "ModTitle":  "Respawn alati",
     "ModDescription":  "Dodaje stavke u igru koje omogućavaju igračima da postave privremene lokacije za oživljavanje.",
-    "ModTitle":  "Respawn alati"
+    "Features.ModSettings.Title":  "Respawn alati",
+    "Features.ModSettings.Admin.Title":  "Alati za oživljavanje (Admin)"
 }

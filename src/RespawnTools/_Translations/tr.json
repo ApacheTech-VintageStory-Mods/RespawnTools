@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Oyuna, oyuncuların geçici yeniden doğma konumları belirlemesine izin veren öğeler ekler.",
-    "ModTitle":  "Yeniden Doğma Araçları"
+    "ModTitle":  "Yeniden Doğma Araçları",
+    "ModDescription":  "Oyuna oyuncuların geçici yeniden doğma noktaları belirlemesine olanak tanıyan eşyalar ekler.",
+    "Features.ModSettings.Title":  "Yeniden Doğma Araçları",
+    "Features.ModSettings.Admin.Title":  "Yeniden Doğuş Araçları (Yönetici)"
 }

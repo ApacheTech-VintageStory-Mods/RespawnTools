@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Tablet na oživenie",
-    "handbooktitle-respawntablet-effect":  "Účinok",
-    "handbooktext-respawntablet-effect":  "Po aktivácii respawn tablet oživí hráča do plného zdravia, odstráni všetky existujúce stavové efekty a na krátky čas rozžiari hráča. Tableta sa spotrebuje pri smrti. ",
-    "handbooktext-respawntablet-usage":  "Ak hráč drží respawn tablet vo svojom slote na hlavnú ruku, off-hand alebo batoh a dostane inak smrteľné poškodenie, totem zachráni hráča pred smrťou. Aby respawn tablet fungoval, musí byť v ruke hráča (hlavná ruka alebo z ruky) alebo v slote na batohu. Nefunguje, ak je v horúcom paneli, pokiaľ nie je vybratý. Tabletu je možné použiť iba raz; Po použití zmizne.",
-    "handbooktitle-respawntablet-usage":  "Použitie"
+    "item-respawntablet":  "Respawn Tablet",
+    "Features.RespawnTablet.Charges":  "Obvinenia: {0}",
+    "handbooktitle-respawntablet-usage":  "Použitie",
+    "handbooktext-respawntablet-usage":  "Ak hráč drží respawn tablet v hlavnej, vedľajšej alebo batohovom slote a utrpí inak smrteľné poškodenie, totem ho zachráni pred smrťou. Respawn tablet musí byť v ruke hráča (hlavná ruka alebo offhand), alebo v slote na batoh, aby fungoval. Nefunguje, ak je v hotbare, pokiaľ nie je vybraný. Tablet je možné použiť len raz; po použití zmizne.",
+    "handbooktitle-respawntablet-effect":  "Vplyv",
+    "handbooktext-respawntablet-effect":  "Po aktivácii respawn tablet oživí hráča na plné zdravie, odstráni všetky existujúce statusové efekty a spôsobí, že hráč na krátky čas žiari. Tablet sa spotrebuje pri smrti. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Možnosť používať Respawn Tablets",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Nastavenia Respawn Tablet Server",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Vyrábateľné:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Keď je povolený, hráči môžu vyrábať Respawn Tablet. Zostáva dostupný v menu Kreatív, keď je vypnutý.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Obvinenia:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Koľko nabíjaní má Respawn tablet, kým sa pokazí."
 }

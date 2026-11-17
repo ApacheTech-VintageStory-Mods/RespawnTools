@@ -1,4 +1,6 @@
 ﻿{
+    "ModTitle":  "リスポーンツール",
     "ModDescription":  "プレイヤーが一時的なリスポーン場所を設定できるアイテムをゲームに追加します。",
-    "ModTitle":  "リスポーンツール"
+    "Features.ModSettings.Title":  "リスポーンツール",
+    "Features.ModSettings.Admin.Title":  "リスポーンツール(管理者)"
 }

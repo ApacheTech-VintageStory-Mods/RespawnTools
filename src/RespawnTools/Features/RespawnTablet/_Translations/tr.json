@@ -1,7 +1,14 @@
 ﻿{
     "item-respawntablet":  "Yeniden Doğma Tableti",
-    "handbooktitle-respawntablet-effect":  "Etki",
-    "handbooktext-respawntablet-effect":  "Etkinleştirildiğinde, yeniden doğma tableti oyuncuyu tam sağlığına kavuşturur, mevcut tüm durum etkilerini kaldırır ve oyuncunun kısa bir süreliğine parlamasını sağlar. Tablet ölümde tüketilir. ",
-    "handbooktext-respawntablet-usage":  "Oyuncu ana elinde, el dışında veya sırt çantası yuvasında bir yeniden doğma tableti tutuyorsa ve başka türlü ölümcül hasar alırsa, totem oyuncuyu ölümden kurtarır. Yeniden doğma tabletinin çalışması için oyuncunun elinde (ana el veya hazırlıksız) veya bir sırt çantası yuvasında olması gerekir. Seçilmediği sürece hotbar\u0027daysa çalışmaz. Tablet yalnızca bir kez kullanılabilir; Kullanımdan sonra kaybolur.",
-    "handbooktitle-respawntablet-usage":  "Kullanım"
+    "Features.RespawnTablet.Charges":  "Suçlamalar: {0}",
+    "handbooktitle-respawntablet-usage":  "Kullanım",
+    "handbooktext-respawntablet-usage":  "Oyuncu ana el, sol el veya sırt çantası yuvasında bir respawn tableti tutuyorsa ve ölümcül hasar alıyorsa, totem oyuncuyu ölümden kurtarır. Yeniden doğma tableti oyuncunun elinde (ana el veya offhand) veya sırt çantası yuvasında olmalıdır ki çalışmasın. Eğer sıcak çubuğundaysa, seçilmedikçe çalışmaz. Tablet sadece bir kez kullanılabilir; kullanıldıktan sonra kaybolur.",
+    "handbooktitle-respawntablet-effect":  "Etkisi",
+    "handbooktext-respawntablet-effect":  "Aktive edildiğinde, yeniden doğma tableti oyuncuyu tam sağlığa döndürür, mevcut tüm durum etkilerini kaldırır ve oyuncuyu kısa bir süre parlatır. Tablet ölürken tüketilir. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Respawn Tabletlerini Kullanma Yeteneği",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet Server Ayarları",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Üretilebilir:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Etkinleştirildiğinde, oyuncular Respawn Tablet\u0027i üretebilirler. Devre dışı bırakıldığında Yaratıcı menüde kullanılabilir kalır.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Suçlamalar:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Respawn Tablet\u0027in kaç şarjı olduğu ve kırıldığı belli değil."
 }

@@ -1,0 +1,14 @@
+﻿{
+    "item-respawntablet":  "Respawn Tábla",
+    "Features.RespawnTablet.Charges":  "Vádak: {0}",
+    "handbooktitle-respawntablet-usage":  "Használat",
+    "handbooktext-respawntablet-usage":  "Ha a játékos egy respawn táblát tart a főkézben, a hátsó kézben vagy hátizsákjában, és egyébként halálos sérülést kap, a totem megmenti a játékost a haláltól. A repawn táblagépnek a játékos kezében kell lennie (fő kézben vagy mellékkézben), vagy hátizsák slotjában, hogy működjön. Nem működik, ha a hotbarban van, kivéve, ha kiválasztják. A tábla csak egyszer használható; használat után eltűnik.",
+    "handbooktitle-respawntablet-effect":  "Hatás",
+    "handbooktext-respawntablet-effect":  "Aktiválva a tábla újraéleszti a játékost teljes életerőre, eltávolítja az összes meglévő státuszhatást, és rövid időre ragyogni készteti. A táblagépet halál után elfogyasztják. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Képesség a Respawn Tabletek használatára",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn tablet szerver beállítások",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Készíthető:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Ha engedélyezve, a játékosok elkészíthetik a Respawn Tabletet. A Kreatív menüben elérhető marad, ha ki van kapcsolva.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Vádak:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Hány töltés van a Respawn Tabletnek, mielőtt eltörik."
+}

@@ -1,7 +1,14 @@
 ﻿{
     "item-respawntablet":  "リスポーンタブレット",
-    "handbooktitle-respawntablet-effect":  "影響",
-    "handbooktext-respawntablet-effect":  "活性化すると、リスポンタブレットはプレイヤーを完全な体力で復活させ、既存の状態異常効果をすべて除去し、プレイヤーを短時間輝かせます。タブレットは死時に消費されます。",
-    "handbooktext-respawntablet-usage":  "プレイヤーがメインハンド、オフハンド、またはバックパックスロットにリスポーンタブレットを持っていて、致命的なダメージを受けた場合、トーテムはプレイヤーを死から救います。リスポーン タブレットが機能するには、プレイヤーの手 (メイン ハンド、またはオフハンド) またはバックパック スロット内にある必要があります。ホットバーにある場合は、選択しない限り機能しません。タブレットは一度だけ使用できます。使用すると消えます。",
-    "handbooktitle-respawntablet-usage":  "使い"
+    "Features.RespawnTablet.Charges":  "料金: {0}",
+    "handbooktitle-respawntablet-usage":  "使用例",
+    "handbooktext-respawntablet-usage":  "プレイヤーがメインハンド、オフハンド、バックパックスロットにリスポーンタブレットを持ち、致命的なダメージを受けた場合、トーテムはプレイヤーを死から救います。リスポーンタブレットはプレイヤーの手札(メインハンドまたはオフハンド)にあるか、バックパックスロット内にある必要があります。ホットバーにある場合は、選択しない限り機能しません。タブレットは一度しか使用できません。使用後は消えます。",
+    "handbooktitle-respawntablet-effect":  "効果",
+    "handbooktext-respawntablet-effect":  "起動するとリスポーンタブレットはプレイヤーを完全な体力に蘇らせ、既存の状態異常をすべて解除し、短時間プレイヤーを光らせます。タブレットは死亡時に消費されます。 ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "リスポーンタブレットの使用能力",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "リスポーンタブレットサーバー設定",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "クラフト可能:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "有効化すると、リスポーンタブレットを作成できます。無効化してもクリエイティブメニューで利用可能です。",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "起訴内容:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "リスポーンタブレットが壊れるまでのチャージ数は何回あるか。"
 }

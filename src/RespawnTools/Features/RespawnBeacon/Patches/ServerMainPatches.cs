@@ -1,5 +1,6 @@
 ﻿using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
-using Vintagestory.Server;
+using RespawnTools.Features.RespawnBeacon.Settings;
+using RespawnTools.Features.RespawnTablet.Settings;
 
 namespace RespawnTools.Features.RespawnBeacon.Patches;
 
@@ -20,8 +21,10 @@ public sealed class ServerMainPatches : GantryPatch
     {
         var player = __instance.PlayerByUid(playerUID);
         if (player.Entity.Alive) return true;
-        var pos = player.Entity.Pos;
+        if (!player.HasPrivilege(RespawnBeaconPrivileges.UseBeacons)) return true;
+        if (!player.Entity.Attributes.GetBool("rt-RespawnAtBeacon", false)) return true;
 
+        var pos = player.Entity.Pos;
         var system = __instance.Api.ModLoader.GetModSystem<RespawnBeacon>();
         var cache = system.EnabledBeacons?
             .Where(p => p.Position is not null)
@@ -76,6 +79,7 @@ public sealed class ServerMainPatches : GantryPatch
         var blockEntity = sapi.World.BlockAccessor.GetBlockEntity(blockPos);
         if (blockEntity is not BlockEntityRespawnBeacon beacon) return;
         if (!beacon.Enabled) return;
+        player.Entity.Attributes.RemoveAttribute("rt-RespawnAtBeacon");
         beacon.OnSpawn();
     }
 }

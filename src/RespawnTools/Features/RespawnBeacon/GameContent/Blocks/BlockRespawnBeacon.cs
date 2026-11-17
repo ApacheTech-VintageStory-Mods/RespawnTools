@@ -1,6 +1,7 @@
 ﻿using RespawnTools.Features.RespawnBeacon.Dialogue;
 using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
-using Vintagestory.API.Util;
+using RespawnTools.Features.RespawnBeacon.Settings;
+using RespawnTools.Features.RespawnTablet.Settings;
 
 namespace RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
 
@@ -60,14 +61,19 @@ public class BlockRespawnBeacon : Block
     /// </returns>
     public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {
-        if (world.Api.Side.IsServer()) return false;
+        if (world.Api is not ICoreClientAPI capi) return false;
         if (!byPlayer.Entity.Controls.Sneak) return false;
         if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is not BlockEntityRespawnBeacon beacon) return false;
+        if (!HasPermission(byPlayer, RespawnBeaconPrivileges.ConfigureBeacons))
+        {
+            capi.TriggerIngameError(this, RespawnBeaconPrivileges.ConfigureBeacons, G.T("RespawnBeacon.Privileges.Denial", RespawnBeaconPrivileges.ConfigureBeacons));
+            return false;
+        }
 
         var dialogue = world.Api.GantryCore().Services.CreateInstance<RespawnBeaconDialogue>(beacon);
         dialogue.OnOkAction = packet =>
         {
-            world.Api.ForClient()!.Network.GetChannel("RespawnBeacon").SendPacket(packet);            
+            capi.Network.GetChannel("RespawnBeacon").SendPacket(packet);            
         };
         dialogue.ToggleGui();
         return true;
@@ -100,15 +106,11 @@ public class BlockRespawnBeacon : Block
             minSize: 0.1f,
             maxSize: 0.75f)
         {
-            SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
+            SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f),
+            WindAffected = false
         };
-        IdleParticles.WindAffected = false;
         IdleParticles.AddPos.Set(1.0, 2.0, 1.0);
         IdleParticles.addLifeLength = 0.5f;
-
-
-
-
 
         ActiveParticles = new SimpleParticleProperties(
             minQuantity: 10f,
@@ -123,11 +125,38 @@ public class BlockRespawnBeacon : Block
             minSize: 0.3f,
             maxSize: 1.25f)
         {
-            SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f)
+            SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.6f),
+            WindAffected = false
         };
-        ActiveParticles.WindAffected = false;
         ActiveParticles.AddPos.Set(1.0, 2.0, 1.0);
         ActiveParticles.addLifeLength = 0.5f;
+    }
+
+    /// <inheritdoc />
+    public override bool DoPlaceBlock(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ItemStack byItemStack)
+    {
+        if (HasPermission(byPlayer, RespawnBeaconPrivileges.PlaceBeacons))
+            return base.DoPlaceBlock(world, byPlayer, blockSel, byItemStack);
+
+        if (world.Api is ICoreClientAPI capi)
+            capi.TriggerIngameError(this, RespawnBeaconPrivileges.PlaceBeacons, G.T("RespawnBeacon.Privileges.Denial", RespawnBeaconPrivileges.PlaceBeacons));
+        
+        return false;
+    }
+
+    private static bool HasPermission(IPlayer player, string privilege)
+        => player.WorldData.CurrentGameMode == EnumGameMode.Creative || player.HasPrivilege(privilege);
+
+
+    public override float OnGettingBroken(IPlayer player, BlockSelection blockSel, ItemSlot itemslot, float remainingResistance, float dt, int counter)
+    {
+        if (HasPermission(player, RespawnBeaconPrivileges.BreakBeacons))
+            return base.OnGettingBroken(player, blockSel, itemslot, remainingResistance, dt, counter);
+
+        if (player.Entity.Api is ICoreClientAPI capi)
+            capi.TriggerIngameError(this, RespawnBeaconPrivileges.BreakBeacons, G.T("RespawnBeacon.Privileges.Denial", RespawnBeaconPrivileges.BreakBeacons));
+
+        return 999f;
     }
 
     /// <summary>
@@ -155,7 +184,7 @@ public class BlockRespawnBeacon : Block
     /// </summary>
     /// <param name="fromPlayer">The player that sent the packet.</param>
     /// <param name="packet">The packet.</param>
-    [RunsOn(EnumAppSide.Server)]
+    [ServerSide]
     private static void OnClientPacketReceived(IServerPlayer fromPlayer, RespawnBeaconPacket packet)
     {
         var sapi = fromPlayer.Entity.Api;
@@ -186,7 +215,8 @@ public class BlockRespawnBeacon : Block
     /// <returns>Vintagestory.API.Client.WorldInteraction[].</returns>
     public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
     {
-        if (world.BlockAccessor.GetBlockEntity(selection.Position) is not BlockEntityRespawnBeacon)
+        if (world.BlockAccessor.GetBlockEntity(selection.Position) is not BlockEntityRespawnBeacon
+        || !HasPermission(forPlayer, RespawnBeaconPrivileges.ConfigureBeacons))
             return base.GetPlacedBlockInteractionHelp(world, selection, forPlayer);
 
         return new[]

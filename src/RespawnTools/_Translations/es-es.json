@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Agrega elementos al juego que permiten a los jugadores establecer ubicaciones de reaparición temporales.",
-    "ModTitle":  "Herramientas de reaparición"
+    "ModTitle":  "Herramientas de reaparición",
+    "ModDescription":  "Añade objetos al juego que permiten a los jugadores establecer ubicaciones temporales de reaparición.",
+    "Features.ModSettings.Title":  "Herramientas de reaparición",
+    "Features.ModSettings.Admin.Title":  "Herramientas de respawn (Admin)"
 }

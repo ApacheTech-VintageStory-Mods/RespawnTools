@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Comprimido Respawn",
+    "item-respawntablet":  "Tábua de Respawn",
+    "Features.RespawnTablet.Charges":  "Acusações: {0}",
+    "handbooktitle-respawntablet-usage":  "Utilização",
+    "handbooktext-respawntablet-usage":  "Se o jogador estiver a segurar um tablet de respawn na mão principal, secundária ou no slot da mochila, e receber dano fatal, o totem salva o jogador da morte. O tablet de respawn deve estar na mão do jogador (mão principal ou secundária), ou dentro de um slot de mochila, para funcionar. Não funciona se estiver na barra de atalhos, a menos que esteja selecionado. O tablet só pode ser usado uma vez; desaparece após o uso.",
     "handbooktitle-respawntablet-effect":  "Efeito",
-    "handbooktext-respawntablet-effect":  "Quando ativado, o tablet respawn revive o jogador para a saúde total, remove todos os efeitos de status existentes e faz o jogador brilhar por um curto período de tempo. O comprimido é consumido na morte. ",
-    "handbooktext-respawntablet-usage":  "Se o jogador estiver segurando um tablet respawn em seu slot de mão principal, off-hand ou mochila, e receber dano fatal, o totem salva o jogador da morte. O tablet respawn deve estar na mão do jogador (mão principal, ou offhand), ou dentro de um slot de mochila, para que funcione. Não funciona se estiver na barra de atalho, a menos que seja selecionado. O comprimido só pode ser utilizado uma vez; desaparece após a utilização.",
-    "handbooktitle-respawntablet-usage":  "Utilização"
+    "handbooktext-respawntablet-effect":  "Quando ativado, o tablet de respawn revive o jogador à saúde completa, remove todos os efeitos de estado existentes e faz o jogador brilhar por um curto período. O tablet é consumido ao morrer. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Capacidade de usar Tablets de Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Definições do Servidor Tablet Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Fabricável:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Quando ativado, os jogadores podem fabricar o Respawn Tablet. Permanece disponível no menu Criativo quando desativado.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Acusações:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Quantas cargas tem a Tábua de Respawn antes de partir."
 }

@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Adiciona itens ao jogo que permitem aos jogadores definir locais de reaparecimento temporários.",
-    "ModTitle":  "Ferramentas de Respawn"
+    "ModTitle":  "Ferramentas de Respawn",
+    "ModDescription":  "Adiciona itens ao jogo que permitem aos jogadores definir locais temporários de respawn.",
+    "Features.ModSettings.Title":  "Ferramentas de Respawn",
+    "Features.ModSettings.Admin.Title":  "Ferramentas de ressurgimento (Admin)"
 }

@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "플레이어가 임시 부활 위치를 설정할 수 있는 아이템을 게임에 추가합니다.",
-    "ModTitle":  "부활 도구"
+    "ModTitle":  "리스폰 도구",
+    "ModDescription":  "플레이어가 임시 리스폰 위치를 설정할 수 있는 아이템을 추가합니다.",
+    "Features.ModSettings.Title":  "리스폰 도구",
+    "Features.ModSettings.Admin.Title":  "리스폰 도구 (관리자)"
 }

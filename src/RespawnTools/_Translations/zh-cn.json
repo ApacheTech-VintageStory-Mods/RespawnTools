@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "向游戏添加允许玩家设置临时重生位置的物品。",
-    "ModTitle":  "重生工具"
+    "ModTitle":  "重生工具",
+    "ModDescription":  "为游戏添加了允许玩家设置临时重生地点的道具。",
+    "Features.ModSettings.Title":  "重生工具",
+    "Features.ModSettings.Admin.Title":  "重生工具（管理员）"
 }

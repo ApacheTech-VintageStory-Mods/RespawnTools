@@ -1,7 +1,14 @@
 ﻿{
     "item-respawntablet":  "Respawn-tablet",
+    "Features.RespawnTablet.Charges":  "Aanklachten: {0}",
+    "handbooktitle-respawntablet-usage":  "Gebruik",
+    "handbooktext-respawntablet-usage":  "Als de speler een respawntablet in zijn hoofd-hand, off-hand of rugzakslot houdt en anderszins dodelijke schade oploopt, redt de totem de speler van de dood. De respawntablet moet in de hand van de speler zijn (hoofd- of offhand), of in een rugzakslot, om te werken. Het werkt niet als het in de hotbar staat, tenzij geselecteerd. De tablet kan slechts één keer worden gebruikt; hij verdwijnt na gebruik.",
     "handbooktitle-respawntablet-effect":  "Effect",
-    "handbooktext-respawntablet-effect":  "Indien geactiveerd, brengt de respawn-tablet de speler weer tot volle gezondheid, verwijdert alle bestaande statuseffecten en laat de speler voor een korte tijd gloeien. De tablet wordt bij de dood geconsumeerd. ",
-    "handbooktext-respawntablet-usage":  "Als de speler een respawn-tablet in zijn hoofdhand-, off-hand- of rugzaksleuf houdt en anderszins fatale schade oploopt, redt de totem de speler van de dood. De respawn-tablet moet in de hand van de speler zijn (hoofdhand of uit de hand), of in een rugzaksleuf, om te kunnen werken. Het werkt niet als het in de hotbar staat, tenzij geselecteerd. De tablet kan slechts één keer worden gebruikt; Het verdwijnt na gebruik.",
-    "handbooktitle-respawntablet-usage":  "Gebruik"
+    "handbooktext-respawntablet-effect":  "Wanneer geactiveerd, reviveert de respawntablet de speler tot volledige gezondheid, verwijdert alle bestaande statuseffecten en laat de speler korte tijd gloeien. De tablet wordt verbruikt bij de dood. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Mogelijkheid om respawntabletten te gebruiken",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet Server-instellingen",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Maakbaar:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Wanneer ingeschakeld, kunnen spelers de Respawn Tablet maken. Deze blijft beschikbaar in het Creatiemenu wanneer deze is uitgeschakeld.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Aanklachten:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Hoeveel ladingen de Respawn Tablet heeft voordat hij breekt."
 }

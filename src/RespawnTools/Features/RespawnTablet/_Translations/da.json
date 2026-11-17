@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Respawn Tablet",
+    "item-respawntablet":  "Respawn-tablet",
+    "Features.RespawnTablet.Charges":  "Anklager: {0}",
+    "handbooktitle-respawntablet-usage":  "Anvendelse",
+    "handbooktext-respawntablet-usage":  "Hvis spilleren holder en respawn-tablet i sin hoved-, off-hand- eller rygsækslot og modtager ellers dødelig skade, redder totemet spilleren fra døden. Respawn-tabletten skal være i spillerens hånd (hovedhånd eller offhand) eller i en rygsækslot for at den virker. Den virker ikke, hvis den er i hotbaren, medmindre den er valgt. Tabletten kan kun bruges én gang; den forsvinder efter brug.",
     "handbooktitle-respawntablet-effect":  "Effekt",
-    "handbooktext-respawntablet-effect":  "Når den er aktiveret, genopliver respawn-tabletten spilleren til fuld sundhed, fjerner alle eksisterende statuseffekter og får spilleren til at gløde i kort tid. Tabletten indtages ved døden. ",
-    "handbooktext-respawntablet-usage":  "Hvis spilleren holder en respawn-tablet i deres main-hand, off-hand eller rygsæk slot og på anden måde får dødelig skade, redder totemet spilleren fra døden. Respawn-tabletten skal være i spillerens hånd (hovedhånd eller offhand) eller i en rygsækplads, for at den kan fungere. Det virker ikke, hvis det er i hotbaren, medmindre det er valgt. Tabletten kan kun bruges én gang; Det forsvinder efter brug.",
-    "handbooktitle-respawntablet-usage":  "Brug"
+    "handbooktext-respawntablet-effect":  "Når den aktiveres, genopliver respawn-tabletten spilleren til fuld sundhed, fjerner alle eksisterende statuseffekter og får spilleren til at lyse i kort tid. Tabletten bliver brugt ved død. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Mulighed for at bruge Respawn-tabletter",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet Server-indstillinger",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Craftable:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Når den er aktiveret, kan spillerne lave Respawn Tablet. Den forbliver tilgængelig i Kreativ-menuen, når den er deaktiveret.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Sigtelser:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Hvor mange ladninger Respawn-tabletten har, før den bryder."
 }

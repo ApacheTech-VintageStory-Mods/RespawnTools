@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33209.295
+# Visual Studio Version 18
+VisualStudioVersion = 18.9.12120.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mod", "Mod", "{866164D1-2A2B-4A0D-A98B-4521DDF1E068}"
 EndProject
@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Launcher", "Launcher", "{7F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{8C9D74AB-AA4D-4B1A-BB4B-5797E7C2D1B9}"
 	ProjectSection(SolutionItems) = preProject
+		MODDB.html = MODDB.html
 		docs\README.md = docs\README.md
 	EndProjectSection
 EndProject
@@ -42,6 +43,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerLauncher", "..\..\..\
 	ProjectSection(ProjectDependencies) = postProject
 		{58E39605-7077-4B59-B9BE-92881D1547B4} = {58E39605-7077-4B59-B9BE-92881D1547B4}
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{25F7B354-07DD-4458-9364-4A488F9E41C9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Gantry.Shared", "..\..\..\Gantry\shared\Gantry.Shared\Gantry.Shared.shproj", "{0EA708E9-9E9D-4FE0-855C-DF89F48CBB2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,11 +96,14 @@ Global
 		{B69465F3-CC2A-4B7C-9FBB-CA431AD7BF60} = {AE9824FB-D46B-4318-BAF3-4949DDD1C784}
 		{32908DFC-3708-4AB3-9B74-A0C82834A86E} = {7F2A8EEF-577B-4025-835C-FE7AD4D8D326}
 		{D0959776-1EF1-425A-97A9-5139816E666D} = {7F2A8EEF-577B-4025-835C-FE7AD4D8D326}
+		{25F7B354-07DD-4458-9364-4A488F9E41C9} = {AE9824FB-D46B-4318-BAF3-4949DDD1C784}
+		{0EA708E9-9E9D-4FE0-855C-DF89F48CBB2F} = {25F7B354-07DD-4458-9364-4A488F9E41C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6CDE7FD7-065A-4557-BC82-4C82F4C5DA35}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\..\Gantry\shared\Gantry.Shared\Gantry.Shared.projitems*{0ea708e9-9e9d-4fe0-855c-df89f48cbb2f}*SharedItemsImports = 13
 		..\..\..\Gantry\shared\Gantry.Shared\Gantry.Shared.projitems*{58e39605-7077-4b59-b9be-92881d1547b4}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

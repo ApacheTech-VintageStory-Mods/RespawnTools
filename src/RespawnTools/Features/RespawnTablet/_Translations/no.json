@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Respawn nettbrett",
+    "item-respawntablet":  "Respawn-nettbrettet",
+    "Features.RespawnTablet.Charges":  "Anklager: {0}",
+    "handbooktitle-respawntablet-usage":  "Bruk",
+    "handbooktext-respawntablet-usage":  "Hvis spilleren holder et respawn-nettbrett i sin hoved-, off-hand- eller ryggsekkplass, og får ellers dødelig skade, redder totemet spilleren fra døden. Respawn-nettbrettet må være i spillerens hånd (hovedhånd eller offhand), eller i en ryggsekkplass, for at det skal fungere. Det fungerer ikke hvis det er i hurtigfeltet, med mindre det er valgt. Nettbrettet kan bare brukes én gang; det forsvinner etter bruk.",
     "handbooktitle-respawntablet-effect":  "Effekt",
-    "handbooktext-respawntablet-effect":  "Når den er aktivert, gjenoppliver respawn-nettbrettet spilleren til full helse, fjerner alle eksisterende statuseffekter og får spilleren til å gløde en kort stund. Tabletten konsumeres ved død. ",
-    "handbooktext-respawntablet-usage":  "Hvis spilleren holder et respawn-nettbrett i hoved-, off-hand eller ryggsekksporet, og får ellers dødelig skade, redder totemet spilleren fra døden. Respawn-nettbrettet må være i spillerens hånd (hovedhånd eller offhand), eller i et ryggsekkspor, for at det skal fungere. Det fungerer ikke hvis det er i hotbar, med mindre det er valgt. Nettbrettet kan bare brukes én gang; den forsvinner etter bruk.",
-    "handbooktitle-respawntablet-usage":  "Bruk"
+    "handbooktext-respawntablet-effect":  "Når den aktiveres, gjenoppliver respawn-tabletten spilleren til full helse, fjerner alle eksisterende statuseffekter, og får spilleren til å gløde i en kort periode. Nettbrettet blir brukt opp ved død. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Mulighet til å bruke respawn-nettbrett",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet Server-innstillinger",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Håndverkbart:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Når den er aktivert, kan spillerne lage Respawn-nettbrettet. Det forblir tilgjengelig i Kreativ-menyen når det er deaktivert.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Anklager:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Hvor mange ladninger Respawn-nettbrettet har før det går i stykker."
 }

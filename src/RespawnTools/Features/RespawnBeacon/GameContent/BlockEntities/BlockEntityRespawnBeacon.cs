@@ -1,5 +1,4 @@
 ﻿using RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
-using Vintagestory.API.Datastructures;
 using Gantry.GameContent.Blocks;
 
 namespace RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
@@ -120,7 +119,7 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
         RespawnVolume = tree.GetInt("RespawnVolume");
         if (worldForResolving is ICoreClientAPI capi)
         {
-            capi.AsClientMain().WorldMap.UpdateLighting(Block.Id, Block.Id, Pos);
+            capi.ClientMain.WorldMap.UpdateLighting(Block.Id, Block.Id, Pos);
         }
     }
 
@@ -141,7 +140,7 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
                 GameMath.Clamp(RandomEx.RandomValueAround(178, 20), 0, 255),
                 GameMath.Clamp(RandomEx.RandomValueAround(128, 127), 0, 255));
         });
-        capi.AsClientMain().SpawnParticles(particles);
+        capi.ClientMain.SpawnParticles(particles);
     }
 
     public void OnSpawn()
@@ -175,6 +174,7 @@ public sealed class BlockEntityRespawnBeacon : BlockEntity<BlockRespawnBeacon>
                 GameMath.Clamp(RandomEx.RandomValueAround(178, 20), 0, 255),
                 GameMath.Clamp(RandomEx.RandomValueAround(128, 127), 0, 255));
         });
-        Api.World.SpawnParticles(particles);
+        if (particles is not null)
+            Api.World.SpawnParticles(particles);
     }
 }

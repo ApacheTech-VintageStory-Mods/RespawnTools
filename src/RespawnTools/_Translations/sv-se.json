@@ -1,4 +1,6 @@
 ﻿{
-    "ModDescription":  "Lägger till föremål i spelet som gör det möjligt för spelare att ställa in tillfälliga återskapningsplatser.",
-    "ModTitle":  "Respawn-verktyg"
+    "ModTitle":  "Respawn-verktyg",
+    "ModDescription":  "Lägger till föremål i spelet som låter spelare bestämma tillfälliga respawn-platser.",
+    "Features.ModSettings.Title":  "Respawn-verktyg",
+    "Features.ModSettings.Admin.Title":  "Respawn-verktyg (Admin)"
 }

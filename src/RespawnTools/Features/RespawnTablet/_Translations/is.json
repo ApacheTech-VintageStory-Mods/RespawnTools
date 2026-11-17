@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Respawn tafla",
-    "handbooktitle-respawntablet-effect":  "Afleiðing",
-    "handbooktext-respawntablet-effect":  "Þegar hún er virkjuð endurlífgar respawn spjaldtölvan leikmanninn til fullrar heilsu, fjarlægir öll núverandi stöðuáhrif og lætur spilarann ljóma í stuttan tíma. Taflan er neytt við dauðann. ",
-    "handbooktext-respawntablet-usage":  "Ef spilarinn heldur á endurvakningartöflu í aðalhandar-, handar- eða bakpokarauf og fær annars banvænan skaða, bjargar tótemið spilaranum frá dauða. Endurvakningarspjaldtölvan verður að vera í hendi spilarans (aðalhönd eða utanhönd), eða í bakpokarauf, til að hún virki. Það virkar ekki ef það er á heita stikunni, nema það sé valið. Töfluna má aðeins nota einu sinni; Það hverfur eftir notkun.",
-    "handbooktitle-respawntablet-usage":  "Notkun"
+    "item-respawntablet":  "Respawn spjald",
+    "Features.RespawnTablet.Charges":  "Ákærur: {0}",
+    "handbooktitle-respawntablet-usage":  "Notkun",
+    "handbooktext-respawntablet-usage":  "Ef leikmaðurinn heldur á endurfæðingarspjaldtölvu í aðal-, aukahandar- eða bakpokahólfi og verður fyrir banvænum skaða, bjargar totemið leikmanninum frá dauða. Endurkomuspjaldið verður að vera í hendi leikmannsins (aðal- eða óhönd), eða í bakpokahólfi til að það virki. Það virkar ekki ef það er í flýtilínunni, nema valið sé valið. Spjaldtölvuna má aðeins nota einu sinni; hún hverfur eftir notkun.",
+    "handbooktitle-respawntablet-effect":  "Áhrif",
+    "handbooktext-respawntablet-effect":  "Þegar hún er virkjuð endurvekur endurkomuspjaldið leikmanninn til fulls heilsu, fjarlægir öll núverandi ástandsáhrif og lætur leikmanninn glóa í stuttan tíma. Spjaldtölvan er notuð við dauða. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Hæfileiki til að nota Respawn-töflur",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Respawn Tablet Server stillingar",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Smíðanlegt:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Þegar hún er virk geta leikmenn smíðað Respawn spjaldtölvuna. Hún er áfram aðgengileg í Skapandi valmyndinni þegar hún er slökkt.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Ákærur:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Hversu margar hleðslur Respawn-spjaldið hefur áður en það brotnar."
 }

@@ -1,7 +1,14 @@
 ﻿{
-    "item-respawntablet":  "Tavoletta di rigenerazione",
+    "item-respawntablet":  "Tavoletta di respawn",
+    "Features.RespawnTablet.Charges":  "Accuse: {0}",
+    "handbooktitle-respawntablet-usage":  "Utilizzo",
+    "handbooktext-respawntablet-usage":  "Se il giocatore tiene in mano una tavoletta di respawn nella mano principale, nella mano secondaria o nello zaino, e subisce danni altrimenti fatali, il totem salva il giocatore dalla morte. La tavoletta di respawn deve essere nella mano del giocatore (mano principale o secondaria), o in uno slot dello zaino, affinché funzioni. Non funziona se è nella barra rapida, a meno che non sia selezionata. La tavoletta può essere usata solo una volta; scompare dopo l\u0027uso.",
     "handbooktitle-respawntablet-effect":  "Effetto",
-    "handbooktext-respawntablet-effect":  "Quando attivata, la tavoletta di rigenerazione rianima il giocatore alla massima salute, rimuove tutti gli effetti di stato esistenti e fa brillare il giocatore per un breve periodo. La compressa viene consumata alla morte. ",
-    "handbooktext-respawntablet-usage":  "Se il giocatore tiene in mano una tavoletta di rigenerazione nello slot della mano principale, della mano secondaria o dello zaino e riceve danni altrimenti fatali, il totem salva il giocatore dalla morte. La tavoletta di rigenerazione deve essere nella mano del giocatore (mano principale o secondaria) o all\u0027interno di uno slot dello zaino, affinché funzioni. Non funziona se si trova nella barra di scelta rapida, a meno che non sia selezionato. Il tablet può essere utilizzato una sola volta; Scompare dopo l\u0027uso.",
-    "handbooktitle-respawntablet-usage":  "Uso"
+    "handbooktext-respawntablet-effect":  "Quando attivato, il tablet di respawn riporta il giocatore alla salute completa, rimuove tutti gli effetti di stato esistenti e fa brillare il giocatore per un breve periodo. Il tablet viene consumato alla morte. ",
+    "Features.RespawnTablet.Privileges.Description.respawntools.tablets.use":  "Possibilità di usare le Tavolette di Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.Title":  "Impostazioni del server Tablet Respawn",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable":  "Craftabili:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCraftable.HoverText":  "Quando attivato, i giocatori possono creare la Respawn Tablet. Rimane disponibile nel menu Creativo quando disabilitata.",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges":  "Accuse:",
+    "Features.RespawnTablet.Admin.Dialogue.lblCharges.HoverText":  "Quante cariche ha la Tavoletta di Respawn prima di rompersi."
 }
