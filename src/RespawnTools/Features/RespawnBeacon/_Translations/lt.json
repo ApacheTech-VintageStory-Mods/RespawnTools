@@ -2,6 +2,7 @@
     "block-respawnbeacon":  "Respawn švyturys",
     "handbooktitle-respawnbeacon-usage":  "Naudojimas",
     "handbooktext-respawnbeacon-usage":  "Jei žaidėjas miršta būdamas švyturio veikimo zonoje, jis atgims prie švyturio, o ne prie savo atgimimo taško. Žaidėjai atgims švyturyje tik tada, kai jis įjungtas. Švyturio diapazoną galima keisti, jį įjungti ir išjungti švyturio grafinėje sąsajoje.",
+    "Features.RespawnBeacon.RespawnAtBeacon":  "Atgimimas Beacon",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.place":  "Gebėjimas padėti Respawn Beacon bloką",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.configure":  "Galimybė konfigūruoti Respawn Beacon bloką",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.use":  "Gebėjimas naudoti Respawn Beacon bloką",

@@ -1,5 +1,4 @@
 ﻿using RespawnTools.Features.RespawnBeacon.Settings;
-using RespawnTools.Features.RespawnTablet.Settings;
 
 namespace RespawnTools.Features.RespawnBeacon.Patches;
 
@@ -30,7 +29,7 @@ public sealed class GuiDialogDeadPatches : GantryPatch
         var respText = (___respawning ? Lang.Get("Respawning...") : Lang.Get("Respawn"));
         var reviveFont = CairoFont.WhiteSmallText().WithOrientation(EnumTextOrientation.Center);
         var buttonWidth = 300.0;
-        var canUseBeacons = Gantry.Capi.World.Player.HasPrivilege(RespawnBeaconPrivileges.UseBeacons);
+        var canUseBeacons = Gantry.Capi.World.Player.HasPrivilege(RespawnBeaconPrivileges.UseBeacons) && BeaconInRange();
         var quitButtonRow = canUseBeacons ? 2.6f : 2f;
 
         __instance.Composers["menu"] = ___game.GuiComposers.Create("deadmenu", ElementStdBounds.AutosizedMainDialog.WithFixedAlignmentOffset(0.0, 40.0)).AddShadedDialogBG(ElementStdBounds.DialogBackground().WithFixedPadding(0.0, GuiStyle.ElementToDialogPadding), false, 5.0, 0.75f)
@@ -40,7 +39,7 @@ public sealed class GuiDialogDeadPatches : GantryPatch
                 .AddIf(___livesLeft != 0)
                     .AddButton(respText, () => OnRespawn(__instance, false), ElementStdBounds.MenuButton(1f, EnumDialogArea.CenterFixed).WithFixedWidth(buttonWidth), EnumButtonStyle.Normal, "respawnbtn")
                     .AddIf(canUseBeacons)
-                        .AddButton("Respawn at Beacon", () => OnRespawn(__instance, true), ElementStdBounds.MenuButton(1.6f, EnumDialogArea.CenterFixed).WithFixedWidth(buttonWidth), EnumButtonStyle.Normal, "btnRespawnAtBeacon")
+                        .AddButton(Gantry.Lang.Translate("RespawnBeacon", "RespawnAtBeacon"), () => OnRespawn(__instance, true), ElementStdBounds.MenuButton(1.6f, EnumDialogArea.CenterFixed).WithFixedWidth(buttonWidth), EnumButtonStyle.Normal, "btnRespawnAtBeacon")
                     .EndIf()
                 .EndIf()
                 .AddIf(___livesLeft == 0 && ___game.IsSingleplayer)
@@ -63,6 +62,9 @@ public sealed class GuiDialogDeadPatches : GantryPatch
         }
         return false;
     }
+
+    private static bool BeaconInRange()
+        => Gantry.ModSystem<RespawnBeacon>().BeaconInRange();
 
     private static bool OnRespawn(GuiDialogDead __instance, bool respawnAtBeacon)
     {

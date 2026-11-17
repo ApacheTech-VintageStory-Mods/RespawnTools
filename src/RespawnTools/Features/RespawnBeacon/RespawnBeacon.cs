@@ -1,7 +1,4 @@
-﻿using Gantry.Features.NexusModMenu.Abstractions;
-using Gantry.Services.IO.Configuration.Synchonisation.Abstractions;
-using Gantry.Services.IO.DataStructures;
-using RespawnTools.Features.RespawnBeacon.Dialogue;
+﻿using RespawnTools.Features.RespawnBeacon.Dialogue;
 using RespawnTools.Features.RespawnBeacon.GameContent.BlockEntities;
 using RespawnTools.Features.RespawnBeacon.GameContent.Blocks;
 using RespawnTools.Features.RespawnBeacon.Model;
@@ -17,9 +14,9 @@ public sealed class RespawnBeacon : UniversalModSystem<RespawnBeacon>, IClientSe
 {
     private static IFileSystemService? _fileSystem;
     private static IJsonModFile? _beaconCacheStore;
+    private IServerNetworkChannel _serverChannel = default!;
 
-    public List<EnabledBeacon>? EnabledBeacons { get; private set; }
-
+    public List<EnabledBeacon> EnabledBeacons { get; private set; } = [];
 
     private RespawnBeaconSettings _settings = new();
     private IDisposable? _craftableSub;
@@ -46,12 +43,25 @@ public sealed class RespawnBeacon : UniversalModSystem<RespawnBeacon>, IClientSe
         _fileSystem?.RegisterFile("beacon-cache-server.json", ModFileType.Data, ModFileScope.World);
         _beaconCacheStore = _fileSystem?.GetJsonFile("beacon-cache-server.json");
 
+        _serverChannel = sapi.Network
+            .GetOrRegisterChannel(Core, "RespawnBeacon")
+            .RegisterPacket<RespawnBeaconPacket>(Core)
+            .RegisterPacket<BeaconCachePacket>(Core);
+
         sapi.Permissions.RegisterPrivilege(RespawnBeaconPrivileges.PlaceBeacons, T($"Privilieges.Description.{RespawnBeaconPrivileges.PlaceBeacons}"), adminAutoGrant: true);
         sapi.Permissions.RegisterPrivilege(RespawnBeaconPrivileges.ConfigureBeacons, T($"Privilieges.Description.{RespawnBeaconPrivileges.ConfigureBeacons}"), adminAutoGrant: true);
         sapi.Permissions.RegisterPrivilege(RespawnBeaconPrivileges.UseBeacons, T($"Privilieges.Description.{RespawnBeaconPrivileges.UseBeacons}"), adminAutoGrant: true);
         sapi.Permissions.RegisterPrivilege(RespawnBeaconPrivileges.BreakBeacons, T($"Privilieges.Description.{RespawnBeaconPrivileges.BreakBeacons}"), adminAutoGrant: true);
         foreach (var role in sapi.Server.Config.Roles)        
             role.Privileges.AddIfNotPresent(RespawnBeaconPrivileges.UseBeacons);
+    }
+
+    protected override void StartPreClientSide(ICoreClientAPI capi)
+    {
+        capi.Network
+            .GetOrRegisterChannel(Core, "RespawnBeacon")
+            .RegisterPacket<RespawnBeaconPacket>(Core)
+            .RegisterPacket<BeaconCachePacket>(Core, packet => EnabledBeacons = packet.EnabledBeacons);
     }
 
     /// <summary>
@@ -63,11 +73,11 @@ public sealed class RespawnBeacon : UniversalModSystem<RespawnBeacon>, IClientSe
     public void UpdateBeaconCache(BlockEntityRespawnBeacon beacon, bool addEnabled)
     {
         if (beacon.Pos is null) return;
-        if (EnabledBeacons is null) return;
         EnabledBeacons.RemoveAll(p => p.Position == null);
         EnabledBeacons.RemoveAll(p => p.Position == beacon.Pos);
         if (beacon.Enabled && addEnabled) EnabledBeacons.Add(EnabledBeacon.FromBlockEntity(beacon));
         _beaconCacheStore?.SaveFrom(EnabledBeacons);
+        _serverChannel.BroadcastPacket<BeaconCachePacket>(new() { EnabledBeacons = EnabledBeacons });
     }
 
     /// <summary>
@@ -76,9 +86,6 @@ public sealed class RespawnBeacon : UniversalModSystem<RespawnBeacon>, IClientSe
     /// <param name="api">The API.</param>
     public override void Start(ICoreAPI api)
     {
-        api.Network
-            .RegisterChannel("RespawnBeacon")
-            .RegisterMessageType<RespawnBeaconPacket>();
         api.RegisterBlock<BlockRespawnBeacon>();
         api.RegisterBlockEntity<BlockEntityRespawnBeacon>();
     }
@@ -89,10 +96,18 @@ public sealed class RespawnBeacon : UniversalModSystem<RespawnBeacon>, IClientSe
     /// <param name="api">The API.</param>
     public override void StartServerSide(ICoreServerAPI sapi)
     {
-        EnabledBeacons = _beaconCacheStore?.ParseAsMany<EnabledBeacon>().ToList();
+        EnabledBeacons = _beaconCacheStore?.ParseAsMany<EnabledBeacon>().ToList() ?? [];
         _settings = Core.Services.GetRequiredService<RespawnBeaconSettings>();
         _settings.AddPropertyChangedAction(p => p.Craftable, ToggleGridRecipes);
+        sapi.Event.PlayerJoin += UpdateClientCache;
+        sapi.Event.PlayerDeath += Event_PlayerDeath;
     }
+
+    private void Event_PlayerDeath(IServerPlayer byPlayer, DamageSource damageSource)
+        => UpdateClientCache(byPlayer);
+
+    private void UpdateClientCache(IServerPlayer byPlayer)    
+        => _serverChannel.SendPacket<BeaconCachePacket>(new() { EnabledBeacons = EnabledBeacons }, byPlayer);
 
     private void ToggleGridRecipes(bool craftable) 
         => UApi.World.ToggleGridRecipes("respawntools:respawnbeacon", craftable);
@@ -109,13 +124,22 @@ public sealed class RespawnBeacon : UniversalModSystem<RespawnBeacon>, IClientSe
             .Add<RespawnBeaconAdminSettingsDialogue>(Core, "RespawnBeacon", adminOnly: true);
     }
 
+    public bool BeaconInRange()
+    {
+        var pos = Capi.World.Player.Entity.Pos;
+        return EnabledBeacons?
+            .Where(p => p.Position is not null)
+            .Any(p => p.Position.InRangeHorizontally((int)pos.X, (int)pos.Z, p.Radius)) ?? false;
+    }
+
     /// <summary>
     ///     If this mod allows runtime reloading, you must implement this method to unregister any listeners / handlers
     /// </summary>
     public override void Dispose()
     {
-        EnabledBeacons?.Clear();
-        EnabledBeacons = null;
+        Sapi?.Event.PlayerJoin -= UpdateClientCache;
+        Sapi?.Event.PlayerDeath -= Event_PlayerDeath;
+        EnabledBeacons.Clear();
         _fileSystem = null;
         _beaconCacheStore = null;
         _craftableSub?.Dispose();

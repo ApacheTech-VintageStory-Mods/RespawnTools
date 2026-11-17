@@ -2,7 +2,7 @@
   "block-respawnbeacon": "Respawn Beacon",
   "handbooktitle-respawnbeacon-usage": "Usage",
   "handbooktext-respawnbeacon-usage": "If a player dies while they are in range of the beacon, they will respawn at the beacon, rather than their own respawn point. Players will only respawn at the beacon, when it is enabled. The range of the beacon can be changed, and it can be enabled, and disabled within the GUI for the beacon.",
-
+  "Features.RespawnBeacon.RespawnAtBeacon": "Respawn at Beacon",
   "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.place": "Ability to place the Respawn Beacon block",
   "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.configure": "Ability to configure the Respawn Beacon block",
   "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.use": "Ability to use the Respawn Beacon block",

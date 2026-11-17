@@ -7,12 +7,14 @@ namespace RespawnTools.Features.RespawnBeacon.Model;
 /// </summary>
 /// <seealso cref="IEquatable{EnabledBeacon}" />
 [JsonObject]
+[ProtoContract]
 public class EnabledBeacon : IEquatable<EnabledBeacon>
 {
     /// <summary>
     /// 	Initialises a new instance of the <see cref="EnabledBeacon"/> class.
     /// </summary>
-    public EnabledBeacon() { /* Reserved by JSON Deserialiser. */ }
+    [JsonConstructor]
+    public EnabledBeacon() { /* Reserved by JSON Deserialiser and ProtoBuf */ }
 
     /// <summary>
     /// 	Initialises a new instance of the <see cref="EnabledBeacon"/> class.
@@ -37,12 +39,14 @@ public class EnabledBeacon : IEquatable<EnabledBeacon>
     ///     Gets a value indicating whether the Respawn Beacon at the given BlockPos is enabled.
     /// </summary>
     /// <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+    [ProtoMember(100)]
     public BlockPos Position { get; } = default!;
 
     /// <summary>
     ///     Gets the radius at which the Respawn Beacon is active.
     /// </summary>
     /// <value>An <see cref="int"/> value, determining the active radius of the beacon.</value>
+    [ProtoMember(101)]
     public int Radius { get; }
 
     /// <summary>

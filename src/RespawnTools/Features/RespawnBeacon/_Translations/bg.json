@@ -1,12 +1,13 @@
 ﻿{
-    "block-respawnbeacon":  "Респаун Бийкън Бийкън",
+    "block-respawnbeacon":  "Респаун Бийкън",
     "handbooktitle-respawnbeacon-usage":  "Употреба",
-    "handbooktext-respawnbeacon-usage":  "Ако играч умре, докато е в обсега на маяка, той ще се появи отново на маяка, а не на собствената си точка на възраждане. Играчите ще се появяват отново на маяка само когато той е активиран. Обхватът на маяка може да се променя, може да се активира и изключва в рамките на графичния интерфейс на маяка.",
+    "handbooktext-respawnbeacon-usage":  "Ако играч умре, докато е в обсега на маяка, той ще се появи отново на него, а не на собствената си точка на възраждане. Играчите ще се появяват отново на маяка, когато е активиран. Обхватът на маяка може да се променя, както и да бъде активиран и изключен в графичния интерфейс на маяка.",
+    "Features.RespawnBeacon.RespawnAtBeacon":  "Възраждане в Бийкън",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.place":  "Възможност за поставяне на блока Respawn Beacon",
-    "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.configure":  "Възможност за конфигуриране на Respawn Beacon блока",
+    "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.configure":  "Възможност за конфигуриране на блока Respawn Beacon",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.use":  "Възможност за използване на блока Respawn Beacon",
-    "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.break":  "Способност да се пробие блокът на Respawn Beacon",
-    "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.place":  "Не е позволено да поставяте този блок.",
+    "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.break":  "Възможност за пробиване на блока на Respawn Beacon",
+    "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.place":  "Не ви е позволено да поставяте този блок.",
     "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.configure":  "Не ви е позволено да конфигурирате този блок.",
     "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.use":  "Не ви е позволено да използвате този блок.",
     "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.break":  "Не ти е позволено да нарушаваш този блок.",
@@ -18,9 +19,9 @@
     "Features.RespawnBeacon.Interactions.OpenGUI":  "Промяна на настройките",
     "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Амбиентна сила на звука:",
     "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Силата на звука, с който се възпроизвеждат околните звуци.",
-    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Обем на респаун:",
-    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Силата на звука, на който се възпроизвеждат звуците на респаун.",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Обем на възстановката:",
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Силата на звука, при който се възпроизвеждат звуците за възраждане.",
     "Features.RespawnBeacon.Admin.Dialogue.Title":  "Настройки на Respawn Beacon сървъра",
-    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable":  "Изработваеми:",
-    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable.HoverText":  "Когато е включен, играчите могат да изработят Respawn Beacon. Той остава достъпен в менюто Creative, когато е изключен."
+    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable":  "Може да се изработи:",
+    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable.HoverText":  "Когато е активирано, играчите могат да създадат Respawn Beacon. Той остава наличен в менюто Креатив, когато е деактивиран."
 }

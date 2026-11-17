@@ -1,7 +1,8 @@
 ﻿{
     "block-respawnbeacon":  "Đèn hiệu hồi sinh",
     "handbooktitle-respawnbeacon-usage":  "Cách sử dụng",
-    "handbooktext-respawnbeacon-usage":  "Nếu người chơi chết khi đang trong phạm vi của beacon, họ sẽ hồi sinh tại beacon, thay vì tại điểm hồi sinh của chính mình. Người chơi chỉ hồi sinh tại beacon khi nó được bật. Phạm vi của beacon có thể thay đổi, và nó có thể được bật hoặc tắt trong giao diện của beacon.",
+    "handbooktext-respawnbeacon-usage":  "Nếu một người chơi chết khi đang trong phạm vi của beacon, họ sẽ hồi sinh tại beacon, thay vì tại điểm hồi sinh của mình. Người chơi chỉ hồi sinh tại beacon khi nó được bật. Phạm vi của beacon có thể thay đổi, bật hoặc tắt trong giao diện của beacon.",
+    "Features.RespawnBeacon.RespawnAtBeacon":  "Hồi sinh tại Beacon",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.place":  "Khả năng đặt khối Respawn Beacon",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.configure":  "Khả năng cấu hình khối Respawn Beacon",
     "Features.RespawnBeacon.Privileges.Description.respawntools.beacons.use":  "Khả năng sử dụng khối Respawn Beacon",
@@ -9,8 +10,8 @@
     "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.place":  "Bạn không được phép đặt khối này.",
     "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.configure":  "Bạn không được phép cấu hình khối này.",
     "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.use":  "Bạn không được phép sử dụng khối này.",
-    "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.break":  "Bạn không được phép phá vỡ khối này.",
-    "Features.RespawnBeacon.Dialogue.Title":  "Cài đặt Respawn Beacon",
+    "Features.RespawnBeacon.Privileges.Denial.respawntools.beacons.break":  "Bạn không được phép phá vỡ rào cản này.",
+    "Features.RespawnBeacon.Dialogue.Title":  "Cài đặt Hồi sinh Beacon",
     "Features.RespawnBeacon.Dialogue.lblEnabled":  "Đã bật:",
     "Features.RespawnBeacon.Dialogue.lblEnabled.HoverText":  "Người chơi chỉ hồi sinh tại beacon khi nó được bật.",
     "Features.RespawnBeacon.Dialogue.lblRadius":  "Bán kính:",
@@ -19,8 +20,8 @@
     "Features.RespawnBeacon.Dialogue.lblAmbientVolume":  "Âm lượng môi trường:",
     "Features.RespawnBeacon.Dialogue.lblAmbientVolume.HoverText":  "Âm lượng mà các âm thanh môi trường được phát.",
     "Features.RespawnBeacon.Dialogue.lblRespawnVolume":  "Thể tích hồi sinh:",
-    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Âm lượng phát ra âm thanh hồi sinh.",
-    "Features.RespawnBeacon.Admin.Dialogue.Title":  "Cài đặt máy chủ Respawn Beacon",
-    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable":  "Chế tạo:",
-    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable.HoverText":  "Khi bật, người chơi có thể chế tạo Respawn Beacon. Nó vẫn có sẵn trong menu Sáng tạo khi bị tắt."
+    "Features.RespawnBeacon.Dialogue.lblRespawnVolume.HoverText":  "Âm lượng mà âm thanh hồi sinh được phát.",
+    "Features.RespawnBeacon.Admin.Dialogue.Title":  "Cài đặt Máy chủ Beacon Hồi sinh",
+    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable":  "Có thể chế tạo:",
+    "Features.RespawnBeacon.Admin.Dialogue.lblCraftable.HoverText":  "Khi được bật, người chơi có thể chế tạo Đèn Hiệu Hồi Sinh. Nó vẫn có sẵn trong menu Sáng Tạo khi bị tắt."
 }

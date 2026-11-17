@@ -40,10 +40,3 @@ public sealed class RespawnManager : UniversalModSystem<RespawnManager>
         _clientChannel!.SendPacket<RespawnPacket>(new() { RespawnAtBeacon = respawnAtBeacon });
     }
 }
-
-[ProtoContract]
-public sealed class RespawnPacket
-{
-    [ProtoMember(1)]
-    public bool RespawnAtBeacon { get; set; }
-}
